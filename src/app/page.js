@@ -23,7 +23,7 @@ export default function Home() {
       <div className="w-full max-w-2xl mt-10 mx-1">
       <h1 className="text-3xl font-bold mb-10 text-left">👋Hi! I'm Bryan.</h1>
       
-      <p className="text-white-600 text-lg text-justify mb-8 leading-9">I'm an incoming SWE student at the University of Waterloo for Fall of 2025 and I'm passionate about programming & mathematics. Having been self-taught since freshman year of high school, I immersed myself in coding, viewing it as a fascinating gateway to enhance the world around us. I will be interning at <a href = "https://joinlivewell.ca" className = "italic">Livewell</a> during summer. My next project will probably be building a brainrot interpreted language 🤫🧏🏻‍♂️ and learning more about operating systems using C. 
+      <p className="text-white-600 text-lg text-justify mb-8 leading-9">I'm an incoming SWE student at the University of Waterloo for Fall of 2025 and I'm passionate about programming & mathematics. Having been self-taught since freshman year of high school, I immersed myself in coding, viewing it as a fascinating gateway to enhance the world around us. I will be interning at <a href = "https://joinlivewell.ca" className = "italic bold">Livewell</a> during summer. My next project will probably be building a brainrot interpreted programming language 🤫🧏🏻‍♂️ and learning more about operating systems using C. 
       In my opinion, machine learning is the 
         perfect blend between programming and mathematics combining algorithms, data, and optimization to build intelligent systems.
          </p>
