@@ -45,7 +45,7 @@ export default function Home() {
           <Link href="https://www.linkedin.com/in/bryan-lin-176785300/"><FaLinkedin/>LinkedIn</Link>
         </Button>
         <Button asChild>
-          <Link href="https://www.instagram.com/mini_bryanlin/"><FaInstagram/>Instagram</Link>
+          <Link href="https://www.instagram.com/bry4n.lin/"><FaInstagram/>Instagram</Link>
         </Button>
       </div>
       <div className="mt-6 flex-col items-center gap-100">
