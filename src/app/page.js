@@ -39,7 +39,7 @@ export default function Home() {
       </div>
       <div className="flex gap-6">
         <Button asChild>
-          <Link href="https://github.com/mini-bryanlin"><FaGithub />GitHub</Link>
+          <Link href="https://github.com/blynkosaur"><FaGithub />GitHub</Link>
         </Button>
         <Button asChild>
           <Link href="https://www.linkedin.com/in/bryan-lin-176785300/"><FaLinkedin/>LinkedIn</Link>
