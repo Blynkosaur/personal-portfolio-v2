@@ -106,12 +106,12 @@ export default function Home() {
 
   return (
     <div className=" overscroll-no min-h-screen flex flex-col justify-start items-start bg-black text-white p-4">
-              <Link
-          href="/"
-          className="absolute top-6 left-6 bg-black-500 text-white rounded-md shadow-md hover:bg-black-600 hover:underline"
-        >
-          Home
-        </Link>
+      <Link
+        href="/"
+        className="absolute top-6 left-6 bg-black-500 text-white rounded-md shadow-md hover:bg-black-600 hover:underline"
+      >
+        Home
+      </Link>
       <div style={{ height: "30px" }} />
       <div className="w-full max-w-xl mt-10 mx-1">
         <h1
@@ -123,7 +123,7 @@ export default function Home() {
 
         <p
           className="text-white-600 text-lg mb-8 leading-9"
-          style={{ fontWeight: "300", alignContent: "left", textAlign: "left", width:"100%"}}
+          style={{ fontWeight: "300", alignContent: "left", textAlign: "left", width: "100%" }}
         >
           I'm an incoming SWE student at the{" "}
           <span className="font-medium">University of Waterloo</span> for Fall
@@ -141,20 +141,20 @@ export default function Home() {
       </div>
       <div
         className="w-full max-w-xl text-left"
-        sytle={{ display: "flex", flexDirection: "row", gap:"5px"}}
+        sytle={{ display: "flex", flexDirection: "row", gap: "5px" }}
       >
         <p className="text-left text-lg mb-10">
           ↳ You can contact me at{" "}
-                      <span className="mr-1"></span>
-          <Button asChild>
-            <a href="mailto:b86lin@uwaterloo.ca">
+          <span className="mr-1"></span>
+          <Button className="mt-3" asChild>
+            <a href="mailto:b86lin@uwaterloo.ca" target="_blank" rel="noopener noreferrer">
               b86lin@uwaterloo.ca <WaterlooImage />
             </a>
           </Button>
         </p>
       </div>
-      <div className="text-center mb-1">
-        <p className="font-thin text-xl text-center mb-4 ">
+      <div className="text-center mb-1 max-w-xl w-full">
+        <p className="font-thin text-xl text-center mb-4 max-w-xl w-full">
           Check out my work below
         </p>
       </div>
@@ -163,30 +163,32 @@ export default function Home() {
         <span className="text-gray-400 text-sm px-2 ">↓</span>
         <div className="flex-1 h-px bg-gray-600"></div>
       </div>
-      <div className="flex gap-6 justify-between flex-wrap max-w-xl w-full">
-        <Button asChild>
+      <div className="flex gap-4 justify-start flex-col sm:flex-row sm:justify-between max-w-xl w-full">
+        <Button className="w-full sm:w-auto" asChild>
           <a
             // download= {true}
             href={`./B_LIN_RESUME.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaPaperclip />
             Resume
           </a>
         </Button>
-        <Button asChild>
-          <Link href="https://github.com/blynkosaur">
+        <Button className="w-full sm:w-auto" asChild>
+          <Link href="https://github.com/blynkosaur" target="_blank" rel="noopener noreferrer">
             <FaGithub />
             GitHub
           </Link>
         </Button>
-        <Button asChild>
-          <Link href="https://www.linkedin.com/in/bryan-lin-176785300/">
+        <Button className="w-full sm:w-auto" asChild>
+          <Link href="https://www.linkedin.com/in/bryan-lin-176785300/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
             LinkedIn
           </Link>
         </Button>
-        <Button asChild>
-          <Link href="https://www.instagram.com/bry4n.lin/">
+        <Button className="w-full sm:w-auto" asChild>
+          <Link href="https://www.instagram.com/bry4n.lin/" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
             Instagram
           </Link>
