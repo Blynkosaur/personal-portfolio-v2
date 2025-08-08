@@ -100,20 +100,20 @@ export default function Home() {
   const handleCheckboxChange = (isChecked) => {
     setChecked(isChecked);
     if (isChecked) {
-      alert("🫣 Peakabo!!! 😱 ");
+      alert("🫣 Peakaboo!!! 😱 ");
     }
   };
 
   return (
-    <div className=" overscroll-no min-h-screen flex flex-col justify-start items-center bg-black text-white p-6 text-center">
-      <Link
-        href="/"
-        className="absolute top-6 left-6 bg-black-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-black-600"
-      >
-        Home
-      </Link>
-      <div style={{ height: "20px" }} />
-      <div className="w-full max-w-2xl mt-10 mx-1">
+    <div className=" overscroll-no min-h-screen flex flex-col justify-start items-start bg-black text-white p-4">
+              <Link
+          href="/"
+          className="absolute top-6 left-6 bg-black-500 text-white rounded-md shadow-md hover:bg-black-600 hover:underline"
+        >
+          Home
+        </Link>
+      <div style={{ height: "30px" }} />
+      <div className="w-full max-w-xl mt-10 mx-1">
         <h1
           className="text-3xl font-bold mb-10 text-left"
           style={{ fontWeight: "300" }}
@@ -123,7 +123,7 @@ export default function Home() {
 
         <p
           className="text-white-600 text-lg mb-8 leading-9"
-          style={{ fontWeight: "300", alignContent: "left", textAlign: "left" }}
+          style={{ fontWeight: "300", alignContent: "left", textAlign: "left", width:"100%"}}
         >
           I'm an incoming SWE student at the{" "}
           <span className="font-medium">University of Waterloo</span> for Fall
@@ -140,52 +140,30 @@ export default function Home() {
         </p>
       </div>
       <div
-        className="w-full max-w-2xl text-left"
-        sytle={{ display: "flex", flexDirection: "row" }}
+        className="w-full max-w-xl text-left"
+        sytle={{ display: "flex", flexDirection: "row", gap:"5px"}}
       >
-        <p
-          className="text-left text-lg mb-10"
-          style={{
-            fontWeight: "300",
-            display: "flex",
-            flexDirection: "row",
-            gap: "10px",
-            alignItems:"center"
-          }}
-        >
-          ↳ You can contact me at
-          <a style={{ fontWeight: "300" }} href="mailto:b86lin@uwaterloo.ca">
-            <b>
-              <div
-                style={{
-                  background: "#18181B",
-                  borderRadius: "5px",
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: "7px",
-                  padding: "8px",
-                  paddingLeft:"7px",
-                  paddingRight:"7px"
-
-                  
-                }}
-              >
-                b86lin@uwaterloo.ca{" "}
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  <WaterlooImage />
-                </div>
-              </div>
-            </b>
-          </a>
+        <p className="text-left text-lg mb-10">
+          ↳ You can contact me at{" "}
+                      <span className="mr-1"></span>
+          <Button asChild>
+            <a href="mailto:b86lin@uwaterloo.ca">
+              b86lin@uwaterloo.ca <WaterlooImage />
+            </a>
+          </Button>
         </p>
       </div>
-      <div>
-        <p className="font-thin text-lg text-left">
-          Feel free to check out my work below
+      <div className="text-center mb-1">
+        <p className="font-thin text-xl text-center mb-4 ">
+          Check out my work below
         </p>
-        <p className="mb-4">↓ ↓ ↓</p>
       </div>
-      <div className="flex gap-6">
+      <div className="flex items-center gap-2 mb-6 max-w-xl w-full justify-center">
+        <div className="flex-1 h-px bg-gray-600"></div>
+        <span className="text-gray-400 text-sm px-2 ">↓</span>
+        <div className="flex-1 h-px bg-gray-600"></div>
+      </div>
+      <div className="flex gap-6 justify-between flex-wrap max-w-xl w-full">
         <Button asChild>
           <a
             // download= {true}
@@ -214,14 +192,14 @@ export default function Home() {
           </Link>
         </Button>
       </div>
-      <div className="mt-6 flex-col items-center gap-100">
+      <div className="mt-12 flex items-center gap-3 p-4 bg-gray-900/20 rounded-lg border border-gray-800/50">
         <Checkbox
           id="nice-to-meet-you"
           checked={checked}
           onCheckedChange={handleCheckboxChange}
         />
-        <label htmlFor="nice-to-meet-you" className="text-white-300">
-          Click Me!
+        <label htmlFor="nice-to-meet-you" className="text-gray-300 text-sm cursor-pointer">
+          Click Me! 👀
         </label>
       </div>
     </div>
