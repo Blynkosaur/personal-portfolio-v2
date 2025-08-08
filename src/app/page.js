@@ -105,13 +105,13 @@ export default function Home() {
   };
 
   return (
-    <div className=" overscroll-no min-h-screen flex flex-col justify-start items-start bg-black text-white p-4">
-      <Link
-        href="/"
-        className="absolute top-6 left-6 bg-black-500 text-white rounded-md shadow-md hover:bg-black-600 hover:underline"
-      >
-        Home
-      </Link>
+    <div className=" overscroll-no min-h-screen flex flex-col justify-start items-start bg-black text-white p-4 pl-12">
+              <Link
+          href="/"
+          className="absolute top-6 left-12 bg-black-500 text-white rounded-md shadow-md hover:bg-black-600 hover:underline"
+        >
+          Home
+        </Link>
       <div style={{ height: "30px" }} />
       <div className="w-full max-w-xl mt-10 mx-1">
         <h1
