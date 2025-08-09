@@ -124,7 +124,7 @@ export default function Home() {
         </Link>
       </Button>
       {/* <div style={{ height: "20px" }} /> */}
-      <div className="w-full max-w-xl mt-10 mx-1">
+      <div className="w-full max-w-xl mt-12 mx-1">
         <h1
           className="text-3xl font-bold mb-10 text-left"
           style={{ fontWeight: "300" }}
