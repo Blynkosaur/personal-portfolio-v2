@@ -116,7 +116,7 @@ export default function Home() {
         asChild
         variant="outline"
         className="absolute top-6 left-6 bg-black/20 border-gray-600 text-white hover:bg-gray-800/40 hover:border-gray-500 transition-all duration-200 backdrop-blur-sm"
-        onClick={() => {alert("You already are home 🙄")}}
+        onClick={() => {alert("You are already home 🙄")}}
       >
         <Link href="/">
           <FaHome className="mr-2" />
