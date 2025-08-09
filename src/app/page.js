@@ -76,7 +76,7 @@ export default function Home() {
 
   useEffect(() => {
     const text =
-      "Hey, I’m Bryan, the biggest linkedin warrior you'll ever meet. So i get down on my knees and ask: would you connect with me?";
+      "Hey, I'm Bryan, the biggest linkedin warrior you'll ever meet. So i get down on my knees and ask: would you connect with me?";
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.pitch = 0.05;
 
@@ -102,6 +102,16 @@ export default function Home() {
       }, 1000);
     }
   }, [checked]);
+
+  useEffect(() => {
+    // Set body overflow to hidden
+    document.body.style.overflow = 'hidden';
+    
+    // Cleanup function to restore overflow when component unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
 
   const handleCheckboxChange = (isChecked) => {
     setChecked(isChecked);
