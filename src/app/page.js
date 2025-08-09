@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaInstagram, FaPaperclip } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaPaperclip, FaHome } from "react-icons/fa";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useState, useEffect } from "react";
 
@@ -106,12 +106,16 @@ export default function Home() {
 
   return (
     <div className=" overscroll-no min-h-screen flex flex-col justify-start items-start bg-black text-white p-10">
-              <Link
-          href="/"
-          className="absolute top-6  bg-black-500 text-white rounded-md shadow-md hover:bg-black-600 hover:underline"
-        >
+      <Button 
+        asChild 
+        variant="outline" 
+        className="absolute top-6 left-6 bg-black/20 border-gray-600 text-white hover:bg-gray-800/40 hover:border-gray-500 transition-all duration-200 backdrop-blur-sm"
+      >
+        <Link href="/">
+          <FaHome className="mr-2" />
           Home
         </Link>
+      </Button>
       {/* <div style={{ height: "20px" }} /> */}
       <div className="w-full max-w-xl mt-10 mx-1">
         <h1
