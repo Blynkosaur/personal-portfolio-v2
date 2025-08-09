@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import styles from "./Page.module.css"
 import {
   FaGithub,
   FaLinkedin,
@@ -112,9 +113,8 @@ export default function Home() {
 
   return (
     <div 
-      className=" min-h-screen flex flex-col justify-start items-start bg-black text-white p-10"
+      className={`${styles.page} min-h-screen flex flex-col justify-start items-start bg-black text-white p-10`}
       style={{ 
-        overflow: 'hidden',
         height: '100vh',
         position: 'fixed',
         top: 0,
