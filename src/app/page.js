@@ -105,14 +105,14 @@ export default function Home() {
   };
 
   return (
-    <div className=" overscroll-no min-h-screen flex flex-col justify-start items-start bg-black text-white p-4 pl-12">
+    <div className=" overscroll-no min-h-screen flex flex-col justify-start items-start bg-black text-white p-10">
               <Link
           href="/"
-          className="absolute top-6 left-12 bg-black-500 text-white rounded-md shadow-md hover:bg-black-600 hover:underline"
+          className="absolute top-6  bg-black-500 text-white rounded-md shadow-md hover:bg-black-600 hover:underline"
         >
           Home
         </Link>
-      <div style={{ height: "30px" }} />
+      {/* <div style={{ height: "20px" }} /> */}
       <div className="w-full max-w-xl mt-10 mx-1">
         <h1
           className="text-3xl font-bold mb-10 text-left"
