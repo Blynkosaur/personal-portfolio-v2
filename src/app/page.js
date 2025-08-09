@@ -103,16 +103,6 @@ export default function Home() {
     }
   }, [checked]);
 
-  useEffect(() => {
-    // Set body overflow to hidden
-    document.body.style.overflow = 'hidden';
-    
-    // Cleanup function to restore overflow when component unmounts
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, []);
-
   const handleCheckboxChange = (isChecked) => {
     setChecked(isChecked);
     if (isChecked) {
@@ -121,7 +111,18 @@ export default function Home() {
   };
 
   return (
-    <div className=" overscroll-no min-h-screen flex flex-col justify-start items-start bg-black text-white p-10">
+    <div 
+      className=" min-h-screen flex flex-col justify-start items-start bg-black text-white p-10"
+      style={{ 
+        overflow: 'hidden',
+        height: '100vh',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0
+      }}
+    >
       <Button
         asChild
         variant="outline"

@@ -1,0 +1,9 @@
+.page{
+    overflow: auto;
+}
+
+@media (min-width: 600px) {
+    .page{
+        overflow: hidden;
+    }
+}
