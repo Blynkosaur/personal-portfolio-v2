@@ -2,7 +2,7 @@
     overflow: auto;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 640px) and (min-height: 800px) {
     .page{
         overflow: hidden;
     }
