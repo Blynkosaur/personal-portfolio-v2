@@ -1,7 +1,13 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaInstagram, FaPaperclip, FaHome } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaPaperclip,
+  FaHome,
+} from "react-icons/fa";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useState, useEffect } from "react";
 
@@ -106,9 +112,9 @@ export default function Home() {
 
   return (
     <div className=" overscroll-no min-h-screen flex flex-col justify-start items-start bg-black text-white p-10">
-      <Button 
-        asChild 
-        variant="outline" 
+      <Button
+        asChild
+        variant="outline"
         className="absolute top-6 left-6 bg-black/20 border-gray-600 text-white hover:bg-gray-800/40 hover:border-gray-500 transition-all duration-200 backdrop-blur-sm"
       >
         <Link href="/">
@@ -127,7 +133,12 @@ export default function Home() {
 
         <p
           className="text-white-600 text-lg mb-8 leading-9"
-          style={{ fontWeight: "300", alignContent: "left", textAlign: "left", width: "100%" }}
+          style={{
+            fontWeight: "300",
+            alignContent: "left",
+            textAlign: "left",
+            width: "100%",
+          }}
         >
           I'm an incoming SWE student at the{" "}
           <span className="font-medium">University of Waterloo</span> for Fall
@@ -148,10 +159,13 @@ export default function Home() {
         sytle={{ display: "flex", flexDirection: "row", gap: "5px" }}
       >
         <p className="text-left text-lg mb-10">
-          ↳ You can contact me at{" "}
-          <span className="mr-1"></span>
+          ↳ You can contact me at <span className="mr-1"></span>
           <Button className="mt-3" asChild>
-            <a href="mailto:b86lin@uwaterloo.ca" target="_blank" rel="noopener noreferrer">
+            <a
+              href="mailto:b86lin@uwaterloo.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               b86lin@uwaterloo.ca <WaterlooImage />
             </a>
           </Button>
@@ -180,19 +194,31 @@ export default function Home() {
           </a>
         </Button>
         <Button className="w-full sm:w-auto" asChild>
-          <Link href="https://github.com/blynkosaur" target="_blank" rel="noopener noreferrer">
+          <Link
+            href="https://github.com/blynkosaur"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaGithub />
             GitHub
           </Link>
         </Button>
         <Button className="w-full sm:w-auto" asChild>
-          <Link href="https://www.linkedin.com/in/bryan-lin-176785300/" target="_blank" rel="noopener noreferrer">
+          <Link
+            href="https://www.linkedin.com/in/bryan-lin-176785300/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaLinkedin />
             LinkedIn
           </Link>
         </Button>
         <Button className="w-full sm:w-auto" asChild>
-          <Link href="https://www.instagram.com/bry4n.lin/" target="_blank" rel="noopener noreferrer">
+          <Link
+            href="https://www.instagram.com/bry4n.lin/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaInstagram />
             Instagram
           </Link>
@@ -204,7 +230,10 @@ export default function Home() {
           checked={checked}
           onCheckedChange={handleCheckboxChange}
         />
-        <label htmlFor="nice-to-meet-you" className="text-gray-300 text-sm cursor-pointer">
+        <label
+          htmlFor="nice-to-meet-you"
+          className="text-gray-300 text-sm cursor-pointer"
+        >
           Click Me! 👀
         </label>
       </div>
