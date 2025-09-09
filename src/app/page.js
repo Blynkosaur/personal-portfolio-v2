@@ -113,20 +113,23 @@ export default function Home() {
 
   return (
     <div 
-      className={`${styles.page} min-h-screen flex flex-col justify-start items-start bg-black text-white p-10`}
-      style={{ 
-        height: '100vh',
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0
-      }}
+      className={`${styles.page} min-h-screen flex flex-col justify-start items-start  text-white p-10`}
+        style={{ 
+          height: '100vh',
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: "#1e1e2e",
+          color: "#E8F4F8",
+          fontFamily: "'Roboto Mono', monospace"
+        }}
     >
       <Button
         asChild
         variant="outline"
-        className="absolute top-6 left-6 bg-black/20 border-gray-600 text-white hover:bg-gray-800/40 hover:border-gray-500 transition-all duration-200 backdrop-blur-sm"
+        className="absolute top-6 left-6 bg-slate-800/30 border-slate-600 text-slate-100 hover:bg-slate-700/50 hover:border-slate-500 transition-all duration-200 backdrop-blur-sm"
         onClick={() => {alert("You are already home 🙄")}}
       >
         <Link href="/">
@@ -152,16 +155,15 @@ export default function Home() {
             width: "100%",
           }}
         >
-          I'm an incoming SWE student at the{" "}
-          <span className="font-medium">University of Waterloo</span> for Fall
-          of 2025 and I'm passionate about programming & mathematics. Having
+          I'm an SWE student at the{" "}
+          <span className="font-medium">University of Waterloo</span> and I'm passionate about programming & mathematics. Having
           been self-taught since freshman year of high school, I immersed myself
           in coding, viewing it as a fascinating gateway to enhance the world
-          around us. I will be interning at{" "}
+          around us. I interned at{" "}
           <a href="https://joinlivewell.ca" className="italic font-semibold">
             Livewell
           </a>{" "}
-          during summer. My next project will probably be building an
+          during summer. I am currently building an
           interpreted programming language and learning more about operating
           systems using C.
         </p>
@@ -197,7 +199,7 @@ export default function Home() {
         <Button className="w-full sm:w-auto" asChild>
           <a
             // download= {true}
-            href={`./B_LIN_RESUME.pdf`}
+            href={`./Bryan_Lin_Resume.pdf`}
             target="_blank"
             rel="noopener noreferrer"
           >
