@@ -113,17 +113,13 @@ export default function Home() {
 
   return (
     <div 
-      className={`${styles.page} min-h-screen flex flex-col justify-start items-start  text-white p-10`}
+      className={`${styles.page} flex flex-col justify-start items-start text-white p-10`}
         style={{ 
-          height: '100vh',
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
+          minHeight: '100vh',
           backgroundColor: "#1e1e2e",
           color: "#E8F4F8",
-          fontFamily: "'Roboto Mono', monospace"
+          fontFamily: "'Roboto Mono', monospace",
+          paddingBottom: "40px"
         }}
     >
       <Button
@@ -143,7 +139,7 @@ export default function Home() {
           className="text-3xl font-bold mb-10 text-left"
           style={{ fontWeight: "300" }}
         >
-          👋Hi! I'm Bryan.
+          👋Hi! I'm <span style={{ color: "#c4a3ec" }}>Bryan</span>.
         </h1>
 
         <p
@@ -234,7 +230,7 @@ export default function Home() {
           </Link>
         </Button>
       </div>
-      <div className="mt-12 flex items-center gap-3 p-4 bg-gray-900/20 rounded-lg border border-gray-500/50">
+      <div className="mt-12 mb-32 flex items-center gap-3 p-4 bg-gray-900/20 rounded-lg border border-gray-500/50">
         <Checkbox
           id="nice-to-meet-you"
           checked={checked}
