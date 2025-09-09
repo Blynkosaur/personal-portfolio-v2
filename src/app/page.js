@@ -159,11 +159,7 @@ export default function Home() {
           <span className="font-medium">University of Waterloo</span> and I'm passionate about programming & mathematics. Having
           been self-taught since freshman year of high school, I immersed myself
           in coding, viewing it as a fascinating gateway to enhance the world
-          around us. I interned at{" "}
-          <a href="https://joinlivewell.ca" className="italic font-semibold">
-            Livewell
-          </a>{" "}
-          during summer. I am currently building an
+          around us. I am currently building an
           interpreted programming language and learning more about operating
           systems using C.
         </p>
@@ -238,11 +234,12 @@ export default function Home() {
           </Link>
         </Button>
       </div>
-      <div className="mt-12 flex items-center gap-3 p-4 bg-gray-900/20 rounded-lg border border-gray-800/50">
+      <div className="mt-12 flex items-center gap-3 p-4 bg-gray-900/20 rounded-lg border border-gray-500/50">
         <Checkbox
           id="nice-to-meet-you"
           checked={checked}
           onCheckedChange={handleCheckboxChange}
+          className="border-gray-500"
         />
         <label
           htmlFor="nice-to-meet-you"
