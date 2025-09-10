@@ -29,7 +29,7 @@ export function WaterlooIcon() {
         {" "}
         <g
           transform="translate(0.000000,297.000000) scale(0.100000,-0.100000)"
-          fill="#FF0000"
+          fill="#c4a3ec"
           stroke="none"
         >
           {" "}
@@ -129,7 +129,7 @@ export default function Home() {
         onClick={() => {alert("You are already home 🙄")}}
       >
         <Link href="/">
-          <FaHome className="mr-2" />
+          <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
           Home
         </Link>
       </Button>
@@ -172,7 +172,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              b86lin@uwaterloo.ca <WaterlooImage />
+              b86lin@uwaterloo.ca <WaterlooImage style={{ color: "#c4a3ec" }} />
             </a>
           </Button>
         </p>
@@ -195,7 +195,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaPaperclip />
+            <FaPaperclip style={{ color: "#c4a3ec" }} />
             Resume
           </a>
         </Button>
@@ -205,7 +205,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub />
+            <FaGithub style={{ color: "#c4a3ec" }} />
             GitHub
           </Link>
         </Button>
@@ -215,7 +215,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin />
+            <FaLinkedin style={{ color: "#c4a3ec" }} />
             LinkedIn
           </Link>
         </Button>
@@ -225,7 +225,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram />
+            <FaInstagram style={{ color: "#c4a3ec" }} />
             Instagram
           </Link>
         </Button>
