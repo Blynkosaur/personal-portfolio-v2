@@ -4,7 +4,13 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
+  background-color: #1e1e2e;
+  color: #E8F4F8;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 @layer base {
