@@ -157,9 +157,9 @@ export default function Home() {
         <div className="text-white-600 text-lg mb-8 leading-9" style={{ fontWeight: "300", alignContent: "left", textAlign: "left", width: "100%" }}>
           <ul className="space-y-2">
             <li>• SWE @ <span className="font-medium">University of Waterloo</span></li>
-            <li>• trying to fight imposter syndrome by building</li>
-            <li>• building an interpreted programming language in C</li>
-            <li>• prev. swe intern <a href="https://joinlivewell.ca" target="_blank" rel="noopener noreferrer" className="font-medium hover:underline hover:font-bold transition-all duration-200 cursor-target" style={{ color: "#c4a3ec" }}>@Livewell</a></li>
+            <li>• Fighting imposter syndrome by building things</li>
+            <li>• Building an interpreted programming language in C</li>
+            <li>• Prev. swe intern <a href="https://joinlivewell.ca" target="_blank" rel="noopener noreferrer" className="font-medium hover:underline hover:font-bold transition-all duration-200 cursor-target" style={{ color: "#c4a3ec" }}>@Livewell</a></li>
           </ul>
         </div>
       </div>
