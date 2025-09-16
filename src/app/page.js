@@ -166,7 +166,7 @@ export default function Home() {
       </div>
       
       {/* Projects Button */}
-      <div className="w-full max-w-xl mt-6 mb-10">
+      <div className="w-full max-w-xl mt-6 mb-16">
         <Button className="cursor-target w-full bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-10 py-6 text-lg font-medium" asChild style={{ border: '0.5px solid #9ca3af' }}>
           <Link href="/projects">
             View My Projects
@@ -246,6 +246,8 @@ export default function Home() {
         </Button>
       </div>
       
+      {/* Bottom spacing for mobile scrolling */}
+      <div className="h-20"></div>
     </div>
   );
 }

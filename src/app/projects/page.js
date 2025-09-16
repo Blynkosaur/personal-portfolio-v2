@@ -81,7 +81,7 @@ Still dealing with segfaults...
           <div className="flex gap-2">
             <Button className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200" asChild>
               <a href="https://github.com/Blynkosaur/BryteLinker" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="mr-1" />
+                <FaGithub className="mr-1" style={{ color: "#c4a3ec" }} />
                 Code
               </a>
             </Button>
@@ -106,7 +106,7 @@ Still dealing with segfaults...
           <div className="flex gap-2">
             <Button className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200" asChild>
               <a href="#" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="mr-1" />
+                <FaGithub className="mr-1" style={{ color: "#c4a3ec" }} />
                 Code
               </a>
             </Button>
@@ -136,7 +136,7 @@ Still dealing with segfaults...
           <div className="flex gap-2">
             <Button className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200" asChild>
               <a href="https://github.com/Blynkosaur/Tumor-Classification" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="mr-1" />
+                <FaGithub className="mr-1" style={{ color: "#c4a3ec" }} />
                 Code
               </a>
             </Button>
@@ -162,7 +162,7 @@ Still dealing with segfaults...
           <div className="flex gap-2">
             <Button className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200" asChild>
               <a href="https://github.com/Blynkosaur/LeagueOfStudies" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="mr-1" />
+                <FaGithub className="mr-1" style={{ color: "#c4a3ec" }} />
                 Code
               </a>
             </Button>
@@ -184,21 +184,21 @@ Still dealing with segfaults...
           Interested in collaborating or have questions about my projects?
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
-          <Button className="cursor-target bg-slate-800/30 border-slate-500 text-slate-100 hover:bg-slate-700/50 hover:border-slate-400 transition-all duration-200 backdrop-blur-sm" asChild>
+          <Button className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base" asChild style={{ border: '0.5px solid #9ca3af' }}>
             <a href="/Bryan_Lin_Resume.pdf" target="_blank" rel="noopener noreferrer">
-              <FaPaperclip className="mr-2" />
+              <FaPaperclip className="mr-2" style={{ color: "#c4a3ec" }} />
               Resume
             </a>
           </Button>
-          <Button className="cursor-target bg-slate-800/30 border-slate-500 text-slate-100 hover:bg-slate-700/50 hover:border-slate-400 transition-all duration-200 backdrop-blur-sm" asChild>
+          <Button className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base" asChild style={{ border: '0.5px solid #9ca3af' }}>
             <Link href="https://github.com/blynkosaur" target="_blank" rel="noopener noreferrer">
-              <FaGithub className="mr-2" />
+              <FaGithub className="mr-2" style={{ color: "#c4a3ec" }} />
               GitHub
             </Link>
           </Button>
-          <Button className="cursor-target bg-slate-800/30 border-slate-500 text-slate-100 hover:bg-slate-700/50 hover:border-slate-400 transition-all duration-200 backdrop-blur-sm" asChild>
+          <Button className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base" asChild style={{ border: '0.5px solid #9ca3af' }}>
             <Link href="https://www.linkedin.com/in/bryan-lin-176785300/" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="mr-2" />
+              <FaLinkedin className="mr-2" style={{ color: "#c4a3ec" }} />
               LinkedIn
             </Link>
           </Button>
