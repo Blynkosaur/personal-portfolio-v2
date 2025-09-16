@@ -38,7 +38,8 @@ export default function Projects() {
       <Button
         asChild
         variant="outline"
-        className="cursor-target absolute top-6 left-6 bg-slate-800/30 border-slate-500 text-slate-100 hover:bg-slate-700/50 hover:border-slate-400 transition-all duration-200 backdrop-blur-sm"
+        className="cursor-target absolute top-6 left-6 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+        style={{ border: '0.5px solid #9ca3af' }}
       >
         <Link href="/">
           <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
@@ -64,27 +65,24 @@ export default function Projects() {
       <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Project 1 */}
         <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
-          <h3 className="text-xl font-semibold mb-3" style={{ color: "#c4a3ec" }}>BryteLinker</h3>
+          <h3 className="text-xl font-semibold mb-3" style={{ color: "#c4a3ec" }}>BryteLinker 💻</h3>
           <p className="text-gray-300 text-sm mb-4">
-            A web application that connects students with study groups and academic resources. 
-            Features include user authentication, group creation, real-time messaging, and 
-            resource sharing capabilities to enhance collaborative learning.
+          Building Bryte Linker, an interpreted programming language featuring a custom bytecode virtual machine in C
+Implementing a full lexer, parser, and bytecode compiler to translate high-level code into executable bytecode.
+<br />
+<br />
+Still dealing with segfaults...
           </p>
           <div className="flex gap-2 mb-4">
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">React</span>
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">Node.js</span>
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">MongoDB</span>
+            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">C</span>
+            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">Makefile</span>
+            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">GCC/GDB</span>
           </div>
           <div className="flex gap-2">
             <Button className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200" asChild>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Blynkosaur/BryteLinker" target="_blank" rel="noopener noreferrer">
                 <FaGithub className="mr-1" />
                 Code
-              </a>
-            </Button>
-            <Button className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200" asChild>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Demo
               </a>
             </Button>
           </div>
@@ -92,16 +90,18 @@ export default function Projects() {
 
         {/* Project 2 */}
         <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
-          <h3 className="text-xl font-semibold mb-3" style={{ color: "#c4a3ec" }}>MyNodes</h3>
+          <h3 className="text-xl font-semibold mb-3" style={{ color: "#c4a3ec" }}>MyNodes 🕸️</h3>
           <p className="text-gray-300 text-sm mb-4">
-            A distributed systems project implementing a peer-to-peer network with node 
-            discovery, message routing, and data synchronization. Built with focus on 
-            scalability, fault tolerance, and efficient communication protocols.
+            Working with 3 other students to create a full-stack knowledge management system that improves knowledge retrieval through automated organization. 
+            Featuring NLP pipelines for content classification using TF-IDF vectorization, embeddings, and KMeans clustering. 
+            <br />
+            <br />
+            Upload your notes and create a graph of your knowledge!
           </p>
           <div className="flex gap-2 mb-4">
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">C++</span>
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">Networking</span>
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">P2P</span>
+            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">React</span>
+            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">Django</span>
+            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">Cytoscape.js</span>
           </div>
           <div className="flex gap-2">
             <Button className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200" asChild>
@@ -120,7 +120,7 @@ export default function Projects() {
 
         {/* Project 3 */}
         <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
-          <h3 className="text-xl font-semibold mb-3" style={{ color: "#c4a3ec" }}>Tumor Classifier</h3>
+          <h3 className="text-xl font-semibold mb-3" style={{ color: "#c4a3ec" }}>Tumor Classifier 🧠</h3>
           <p className="text-gray-300 text-sm mb-4">
             Designed and implemented a neural network from scratch using only NumPy to classify breast growths as benign or malignant.
             Learning the calculus and linear algebra behind supervised learning models was a great experience. 
@@ -146,7 +146,7 @@ export default function Projects() {
 
         {/* Project 4 */}
         <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
-          <h3 className="text-xl font-semibold mb-3" style={{ color: "#c4a3ec" }}>League of Studies</h3>
+          <h3 className="text-xl font-semibold mb-3" style={{ color: "#c4a3ec" }}>League of Studies 📖</h3>
           <p className="text-gray-300 text-sm mb-4">
             My mom told me to stop playing League of Legends 💔, so I made League of Studies, a gamified study platform instead.
             Fight with your friends or a boss to study for exams and climb the leaderboard!
