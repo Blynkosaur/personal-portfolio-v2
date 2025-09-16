@@ -1,7 +1,8 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import styles from "./Page.module.css"
+import styles from "./Page.module.css";
+import TextType from "@/components/TextType";
 import {
   FaGithub,
   FaLinkedin,
@@ -10,6 +11,8 @@ import {
   FaHome,
 } from "react-icons/fa";
 import { Checkbox } from "@/components/ui/checkbox";
+import PixelTrail from "@/components/PixelTrail";
+import TargetCursor from "@/components/TargetCursor";
 import { useState, useEffect } from "react";
 
 import React from "react";
@@ -18,6 +21,7 @@ import { AlignCenterVertical } from "lucide-react";
 export function WaterlooIcon() {
   return (
     <div sytle={{ height: "10px", width: "10px" }}>
+      
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
@@ -76,25 +80,7 @@ export default function Home() {
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
-    const text =
-      "Hey, I'm Bryan, the biggest linkedin warrior you'll ever meet. So i get down on my knees and ask: would you connect with me?";
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.pitch = 0.05;
-
-    const voices = window.speechSynthesis.getVoices();
-    voices.forEach((voice) => console.log(voice.name, voice.lang));
-
-    const selectedVoice = voices.find(
-      (voice) =>
-        voice.lang === "en-US" &&
-        (voice.name.includes("Daniel") ||
-          voice.name.includes("Tom") ||
-          voice.name.includes("Aaron"))
-    );
-
-    utterance.voice = selectedVoice;
-
-    utterance.rate = 1;
+    
 
     if (checked) {
       // window.speechSynthesis.speak(utterance);
@@ -119,13 +105,30 @@ export default function Home() {
           backgroundColor: "#1e1e2e",
           color: "#E8F4F8",
           fontFamily: "'Roboto Mono', monospace",
-          paddingBottom: "40px"
+          paddingBottom: "40px",
+          zIndex: 2,
         }}
     >
+      <TargetCursor 
+        spinDuration={2}
+        hideDefaultCursor={true}
+      />
+      <div style={{
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  width: '100vw',
+  height: '100vh',
+  zIndex: 1,
+  pointerEvents: 'none',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
+}} />
       <Button
         asChild
         variant="outline"
-        className="absolute top-6 left-6 bg-slate-800/30 border-slate-600 text-slate-100 hover:bg-slate-700/50 hover:border-slate-500 transition-all duration-200 backdrop-blur-sm"
+        className="cursor-target absolute top-6 left-6 bg-slate-800/30 border-slate-500 text-slate-100 hover:bg-slate-700/50 hover:border-slate-400 transition-all duration-200 backdrop-blur-sm"
         onClick={() => {alert("You are already home 🙄")}}
       >
         <Link href="/">
@@ -134,12 +137,22 @@ export default function Home() {
         </Link>
       </Button>
       {/* <div style={{ height: "20px" }} /> */}
-      <div className="w-full max-w-xl mt-12 mx-1">
+<div className="w-full max-w-xl mt-12 mx-1">
         <h1
           className="text-3xl font-bold mb-10 text-left"
           style={{ fontWeight: "300" }}
         >
-          👋Hi! I'm <span style={{ color: "#c4a3ec" }}>Bryan</span>.
+          👋Hi! I'm{' '}
+          <TextType
+            text={["Bryan.", "a builder.", "a problem solver.", "a UWaterloo student."]}
+            typingSpeed={75}
+            pauseDuration={3500}
+            showCursor={true}
+            cursorCharacter="|"
+            textColors={["#c4a3ec"]}
+            loop={true}
+          />
+          
         </h1>
 
         <p
@@ -166,7 +179,7 @@ export default function Home() {
       >
         <p className="text-left text-lg mb-10">
           ↳ You can contact me at <span className="mr-1"></span>
-          <Button className="mt-3" asChild>
+          <Button className="cursor-target mt-3 bg-slate-800/30 border-slate-500 text-slate-100 hover:bg-slate-700/50 hover:border-slate-400 transition-all duration-200 backdrop-blur-sm" asChild>
             <a
               href="mailto:b86lin@uwaterloo.ca"
               target="_blank"
@@ -188,7 +201,7 @@ export default function Home() {
         <div className="flex-1 h-px bg-gray-600"></div>
       </div>
       <div className="flex gap-4 justify-start flex-col sm:flex-row sm:justify-between max-w-xl w-full">
-        <Button className="w-full sm:w-auto" asChild>
+        <Button className="cursor-target w-full sm:w-auto bg-slate-800/30 border-slate-500 text-slate-100 hover:bg-slate-700/50 hover:border-slate-400 transition-all duration-200 backdrop-blur-sm" asChild>
           <a
             // download= {true}
             href={`./Bryan_Lin_Resume.pdf`}
@@ -199,7 +212,7 @@ export default function Home() {
             Resume
           </a>
         </Button>
-        <Button className="w-full sm:w-auto" asChild>
+        <Button className="cursor-target w-full sm:w-auto bg-slate-800/30 border-slate-500 text-slate-100 hover:bg-slate-700/50 hover:border-slate-400 transition-all duration-200 backdrop-blur-sm" asChild>
           <Link
             href="https://github.com/blynkosaur"
             target="_blank"
@@ -209,7 +222,7 @@ export default function Home() {
             GitHub
           </Link>
         </Button>
-        <Button className="w-full sm:w-auto" asChild>
+        <Button className="cursor-target w-full sm:w-auto bg-slate-800/30 border-slate-500 text-slate-100 hover:bg-slate-700/50 hover:border-slate-400 transition-all duration-200 backdrop-blur-sm" asChild>
           <Link
             href="https://www.linkedin.com/in/bryan-lin-176785300/"
             target="_blank"
@@ -219,7 +232,7 @@ export default function Home() {
             LinkedIn
           </Link>
         </Button>
-        <Button className="w-full sm:w-auto" asChild>
+        <Button className="cursor-target w-full sm:w-auto bg-slate-800/30 border-slate-500 text-slate-100 hover:bg-slate-700/50 hover:border-slate-400 transition-all duration-200 backdrop-blur-sm" asChild>
           <Link
             href="https://www.instagram.com/bry4n.lin/"
             target="_blank"
@@ -230,7 +243,7 @@ export default function Home() {
           </Link>
         </Button>
       </div>
-      <div className="mt-12 mb-32 flex items-center gap-3 p-4 bg-gray-900/20 rounded-lg border border-gray-500/50">
+      <div className="cursor-target mt-12 mb-32 flex items-center gap-3 p-4 bg-gray-900/20 rounded-lg border border-gray-500/50">
         <Checkbox
           id="nice-to-meet-you"
           checked={checked}
@@ -239,7 +252,7 @@ export default function Home() {
         />
         <label
           htmlFor="nice-to-meet-you"
-          className="text-gray-300 text-sm cursor-pointer"
+          className="text-gray-300 text-sm "
         >
           Click Me! 👀
         </label>

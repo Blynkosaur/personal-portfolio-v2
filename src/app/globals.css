@@ -77,3 +77,11 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+/* Hide default cursor on TargetCursor elements */
+.cursor-target,
+.cursor-target *,
+.cursor-target button,
+.cursor-target a {
+  cursor: none !important;
+}
