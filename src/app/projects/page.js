@@ -25,7 +25,7 @@ export default function Projects() {
         backgroundColor: "#1e1e2e",
         color: "#E8F4F8",
         fontFamily: "'Roboto Mono', monospace",
-        paddingBottom: "40px",
+        paddingBottom: "80px",
         zIndex: 2,
       }}
     >
