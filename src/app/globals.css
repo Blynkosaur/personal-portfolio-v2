@@ -78,10 +78,12 @@ html {
   }
 }
 
-/* Hide default cursor on TargetCursor elements */
-.cursor-target,
-.cursor-target *,
-.cursor-target button,
-.cursor-target a {
-  cursor: none !important;
+/* Hide default cursor on TargetCursor elements - only on medium screens and up */
+@media (min-width: 768px) {
+  .cursor-target,
+  .cursor-target *,
+  .cursor-target button,
+  .cursor-target a {
+    cursor: none !important;
+  }
 }
