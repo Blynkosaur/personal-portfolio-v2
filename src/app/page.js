@@ -129,7 +129,6 @@ export default function Home() {
         asChild
         variant="outline"
         className="cursor-target absolute top-6 left-6 bg-slate-800/30 border-slate-500 text-slate-100 hover:bg-slate-700/50 hover:border-slate-400 transition-all duration-200 backdrop-blur-sm"
-        onClick={() => {alert("You are already home 🙄")}}
       >
         <Link href="/">
           <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
@@ -155,24 +154,25 @@ export default function Home() {
           
         </h1>
 
-        <p
-          className="text-white-600 text-lg mb-8 leading-9"
-          style={{
-            fontWeight: "300",
-            alignContent: "left",
-            textAlign: "left",
-            width: "100%",
-          }}
-        >
-          I'm an SWE student at the{" "}
-          <span className="font-medium">University of Waterloo</span> and I'm passionate about programming & mathematics. Having
-          been self-taught since freshman year of high school, I immersed myself
-          in coding, viewing it as a fascinating gateway to enhance the world
-          around us. I am currently building an
-          interpreted programming language and learning more about operating
-          systems using C.
-        </p>
+        <div className="text-white-600 text-lg mb-8 leading-9" style={{ fontWeight: "300", alignContent: "left", textAlign: "left", width: "100%" }}>
+          <ul className="space-y-2">
+            <li>• SWE @ <span className="font-medium">University of Waterloo</span></li>
+            <li>• trying to fight imposter syndrome by building</li>
+            <li>• building an interpreted programming language in C</li>
+            <li>• prev. swe intern <a href="https://joinlivewell.ca" target="_blank" rel="noopener noreferrer" className="font-medium hover:underline hover:font-bold transition-all duration-200 cursor-target" style={{ color: "#c4a3ec" }}>@Livewell</a></li>
+          </ul>
+        </div>
       </div>
+      
+      {/* Projects Button */}
+      <div className="w-full max-w-xl mt-2 mb-6">
+        <Button className="cursor-target w-full bg-slate-800/30 border border-slate-300 text-slate-100 hover:bg-slate-700/50 hover:border-slate-200 transition-all duration-200 backdrop-blur-sm px-10 py-6 text-lg font-medium" asChild>
+          <Link href="/projects">
+            View My Projects
+          </Link>
+        </Button>
+      </div>
+      
       <div
         className="w-full max-w-xl text-left"
         sytle={{ display: "flex", flexDirection: "row", gap: "5px" }}
@@ -190,9 +190,10 @@ export default function Home() {
           </Button>
         </p>
       </div>
-      <div className="text-center mb-1 max-w-xl w-full">
+      
+      <div className="text-center mb-1 max-w-xl w-full mt-2">
         <p className="font-thin text-xl text-center mb-4 max-w-xl w-full">
-          Check out my work below
+          Here are my socials:
         </p>
       </div>
       <div className="flex items-center gap-2 mb-6 max-w-xl w-full justify-center">
@@ -243,20 +244,7 @@ export default function Home() {
           </Link>
         </Button>
       </div>
-      <div className="cursor-target mt-12 mb-32 flex items-center gap-3 p-4 bg-gray-900/20 rounded-lg border border-gray-500/50">
-        <Checkbox
-          id="nice-to-meet-you"
-          checked={checked}
-          onCheckedChange={handleCheckboxChange}
-          className="border-gray-500"
-        />
-        <label
-          htmlFor="nice-to-meet-you"
-          className="text-gray-300 text-sm "
-        >
-          Click Me! 👀
-        </label>
-      </div>
+      
     </div>
   );
 }
