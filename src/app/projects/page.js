@@ -29,10 +29,12 @@ export default function Projects() {
         zIndex: 2,
       }}
     >
-      <TargetCursor 
-        spinDuration={2}
-        hideDefaultCursor={true}
-      />
+      <div className="hidden md:block">
+        <TargetCursor 
+          spinDuration={2}
+          hideDefaultCursor={true}
+        />
+      </div>
       
       {/* Home Button */}
       <Button

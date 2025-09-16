@@ -109,10 +109,12 @@ export default function Home() {
           zIndex: 2,
         }}
     >
-      <TargetCursor 
-        spinDuration={2}
-        hideDefaultCursor={true}
-      />
+      <div className="hidden md:block">
+        <TargetCursor 
+          spinDuration={2}
+          hideDefaultCursor={true}
+        />
+      </div>
       <div style={{
   position: 'fixed',
   top: 0,
