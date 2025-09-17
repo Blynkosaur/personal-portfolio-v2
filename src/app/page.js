@@ -159,7 +159,7 @@ export default function Home() {
             text={["Bryan.", "a builder.", "a problem solver.", "a UWaterloo student."]}
             typingSpeed={75}
             pauseDuration={3500}
-            initialDelay={1500}
+            initialDelay={2000}
             showCursor={true}
             cursorCharacter="|"
             textColors={["#c4a3ec"]}
