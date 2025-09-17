@@ -142,14 +142,24 @@ export default function Home() {
 <div className="w-full max-w-xl mt-2 mx-1">
         <h1
           className="text-3xl font-bold mt-12 mb-10 text-left"
-          style={{ fontWeight: "300" }}
+          style={{ fontWeight: "250" }}
         >
-          👋Hi! I'm{' '}
+          <TextType
+            text={["👋Hi! I'm"]}
+            typingSpeed={100}
+            pauseDuration={2000}
+            initialDelay={1000}
+            showCursor={false}
+            textColors={["#ffffff"]}
+            loop={false}
+          />{' '}
+         
+          
           <TextType
             text={["Bryan.", "a builder.", "a problem solver.", "a UWaterloo student."]}
             typingSpeed={75}
             pauseDuration={3500}
-            initialDelay={1000}
+            initialDelay={1500}
             showCursor={true}
             cursorCharacter="|"
             textColors={["#c4a3ec"]}
