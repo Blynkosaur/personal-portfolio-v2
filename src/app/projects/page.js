@@ -19,7 +19,7 @@ export function WaterlooImage() {
 export default function Projects() {
   return (
     <div 
-      className={`${styles.page} flex flex-col justify-start items-start text-white p-10`}
+      className={`${styles.page} flex flex-col justify-start items-start text-white p-10 scrollbar-hide`}
       style={{ 
         minHeight: '100vh',
         backgroundColor: "#1e1e2e",
