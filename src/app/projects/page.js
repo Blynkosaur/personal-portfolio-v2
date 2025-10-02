@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import styles from "../Page.module.css";
 import TargetCursor from "@/components/TargetCursor";
+import DotGrid from "@/components/DotGrid";
 import {
   FaHome,
   FaGithub,
@@ -35,6 +36,7 @@ export default function Projects() {
         zIndex: 2,
       }}
     >
+      <DotGrid dotSize={5} gap={28} baseColor="#c4a3ec" activeColor="#ffffff" style={{ opacity: 0.18 }} />
       <div className="hidden md:block">
         <TargetCursor spinDuration={2} hideDefaultCursor={true} />
       </div>

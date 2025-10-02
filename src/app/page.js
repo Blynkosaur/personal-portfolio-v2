@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import styles from "./Page.module.css";
+import DotGrid from '@/components/DotGrid';
 import TextType from "@/components/TextType";
 import {
   FaGithub,
@@ -106,6 +107,7 @@ export default function Home() {
         zIndex: 2,
       }}
     >
+      <DotGrid dotSize={5} gap={28} baseColor="#c4a3ec" activeColor="#ffffff" style={{ opacity: 0.18 }} />
       <div className="hidden md:block">
         <TargetCursor spinDuration={2} hideDefaultCursor={true} />
       </div>
@@ -179,8 +181,8 @@ export default function Home() {
         >
           <ul className="space-y-2">
             <li>
-              • SWE @{" "}
-              <span className="font-medium">University of Waterloo</span>
+              • SWE {" "}
+              <span className="font-medium cursor-target hover:underline hover:text-[#c4a3ec] transition-colors duration-200">@ University of Waterloo</span>
             </li>
             <li>• Fighting imposter syndrome by building things</li>
             <li>• Building an interpreted programming language in C</li>
@@ -190,8 +192,7 @@ export default function Home() {
                 href="https://joinlivewell.ca"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium hover:underline hover:font-bold transition-all duration-200 cursor-target"
-                style={{ color: "#c4a3ec" }}
+                  className="font-medium cursor-target hover:underline hover:text-[#c4a3ec] transition-colors duration-200"
               >
                 @Livewell
               </a>

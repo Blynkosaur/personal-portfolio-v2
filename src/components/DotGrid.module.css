@@ -1,0 +1,26 @@
+.root {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	pointer-events: none;
+	z-index: 0;
+	opacity: 0.2;
+}
+
+.wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.canvas {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+
