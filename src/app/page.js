@@ -21,7 +21,6 @@ import { AlignCenterVertical } from "lucide-react";
 export function WaterlooIcon() {
   return (
     <div sytle={{ height: "10px", width: "10px" }}>
-      
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
@@ -80,8 +79,6 @@ export default function Home() {
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
-    
-
     if (checked) {
       // window.speechSynthesis.speak(utterance);
       setTimeout(() => {
@@ -98,48 +95,49 @@ export default function Home() {
   };
 
   return (
-    <div 
-      className={`${styles.page} flex flex-col justify-start items-start text-white p-10 scrollbar-hide`}
-        style={{ 
-          minHeight: '100vh',
-          backgroundColor: "#1e1e2e",
-          color: "#E8F4F8",
-          fontFamily: "'Roboto Mono', monospace",
-          paddingBottom: "40px",
-          zIndex: 2,
-        }}
+    <div
+      className={`${styles.page} relative flex flex-col justify-center items-center text-white p-10 scrollbar-hide`}
+      style={{
+        minHeight: "100vh",
+        backgroundColor: "#1e1e2e",
+        color: "#E8F4F8",
+        fontFamily: "'Roboto Mono', monospace",
+        paddingBottom: "40px",
+        zIndex: 2,
+      }}
     >
       <div className="hidden md:block">
-        <TargetCursor 
-          spinDuration={2}
-          hideDefaultCursor={true}
-        />
+        <TargetCursor spinDuration={2} hideDefaultCursor={true} />
       </div>
-      <div style={{
-  position: 'fixed',
-  top: 0,
-  left: 0,
-  width: '100%',
-  height: '100vh',
-  zIndex: 1,
-  pointerEvents: 'none',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center'
-}} />
-      <Button
+<Button
         asChild
         variant="outline"
-        className="cursor-target absolute top-6 left-6 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
-        style={{ border: '0.5px solid #9ca3af' }}
+        className="cursor-target absolute top-6 left-8 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+        style={{ border: "0.5px solid #9ca3af" }}
       >
         <Link href="/">
           <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
           Home
         </Link>
       </Button>
-      {/* <div style={{ height: "20px" }} /> */}
-<div className="w-full max-w-xl mt-2 mx-1">
+
+
+      <div
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100vh",
+          zIndex: 1,
+          pointerEvents: "none",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      />
+            {/* <div style={{ height: "20px" }} /> */}
+      <div className="w-full max-w-xl mt-2 mx-1">
         <h1
           className="text-3xl font-bold mt-12 mb-10 text-left"
           style={{ fontWeight: "250" }}
@@ -152,11 +150,14 @@ export default function Home() {
             showCursor={false}
             textColors={["#ffffff"]}
             loop={false}
-          />{' '}
-         
-          
+          />{" "}
           <TextType
-            text={["Bryan.", "a builder.", "a problem solver.", "a UWaterloo student."]}
+            text={[
+              "Bryan.",
+              "a builder.",
+              "a problem solver.",
+              "a UWaterloo student.",
+            ]}
             typingSpeed={75}
             pauseDuration={3500}
             initialDelay={2000}
@@ -165,35 +166,62 @@ export default function Home() {
             textColors={["#c4a3ec"]}
             loop={true}
           />
-          
         </h1>
 
-        <div className="text-white-600 text-lg mb-8 leading-9" style={{ fontWeight: "300", alignContent: "left", textAlign: "left", width: "100%" }}>
+        <div
+          className="text-white-600 text-lg mb-8 leading-9"
+          style={{
+            fontWeight: "300",
+            alignContent: "left",
+            textAlign: "left",
+            width: "100%",
+          }}
+        >
           <ul className="space-y-2">
-            <li>• SWE @ <span className="font-medium">University of Waterloo</span></li>
+            <li>
+              • SWE @{" "}
+              <span className="font-medium">University of Waterloo</span>
+            </li>
             <li>• Fighting imposter syndrome by building things</li>
             <li>• Building an interpreted programming language in C</li>
-            <li>• Prev. swe intern <a href="https://joinlivewell.ca" target="_blank" rel="noopener noreferrer" className="font-medium hover:underline hover:font-bold transition-all duration-200 cursor-target" style={{ color: "#c4a3ec" }}>@Livewell</a></li>
+            <li>
+              • Prev. swe intern{" "}
+              <a
+                href="https://joinlivewell.ca"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium hover:underline hover:font-bold transition-all duration-200 cursor-target"
+                style={{ color: "#c4a3ec" }}
+              >
+                @Livewell
+              </a>
+            </li>
           </ul>
         </div>
       </div>
-      
+
       {/* Projects Button */}
       <div className="w-full max-w-xl mt-6 mb-16">
-        <Button className="cursor-target w-full bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-10 py-6 text-lg font-medium" asChild style={{ border: '0.5px solid #9ca3af' }}>
-          <Link href="/projects">
-            View My Projects
-          </Link>
+        <Button
+          className="cursor-target w-full bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-10 py-6 text-lg font-medium"
+          asChild
+          style={{ border: "0.5px solid #9ca3af" }}
+        >
+          <Link href="/projects">View My Projects</Link>
         </Button>
       </div>
-      
+
       <div
         className="w-full max-w-xl text-left"
         sytle={{ display: "flex", flexDirection: "row", gap: "5px" }}
       >
         <p className="text-left text-lg mb-10">
           ↳ You can contact me at <span className="mr-1"></span>
-          <Button className="cursor-target mt-3 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base" asChild style={{ border: '0.5px solid #9ca3af' }}>
+          <Button
+            className="cursor-target mt-3 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+            asChild
+            style={{ border: "0.5px solid #9ca3af" }}
+          >
             <a
               href="mailto:b86lin@uwaterloo.ca"
               target="_blank"
@@ -204,7 +232,7 @@ export default function Home() {
           </Button>
         </p>
       </div>
-      
+
       <div className="text-center mb-1 max-w-xl w-full mt-2">
         <p className="font-thin text-xl text-center mb-4 max-w-xl w-full">
           Here are my socials:
@@ -216,7 +244,11 @@ export default function Home() {
         <div className="flex-1 h-px bg-gray-600"></div>
       </div>
       <div className="flex gap-4 justify-start flex-col sm:flex-row sm:justify-between max-w-xl w-full">
-        <Button className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base" asChild style={{ border: '0.5px solid #9ca3af' }}>
+        <Button
+          className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+          asChild
+          style={{ border: "0.5px solid #9ca3af" }}
+        >
           <a
             // download= {true}
             href={`./Bryan_Lin_Resume.pdf`}
@@ -227,7 +259,11 @@ export default function Home() {
             Resume
           </a>
         </Button>
-        <Button className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base" asChild style={{ border: '0.5px solid #9ca3af' }}>
+        <Button
+          className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+          asChild
+          style={{ border: "0.5px solid #9ca3af" }}
+        >
           <Link
             href="https://github.com/blynkosaur"
             target="_blank"
@@ -237,7 +273,11 @@ export default function Home() {
             GitHub
           </Link>
         </Button>
-        <Button className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base" asChild style={{ border: '0.5px solid #9ca3af' }}>
+        <Button
+          className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+          asChild
+          style={{ border: "0.5px solid #9ca3af" }}
+        >
           <Link
             href="https://www.linkedin.com/in/bryan-lin-176785300/"
             target="_blank"
@@ -247,7 +287,11 @@ export default function Home() {
             LinkedIn
           </Link>
         </Button>
-        <Button className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base" asChild style={{ border: '0.5px solid #9ca3af' }}>
+        <Button
+          className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+          asChild
+          style={{ border: "0.5px solid #9ca3af" }}
+        >
           <Link
             href="https://www.instagram.com/bry4n.lin/"
             target="_blank"
@@ -258,7 +302,7 @@ export default function Home() {
           </Link>
         </Button>
       </div>
-      
+
       {/* Bottom spacing for mobile scrolling */}
       <div className="h-20"></div>
     </div>
