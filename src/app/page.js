@@ -216,10 +216,10 @@ export default function Home() {
         className="w-full max-w-xl text-left"
         sytle={{ display: "flex", flexDirection: "row", gap: "5px" }}
       >
-        <p className="text-left text-lg mb-10 flex items-center flex-wrap gap-3">
+        <p className="text-left text-lg mb-10">
           ↳ You can contact me at <span className="mr-1"></span>
           <Button
-            className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+            className="cursor-target mt-3 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
             asChild
             style={{ border: "0.5px solid #9ca3af" }}
           >
