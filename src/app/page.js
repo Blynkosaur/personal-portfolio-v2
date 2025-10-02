@@ -97,7 +97,7 @@ export default function Home() {
 
   return (
     <div
-      className={`${styles.page} relative flex flex-col justify-center items-center text-white p-10 scrollbar-hide`}
+      className={`${styles.page} relative flex flex-col justify-center items-center text-white p-10 scrollbar-hide overflow-x-hidden`}
       style={{
         minHeight: "100vh",
         backgroundColor: "#1e1e2e",

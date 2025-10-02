@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import styles from "../Page.module.css";
 import TargetCursor from "@/components/TargetCursor";
+import TextType from "@/components/TextType";
 import DotGrid from "@/components/DotGrid";
 import {
   FaHome,
@@ -26,7 +27,7 @@ export function WaterlooImage() {
 export default function Projects() {
   return (
     <div
-      className={`${styles.page} relative flex flex-col justify-start items-center text-white p-10 scrollbar-hide`}
+      className={`${styles.page} relative flex flex-col justify-start items-center text-white p-10 scrollbar-hide overflow-x-hidden`}
       style={{
         minHeight: "100vh",
         backgroundColor: "#1e1e2e",
@@ -43,7 +44,7 @@ export default function Projects() {
 
       {/* Home Button */}
             {/* Header */}
-      <div className="w-full max-w-4xl mt-12 mx-auto text-center">
+      <div className="w-full max-w-4xl mt-12 mx-auto text-left">
            <Button
         asChild
         variant="outline"
@@ -58,14 +59,24 @@ export default function Projects() {
 
 
         <h1
-          className="text-4xl font-bold mb-6 text-center"
+          className="text-4xl font-bold mb-6 text-left"
           style={{ fontWeight: "300", color: "#c4a3ec" }}
         >
           My Projects
         </h1>
 
-        <p className="text-gray-300 text-lg mb-12 leading-7 text-center">
-          Here is what I've been spending my time on.
+        <p className="text-gray-300 text-lg mb-12 leading-7 text-left">
+          <TextType
+          
+            text={["Here is what I've been spending my time on."]}
+            typingSpeed={50}
+            pauseDuration={2000}
+            initialDelay={500}
+            showCursor={true}
+            cursorCharacter="|"
+            textColors={["#ffffff"]}
+            loop={false}
+          />
         </p>
       </div>
 
