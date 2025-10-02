@@ -182,7 +182,7 @@ export default function Home() {
           <ul className="space-y-2">
             <li>
               • SWE {" "}
-              <span className="font-medium cursor-target hover:underline hover:text-[#c4a3ec] transition-colors duration-200">@ University of Waterloo</span>
+              <span className="font-medium cursor-target hover:underline hover:text-[#c4a3ec] transition-colors duration-200">@University of Waterloo</span>
             </li>
             <li>• Fighting imposter syndrome by building things</li>
             <li>• Building an interpreted programming language in C</li>

@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import styles from "../Page.module.css";
 import TargetCursor from "@/components/TargetCursor";
-import DotGrid from "@/components/DotGrid";
 import {
   FaHome,
   FaGithub,
@@ -36,7 +35,6 @@ export default function Projects() {
         zIndex: 2,
       }}
     >
-      <DotGrid dotSize={5} gap={28} baseColor="#c4a3ec" activeColor="#ffffff" style={{ opacity: 0.18 }} />
       <div className="hidden md:block">
         <TargetCursor spinDuration={2} hideDefaultCursor={true} />
       </div>
@@ -58,13 +56,13 @@ export default function Projects() {
 
 
         <h1
-          className="text-4xl font-bold mb-6 text-left"
+          className="text-4xl font-bold mb-6 text-center"
           style={{ fontWeight: "300", color: "#c4a3ec" }}
         >
           My Projects
         </h1>
 
-        <p className="text-gray-300 text-lg mb-12 leading-7 text-left">
+        <p className="text-gray-300 text-lg mb-12 leading-7 text-center">
           Here is what I've been spending my time on.
         </p>
       </div>
