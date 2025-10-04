@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import styles from "./Page.module.css";
-import DotGrid from '@/components/DotGrid';
+import DotGrid from "@/components/DotGrid";
 import TextType from "@/components/TextType";
 import {
   FaGithub,
@@ -107,11 +107,17 @@ export default function Home() {
         zIndex: 2,
       }}
     >
-      <DotGrid dotSize={5} gap={28} baseColor="#c4a3ec" activeColor="#ffffff" style={{ opacity: 0.18 }} />
+      <DotGrid
+        dotSize={5}
+        gap={28}
+        baseColor="#c4a3ec"
+        activeColor="#ffffff"
+        style={{ opacity: 0.18 }}
+      />
       <div className="hidden md:block">
         <TargetCursor spinDuration={2} hideDefaultCursor={true} />
       </div>
-<Button
+      <Button
         asChild
         variant="outline"
         className="cursor-target absolute top-6 left-8 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
@@ -122,7 +128,6 @@ export default function Home() {
           Home
         </Link>
       </Button>
-
 
       <div
         style={{
@@ -138,7 +143,7 @@ export default function Home() {
           alignItems: "center",
         }}
       />
-            {/* <div style={{ height: "20px" }} /> */}
+      {/* <div style={{ height: "20px" }} /> */}
       <div className="w-full max-w-xl mt-2 mx-1">
         <h1
           className="text-3xl font-bold mt-12 mb-10 text-left"
@@ -181,8 +186,10 @@ export default function Home() {
         >
           <ul className="space-y-2">
             <li>
-              • SWE {" "}
-              <span className="font-medium cursor-target hover:underline hover:text-[#c4a3ec] transition-colors duration-200">@University of Waterloo</span>
+              • SWE{" "}
+              <span className="font-medium cursor-target hover:underline hover:text-[#c4a3ec] transition-colors duration-200">
+                @University of Waterloo
+              </span>
             </li>
             <li>• Fighting imposter syndrome by building things</li>
             <li>• Building an interpreted programming language in C</li>
@@ -192,7 +199,7 @@ export default function Home() {
                 href="https://joinlivewell.ca"
                 target="_blank"
                 rel="noopener noreferrer"
-                  className="font-medium cursor-target hover:underline hover:text-[#c4a3ec] transition-colors duration-200"
+                className="font-medium cursor-target hover:underline hover:text-[#c4a3ec] transition-colors duration-200"
               >
                 @Livewell
               </a>
@@ -212,26 +219,46 @@ export default function Home() {
         </Button>
       </div>
 
-      <div
-        className="w-full max-w-xl text-left"
-        sytle={{ display: "flex", flexDirection: "row", gap: "5px" }}
-      >
-        <p className="text-left text-lg mb-10">
-          ↳ You can contact me at <span className="mr-1"></span>
-          <Button
-            className="cursor-target mt-3 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
-            asChild
-            style={{ border: "0.5px solid #9ca3af" }}
+       <div
+         className=" text-lg mb-10 w-full max-w-xl text-left"
+         style={{ display: "flex", flexDirection: "row", gap: "10px", height: "100%", alignItems: "center" }}
+       >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              verticalAlign: "middle",
+              justifyContent: "center",
+              height: "100%",
+            }}
           >
-            <a
-              href="mailto:b86lin@uwaterloo.ca"
-              target="_blank"
-              rel="noopener noreferrer"
+            ↳ You can contact me at 
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100%"
+            }}
+          >
+            <Button
+              className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+              asChild
+              style={{ border: "0.5px solid #9ca3af" }}
             >
-              b86lin@uwaterloo.ca <WaterlooImage style={{ color: "#c4a3ec" }} />
-            </a>
-          </Button>
-        </p>
+              <a
+                href="mailto:b86lin@uwaterloo.ca"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                b86lin@uwaterloo.ca{" "}
+                <WaterlooImage style={{ color: "#c4a3ec" }} />
+              </a>
+            </Button>
+          </div>
       </div>
 
       <div className="text-center mb-1 max-w-xl w-full mt-2">
