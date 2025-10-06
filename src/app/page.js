@@ -220,30 +220,12 @@ export default function Home() {
       </div>
 
        <div
-         className=" text-lg mb-10 w-full max-w-xl text-left"
-         style={{ display: "flex", flexDirection: "row", gap: "10px", height: "100%", alignItems: "center" }}
+         className="text-lg mb-10 w-full max-w-xl text-left flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center"
        >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              verticalAlign: "middle",
-              justifyContent: "center",
-              height: "100%",
-            }}
-          >
+          <div className="flex flex-col items-center justify-center">
             ↳ You can contact me at 
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "100%"
-            }}
-          >
+          <div className="flex flex-col justify-center items-center">
             <Button
               className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
               asChild
