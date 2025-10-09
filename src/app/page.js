@@ -102,7 +102,7 @@ export default function Home() {
         minHeight: "100vh",
         backgroundColor: "#1e1e2e",
         color: "#E8F4F8",
-        fontFamily: "'Roboto Mono', monospace",
+        fontFamily: "var(--font-comfortaa), Arial, Helvetica, sans-serif",
         paddingBottom: "40px",
         zIndex: 2,
       }}

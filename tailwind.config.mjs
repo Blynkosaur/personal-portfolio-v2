@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			comfortaa: ['var(--font-comfortaa)', 'Arial', 'Helvetica', 'sans-serif'],
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
