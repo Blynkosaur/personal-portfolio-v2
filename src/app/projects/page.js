@@ -32,7 +32,7 @@ export default function Projects() {
         minHeight: "100vh",
         backgroundColor: "#1e1e2e",
         color: "#E8F4F8",
-        fontFamily: "var(--font-comfortaa), Arial, Helvetica, sans-serif",
+        fontFamily: "var(--font-space-mono), 'Courier New', monospace",
         paddingBottom: "80px",
         zIndex: 2,
       }}
@@ -77,7 +77,7 @@ export default function Projects() {
             loop={false}
             style={{ 
               fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-              fontWeight: "700",
+              fontWeight: "400",
               fontStyle: "italic"
             }}
           />

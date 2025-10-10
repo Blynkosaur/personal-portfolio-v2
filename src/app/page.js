@@ -102,7 +102,7 @@ export default function Home() {
         minHeight: "100vh",
         backgroundColor: "#1e1e2e",
         color: "#E8F4F8",
-        fontFamily: "var(--font-jetbrains-mono), 'Courier New', monospace",
+        fontFamily: "var(--font-space-mono), 'Courier New', monospace",
         paddingBottom: "40px",
         zIndex: 2,
       }}
@@ -159,7 +159,7 @@ export default function Home() {
             loop={false}
             style={{ 
               fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-              fontWeight: "700",
+              fontWeight: "400",
               fontStyle: "italic"
             }}
           />{" "}
@@ -179,7 +179,7 @@ export default function Home() {
             loop={true}
             style={{ 
               fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-              fontWeight: "700",
+              fontWeight: "400",
               fontStyle: "italic"
             }}
           />
