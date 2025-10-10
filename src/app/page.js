@@ -102,7 +102,7 @@ export default function Home() {
         minHeight: "100vh",
         backgroundColor: "#1e1e2e",
         color: "#E8F4F8",
-        fontFamily: "var(--font-comfortaa), Arial, Helvetica, sans-serif",
+        fontFamily: "var(--font-jetbrains-mono), 'Courier New', monospace",
         paddingBottom: "40px",
         zIndex: 2,
       }}
@@ -150,13 +150,18 @@ export default function Home() {
           style={{ fontWeight: "250" }}
         >
           <TextType
-            text={["👋Hi! I'm"]}
+            text={["👋Hi! I'm "]}
             typingSpeed={100}
             pauseDuration={2000}
             initialDelay={1000}
             showCursor={false}
             textColors={["#ffffff"]}
             loop={false}
+            style={{ 
+              fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+              fontWeight: "700",
+              fontStyle: "italic"
+            }}
           />{" "}
           <TextType
             text={[
@@ -172,6 +177,11 @@ export default function Home() {
             cursorCharacter="|"
             textColors={["#c4a3ec"]}
             loop={true}
+            style={{ 
+              fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+              fontWeight: "700",
+              fontStyle: "italic"
+            }}
           />
         </h1>
 

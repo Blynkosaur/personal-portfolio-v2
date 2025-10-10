@@ -67,7 +67,6 @@ export default function Projects() {
 
         <p className="text-gray-300 text-lg mb-12 leading-7 text-left">
           <TextType
-          
             text={["Here is what I've been spending my time on."]}
             typingSpeed={50}
             pauseDuration={2000}
@@ -76,6 +75,11 @@ export default function Projects() {
             cursorCharacter="|"
             textColors={["#ffffff"]}
             loop={false}
+            style={{ 
+              fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+              fontWeight: "700",
+              fontStyle: "italic"
+            }}
           />
         </p>
       </div>
