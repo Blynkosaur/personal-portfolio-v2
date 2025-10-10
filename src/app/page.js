@@ -108,7 +108,7 @@ export default function Home() {
       }}
     >
       <DotGrid
-        dotSize={5}
+        dotSize={8}
         gap={28}
         baseColor="#c4a3ec"
         activeColor="#ffffff"
@@ -150,7 +150,7 @@ export default function Home() {
           style={{ fontWeight: "250" }}
         >
           <TextType
-            text={["👋Hi! I'm "]}
+            text={["👋Hi! I'm"]}
             typingSpeed={100}
             pauseDuration={2000}
             initialDelay={1000}

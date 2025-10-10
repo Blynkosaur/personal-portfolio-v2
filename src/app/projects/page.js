@@ -33,6 +33,7 @@ export default function Projects() {
         backgroundColor: "#1e1e2e",
         color: "#E8F4F8",
         fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+        fontWeight: "700",
         paddingBottom: "80px",
         zIndex: 2,
       }}
@@ -60,7 +61,11 @@ export default function Projects() {
 
         <h1
           className="text-4xl font-bold mb-6 text-left"
-          style={{ fontWeight: "300", color: "#c4a3ec" }}
+          style={{ 
+            fontWeight: "700", 
+            color: "#c4a3ec",
+            fontFamily: "var(--font-space-mono), 'Courier New', monospace"
+          }}
         >
           My Projects
         </h1>
@@ -77,7 +82,7 @@ export default function Projects() {
             loop={false}
             style={{ 
               fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-              fontWeight: "400",
+              fontWeight: "700",
               fontStyle: "italic"
             }}
           />
@@ -90,7 +95,11 @@ export default function Projects() {
         <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
           <h3
             className="text-xl font-semibold mb-3"
-            style={{ color: "#c4a3ec" }}
+            style={{ 
+              color: "#c4a3ec",
+              fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+              fontWeight: "700"
+            }}
           >
             BryteLinker 💻
           </h3>
@@ -133,7 +142,11 @@ export default function Projects() {
         <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
           <h3
             className="text-xl font-semibold mb-3"
-            style={{ color: "#c4a3ec" }}
+            style={{ 
+              color: "#c4a3ec",
+              fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+              fontWeight: "700"
+            }}
           >
             MyNodes 🕸️
           </h3>
@@ -183,7 +196,11 @@ export default function Projects() {
         <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
           <h3
             className="text-xl font-semibold mb-3"
-            style={{ color: "#c4a3ec" }}
+            style={{ 
+              color: "#c4a3ec",
+              fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+              fontWeight: "700"
+            }}
           >
             Tumor Classifier 🧠
           </h3>
@@ -228,7 +245,11 @@ export default function Projects() {
         <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
           <h3
             className="text-xl font-semibold mb-3"
-            style={{ color: "#c4a3ec" }}
+            style={{ 
+              color: "#c4a3ec",
+              fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+              fontWeight: "700"
+            }}
           >
             League of Studies 📖
           </h3>
@@ -285,7 +306,11 @@ export default function Projects() {
       <div className="w-full max-w-4xl mt-16 text-center">
         <h2
           className="text-2xl font-bold mb-6"
-          style={{ fontWeight: "300", color: "#c4a3ec" }}
+          style={{ 
+            fontWeight: "700", 
+            color: "#c4a3ec",
+            fontFamily: "var(--font-space-mono), 'Courier New', monospace"
+          }}
         >
           Let's Connect
         </h2>

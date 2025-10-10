@@ -11,6 +11,12 @@ body {
   scrollbar-width: none;  /* Firefox */
 }
 
+/* Ensure all text elements use Space Mono */
+* {
+  font-family: var(--font-space-mono), 'Courier New', monospace !important;
+  font-weight: 700 !important;
+}
+
 body::-webkit-scrollbar {
   width: 0 !important;
   height: 0 !important;
