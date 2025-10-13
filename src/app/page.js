@@ -94,7 +94,7 @@ export default function Home() {
       alert("🫣 Peakaboo!!! 😱 ");
     }
   };
-
+  const [hover, setHover] = useState();
   return (
     <div
       className={`${styles.page} relative flex flex-col justify-center items-center text-white p-10 scrollbar-hide overflow-x-hidden`}
@@ -195,16 +195,31 @@ export default function Home() {
           }}
         >
           <ul className="space-y-2">
-            <li>
-              • SWE{" "}
+            <li className="group flex items-start gap-4 pl-8 relative hover:translate-x-3 transition-transform duration-200">
+              <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              SWE{" "}
               <span className="font-medium cursor-target hover:underline hover:text-[#c4a3ec] transition-colors duration-200">
-                @University of Waterloo
+                <a
+                  href="https://uwaterloo.ca"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium cursor-target hover:underline hover:text-[#c4a3ec] transition-colors duration-200"
+                >
+                  @UWaterloo
+                </a>
               </span>
             </li>
-            <li>• Fighting imposter syndrome by building things</li>
-            <li>• Building an interpreted programming language in C</li>
-            <li>
-              • Prev. swe intern{" "}
+            <li className="group flex items-start gap-4 pl-8 relative hover:translate-x-3 transition-transform duration-200">
+              <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              Fighting imposter syndrome by building things
+            </li>
+            <li className="group flex items-start gap-4 pl-8 relative hover:translate-x-3 transition-transform duration-200">
+              <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              Building an interpreted programming language in C
+            </li>
+            <li className="group flex items-start gap-4 pl-8 relative hover:translate-x-3 transition-transform duration-200">
+              <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              Prev. swe intern{" "}
               <a
                 href="https://joinlivewell.ca"
                 target="_blank"
