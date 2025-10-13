@@ -150,7 +150,7 @@ export default function Home() {
         >
           <TextType
             text={["👋Hi! I'm"]}
-            typingSpeed={100}
+            typingSpeed={60}
             pauseDuration={2000}
             initialDelay={1000}
             showCursor={false}
@@ -170,8 +170,8 @@ export default function Home() {
               "a UWaterloo student.",
             ]}
             typingSpeed={75}
-            pauseDuration={3500}
-            initialDelay={2000}
+            pauseDuration={1500}
+            initialDelay={500}
             showCursor={true}
             cursorCharacter="|"
             textColors={["#c4a3ec"]}

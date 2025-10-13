@@ -51,7 +51,7 @@ export default function Projects() {
 
       {/* Home Button */}
       {/* Header */}
-      <div className="w-full max-w-4xl mt-12 mx-auto text-left">
+      <div className="w-full max-w-xl mt-12 mx-auto text-left">
         <Button
           asChild
           variant="outline"
@@ -95,7 +95,7 @@ export default function Projects() {
       </div>
 
       {/* Projects Grid */}
-      <div className="w-full max-w-4xl grid grid-cols-1  gap-6 mx-auto">
+      <div className="w-full max-w-xl grid grid-cols-1  gap-6 mx-auto">
         {/* Project 1 */}
         <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
           <h3
@@ -308,7 +308,7 @@ export default function Projects() {
       </div>
 
       {/* Contact Section */}
-      <div className="w-full max-w-4xl mt-16 text-center">
+      <div className="w-full max-w-xl mt-16 text-left">
         <h2
           className="text-2xl font-bold mb-6"
           style={{
@@ -317,7 +317,7 @@ export default function Projects() {
             fontFamily: "var(--font-space-mono), 'Courier New', monospace",
           }}
         >
-          Let's Connect
+          Let&apos;s Connect
         </h2>
         <p className="text-gray-300 mb-8">
           Interested in collaborating or have questions about my projects?
