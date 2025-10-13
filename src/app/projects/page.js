@@ -75,22 +75,32 @@ export default function Projects() {
           My Projects
         </h1>
 
-        <p className="text-gray-300 text-lg mb-12 leading-7 text-left">
-          <TextType
-            text={["Here is what I've been spending my time on."]}
-            typingSpeed={50}
-            pauseDuration={2000}
-            initialDelay={500}
-            showCursor={true}
-            cursorCharacter="|"
-            textColors={["#ffffff"]}
-            loop={false}
+        <p className="group   gap-4  relative hover:translate-x-3 hover:font-bold transition-transform duration-200text-gray-300 text-lg mb-2 pl-2 leading-7 text-left">
+          <span
+            className="group-hover:font-bold hover:translate-x-3 font-bold italic"
             style={{
               fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-              fontWeight: "700",
-              fontStyle: "italic",
+              marginBottom: "4px",
             }}
-          />
+          >
+            {" "}
+            <TextType
+              text={["Here is what I've been spending my time on."]}
+              typingSpeed={50}
+              pauseDuration={2000}
+              initialDelay={500}
+              showCursor={true}
+              cursorCharacter="|"
+              textColors={["#ffffff"]}
+              loop={false}
+              style={{
+                fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+                fontWeight: "700",
+                fontStyle: "italic",
+                marginBottom: "4px",
+              }}
+            />
+          </span>
         </p>
       </div>
 
