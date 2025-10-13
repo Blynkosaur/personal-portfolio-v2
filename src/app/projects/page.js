@@ -39,8 +39,8 @@ export default function Projects() {
       }}
     >
       <DotGrid
-        dotSize={8}
-        gap={28}
+        dotSize={4}
+        gap={20}
         baseColor="#c4a3ec"
         activeColor="#ffffff"
         style={{ opacity: 0.18 }}
