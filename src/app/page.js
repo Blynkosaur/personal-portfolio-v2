@@ -90,7 +90,7 @@ export default function Home() {
             text={["👋Hi! I'm"]}
             typingSpeed={60}
             pauseDuration={2000}
-            initialDelay={1000}
+            initialDelay={500}
             showCursor={false}
             textColors={["#ffffff"]}
             loop={false}
@@ -109,7 +109,7 @@ export default function Home() {
             ]}
             typingSpeed={75}
             pauseDuration={1500}
-            initialDelay={500}
+            initialDelay={1000}
             showCursor={true}
             cursorCharacter="|"
             textColors={["#c4a3ec"]}
