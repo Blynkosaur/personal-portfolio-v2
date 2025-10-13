@@ -1,4 +1,5 @@
 "use client";
+import { Highlighter } from "@/components/ui/highlighter";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import styles from "./Page.module.css";
@@ -32,7 +33,8 @@ export function WaterlooImage() {
 
 export default function Home() {
   const [checked, setChecked] = useState(false);
-
+  const [hover, setHover] = useState(false);
+  const [livewellHover, setLivewellHover] = useState(false);
   return (
     <div
       className={`${styles.page} relative flex flex-col justify-center items-center text-white p-10 scrollbar-hide overflow-x-hidden`}
@@ -132,17 +134,43 @@ export default function Home() {
           }}
         >
           <ul className="space-y-8">
-            <li className="group flex items-start gap-4 pl-8 relative hover:font-bold hover:translate-x-3 transition-transform duration-200">
+            <li
+              className="group flex items-start gap-4 pl-8 relative hover:font-bold hover:translate-x-3 transition-transform duration-200"
+              onMouseEnter={() => {
+                setHover(true);
+              }}
+              onMouseLeave={() => {
+                setHover(false);
+              }}
+            >
               <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               SWE{" "}
-              <span className="font-medium cursor-target hover:underline hover:text-[#c4a3ec] transition-colors duration-200">
+              <span
+                className="font-medium  hover:text-[#c4a3ec] transition-colors duration-200"
+                style={{
+                  textDecoration: hover ? "underline" : "none",
+                  fontWeight: hover ? "bold" : "normal",
+                }}
+              >
                 <a
                   href="https://uwaterloo.ca"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:font-bold cursor-target hover:underline hover:text-[#c4a3ec] transition-colors duration-200"
+                  className="hover:font-bold  hover:underline hover:text-[#c4a3ec] transition-colors duration-200"
+                  style={{
+                    fontWeight: hover ? "bold" : "normal",
+                    color: hover ? "#c4a3ec" : "inherit",
+                    textDecoration: hover ? "underline" : "none",
+                  }}
                 >
-                  @UWaterloo
+                  {hover && (
+                    <Highlighter action="underline" color="#ffffff" >
+                      <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                        @UWaterloo
+                      </span>
+                    </Highlighter>
+                  )}
+                  {!hover && "@UWaterloo"}
                 </a>
               </span>
             </li>
@@ -155,16 +183,31 @@ export default function Home() {
               Building an interpreted programming language in C
             </li>
 
-            <li className="group items-start pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200">
+            <li
+              onMouseEnter={() => {
+                setLivewellHover(true);
+              }}
+              onMouseLeave={() => {
+                setLivewellHover(false);
+              }}
+              className="group  items-start gap-4 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
+            >
               <div className="absolute  left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               Prev. swe intern{" "}
               <a
                 href="https://joinlivewell.ca"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-target hover:font-bold hover:underline hover:text-[#c4a3ec] transition-colors duration-200"
+                className=" hover:font-bold hover:underline hover:text-[#c4a3ec] transition-colors duration-200"
               >
-                @Livewell
+                {!livewellHover && "@Livewell"}
+                {livewellHover && (
+                  <Highlighter  action="underline" color="#ffffff">
+                    <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                      @Livewell
+                    </span>
+                  </Highlighter>
+                )}
               </a>
             </li>
           </ul>
