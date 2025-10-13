@@ -38,33 +38,38 @@ export default function Projects() {
         zIndex: 2,
       }}
     >
-      <DotGrid dotSize={8} gap={28} baseColor="#c4a3ec" activeColor="#ffffff" style={{ opacity: 0.18 }} />
+      <DotGrid
+        dotSize={8}
+        gap={28}
+        baseColor="#c4a3ec"
+        activeColor="#ffffff"
+        style={{ opacity: 0.18 }}
+      />
       <div className="hidden md:block">
         <TargetCursor spinDuration={2} hideDefaultCursor={true} />
       </div>
 
       {/* Home Button */}
-            {/* Header */}
+      {/* Header */}
       <div className="w-full max-w-4xl mt-12 mx-auto text-left">
-           <Button
-        asChild
-        variant="outline"
-             className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base max-w-fit"
-        style={{ border: "0.5px solid #9ca3af" }}
-      >
-        <Link href="/">
-          <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
-          Home
-        </Link>
-      </Button>
-
+        <Button
+          asChild
+          variant="outline"
+          className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base max-w-fit"
+          style={{ border: "0.5px solid #9ca3af" }}
+        >
+          <Link href="/">
+            <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
+            Home
+          </Link>
+        </Button>
 
         <h1
           className="text-4xl font-bold mb-6 text-left"
-          style={{ 
-            fontWeight: "700", 
+          style={{
+            fontWeight: "700",
             color: "#c4a3ec",
-            fontFamily: "var(--font-space-mono), 'Courier New', monospace"
+            fontFamily: "var(--font-space-mono), 'Courier New', monospace",
           }}
         >
           My Projects
@@ -80,25 +85,25 @@ export default function Projects() {
             cursorCharacter="|"
             textColors={["#ffffff"]}
             loop={false}
-            style={{ 
+            style={{
               fontFamily: "var(--font-space-mono), 'Courier New', monospace",
               fontWeight: "700",
-              fontStyle: "italic"
+              fontStyle: "italic",
             }}
           />
         </p>
       </div>
 
       {/* Projects Grid */}
-      <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
+      <div className="w-full max-w-4xl grid grid-cols-1  gap-6 mx-auto">
         {/* Project 1 */}
         <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
           <h3
             className="text-xl font-semibold mb-3"
-            style={{ 
+            style={{
               color: "#c4a3ec",
               fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-              fontWeight: "700"
+              fontWeight: "700",
             }}
           >
             BryteLinker 💻
@@ -142,10 +147,10 @@ export default function Projects() {
         <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
           <h3
             className="text-xl font-semibold mb-3"
-            style={{ 
+            style={{
               color: "#c4a3ec",
               fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-              fontWeight: "700"
+              fontWeight: "700",
             }}
           >
             MyNodes 🕸️
@@ -196,10 +201,10 @@ export default function Projects() {
         <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
           <h3
             className="text-xl font-semibold mb-3"
-            style={{ 
+            style={{
               color: "#c4a3ec",
               fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-              fontWeight: "700"
+              fontWeight: "700",
             }}
           >
             Tumor Classifier 🧠
@@ -245,10 +250,10 @@ export default function Projects() {
         <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
           <h3
             className="text-xl font-semibold mb-3"
-            style={{ 
+            style={{
               color: "#c4a3ec",
               fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-              fontWeight: "700"
+              fontWeight: "700",
             }}
           >
             League of Studies 📖
@@ -306,10 +311,10 @@ export default function Projects() {
       <div className="w-full max-w-4xl mt-16 text-center">
         <h2
           className="text-2xl font-bold mb-6"
-          style={{ 
-            fontWeight: "700", 
+          style={{
+            fontWeight: "700",
             color: "#c4a3ec",
-            fontFamily: "var(--font-space-mono), 'Courier New', monospace"
+            fontFamily: "var(--font-space-mono), 'Courier New', monospace",
           }}
         >
           Let's Connect

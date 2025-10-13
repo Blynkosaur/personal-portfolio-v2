@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 body {
-  font-family: var(--font-space-mono), 'Courier New', monospace;
+  font-family: var(--font-space-mono), "Courier New", monospace;
   background-color: #1e1e2e;
-  color: #E8F4F8;
+  color: #e8f4f8;
   overflow-x: hidden;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 /* Ensure all text elements use Space Mono */
 * {
-  font-family: var(--font-space-mono), 'Courier New', monospace !important;
-  font-weight: 700 !important;
+  font-family: var(--font-space-mono), "Courier New", monospace !important;
+  font-weight: 400;
 }
 
 body::-webkit-scrollbar {
@@ -32,8 +32,8 @@ body::-webkit-scrollbar-thumb {
 
 html {
   overflow-x: hidden;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 html::-webkit-scrollbar {
@@ -123,4 +123,3 @@ html::-webkit-scrollbar-thumb {
     cursor: none !important;
   }
 }
-

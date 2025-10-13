@@ -128,7 +128,6 @@ export default function Home() {
           Home
         </Link>
       </Button>
-
       <div
         style={{
           position: "fixed",
@@ -194,7 +193,7 @@ export default function Home() {
             width: "100%",
           }}
         >
-          <ul className="space-y-2">
+          <ul className="space-y-8">
             <li className="group flex items-start gap-4 pl-8 relative hover:translate-x-3 transition-transform duration-200">
               <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               SWE{" "}
@@ -209,16 +208,17 @@ export default function Home() {
                 </a>
               </span>
             </li>
-            <li className="group flex items-start gap-4 pl-8 relative hover:translate-x-3 transition-transform duration-200">
+            <li className="group  items-start gap-4 pl-8 relative hover:translate-x-3 transition-transform duration-200">
               <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               Fighting imposter syndrome by building things
             </li>
-            <li className="group flex items-start gap-4 pl-8 relative hover:translate-x-3 transition-transform duration-200">
+            <li className="group  items-start gap-4 pl-8 relative hover:translate-x-3 transition-transform duration-200">
               <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               Building an interpreted programming language in C
             </li>
-            <li className="group flex items-start gap-4 pl-8 relative hover:translate-x-3 transition-transform duration-200">
-              <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+
+            <li className="group items-start pl-8 relative hover:translate-x-3 transition-transform duration-200">
+              <div className="absolute  left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               Prev. swe intern{" "}
               <a
                 href="https://joinlivewell.ca"
@@ -240,10 +240,11 @@ export default function Home() {
           asChild
           style={{ border: "0.5px solid #9ca3af" }}
         >
-          <Link href="/projects">View My Projects</Link>
+          <Link href="/projects" className="!font-bold">
+            View My Projects
+          </Link>
         </Button>
       </div>
-
       <div className="text-lg mb-10 w-full max-w-xl text-left flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center">
         <div className="flex flex-col items-center justify-center">
           ↳ You can contact me at
@@ -264,7 +265,6 @@ export default function Home() {
           </Button>
         </div>
       </div>
-
       <div className="text-center mb-1 max-w-xl w-full mt-2">
         <p className="font-thin text-xl text-center mb-4 max-w-xl w-full">
           Here are my socials:
@@ -334,7 +334,6 @@ export default function Home() {
           </Link>
         </Button>
       </div>
-
       {/* Bottom spacing for mobile scrolling */}
       <div className="h-20"></div>
     </div>
