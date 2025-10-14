@@ -11,6 +11,7 @@ import {
   FaLinkedin,
   FaInstagram,
   FaPaperclip,
+  FaEnvelope,
 } from "react-icons/fa";
 
 export function WaterlooImage() {
@@ -107,7 +108,7 @@ export default function Projects() {
       {/* Projects Grid */}
       <div className="w-full max-w-xl grid grid-cols-1  gap-6 mx-auto">
         {/* Project 1 */}
-        <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
+        <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}>
           <h3
             className="text-xl font-semibold mb-3"
             style={{
@@ -154,7 +155,7 @@ export default function Projects() {
         </div>
 
         {/* Project 2 */}
-        <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
+        <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}>
           <h3
             className="text-xl font-semibold mb-3"
             style={{
@@ -208,7 +209,7 @@ export default function Projects() {
         </div>
 
         {/* Project 3 */}
-        <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
+        <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}>
           <h3
             className="text-xl font-semibold mb-3"
             style={{
@@ -257,7 +258,7 @@ export default function Projects() {
         </div>
 
         {/* Project 4 */}
-        <div className="cursor-target p-6 bg-slate-800/20 border border-slate-500/30 rounded-lg hover:bg-slate-700/30 hover:border-slate-400/50 transition-all duration-200 backdrop-blur-sm">
+        <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}>
           <h3
             className="text-xl font-semibold mb-3"
             style={{
@@ -330,7 +331,7 @@ export default function Projects() {
           Let&apos;s Connect
         </h2>
         <p className="text-gray-300 mb-8">
-          Interested in collaborating or have questions about my projects?
+          Interested in collaborating or have questions about any other projects?
         </p>
         <div className="flex gap-4 justify-between flex-wrap">
           <Button
@@ -339,12 +340,12 @@ export default function Projects() {
             style={{ border: "1px solid #6b7280" }}
           >
             <a
-              href="/Bryan_Lin_Resume.pdf"
+              href="mailto:b86lin@uwaterloo.ca"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaPaperclip className="mr-2" style={{ color: "#c4a3ec" }} />
-              Resume
+              <FaEnvelope className="mr-2" style={{ color: "#c4a3ec" }} />
+              Email
             </a>
           </Button>
           <Button
