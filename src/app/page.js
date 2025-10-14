@@ -35,6 +35,7 @@ export default function Home() {
   const [checked, setChecked] = useState(false);
   const [hover, setHover] = useState(false);
   const [livewellHover, setLivewellHover] = useState(false);
+  const [programmingHover, setProgrammingHover] = useState(false);
   return (
     <div
       className={`${styles.page} relative flex flex-col justify-center items-center text-white p-10 scrollbar-hide overflow-x-hidden`}
@@ -178,20 +179,42 @@ export default function Home() {
               <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               Fighting imposter syndrome by building things
             </li>
-            <li className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200">
+            <li className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
+            onMouseEnter={() => {
+                  setProgrammingHover(true);
+                }}
+                onMouseLeave={() => {
+                  setProgrammingHover(false);
+                }}>
               <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              Building an interpreted programming language in C
+              Building an{" "}
+              <span
+                className="font-medium hover:text-[#c4a3ec] transition-colors duration-200 cursor-pointer"
+                style={{
+                  textDecoration: programmingHover ? "underline" : "none",
+                  fontWeight: programmingHover ? "bold" : "normal",
+                }}
+                
+              >
+                {!programmingHover && "VM interpreter"}
+                {programmingHover && (
+                  <Highlighter action="underline" color="#ffffff">
+                    <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                    VM interpreter
+                    </span>
+                  </Highlighter>
+                )}
+              </span>{" "}
+              in C
             </li>
 
-            <li
-              onMouseEnter={() => {
-                setLivewellHover(true);
-              }}
-              onMouseLeave={() => {
-                setLivewellHover(false);
-              }}
-              className="group  items-start gap-4 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
-            >
+            <li className="group  items-start gap-4 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
+            onMouseEnter={() => {
+                  setLivewellHover(true);
+                }}
+                onMouseLeave={() => {
+                  setLivewellHover(false);
+                }}>
               <div className="absolute  left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               Prev. swe intern{" "}
               <a
