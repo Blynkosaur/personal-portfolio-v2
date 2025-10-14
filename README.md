@@ -4,7 +4,7 @@ A modern, responsive portfolio built with Next.js and Tailwind CSS.
 
 ## 🚀 Live Demo
 
-See the latest version here: [Portfolio] (bry4n.co)
+See the latest version here: [Portfolio](https://bry4n.co)
 
 ## 🧑‍💻 About
 
