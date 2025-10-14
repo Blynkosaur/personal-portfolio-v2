@@ -59,12 +59,12 @@ export default function Home() {
       <div className="hidden md:block">
         <TargetCursor spinDuration={2} hideDefaultCursor={true} />
       </div>
-      <Button
-        asChild
-        variant="outline"
-        className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base "
-        style={{ border: "0.5px solid #9ca3af" }}
-      >
+        <Button
+          asChild
+          variant="outline"
+          className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base "
+          style={{ border: "1px solid #6b7280" }}
+        >
         <Link href="/">
           <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
           Home
@@ -300,7 +300,7 @@ export default function Home() {
         <Button
           className="cursor-target w-full bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-10 py-6 text-lg font-medium"
           asChild
-          style={{ border: "0.5px solid #9ca3af" }}
+          style={{ border: "1px solid #6b7280" }}
         >
           <Link href="/projects" className="!font-bold">
             View My Projects
@@ -315,7 +315,7 @@ export default function Home() {
           <Button
             className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
             asChild
-            style={{ border: "0.5px solid #9ca3af" }}
+            style={{ border: "1px solid #6b7280" }}
           >
             <a
               href="mailto:b86lin@uwaterloo.ca"
@@ -341,7 +341,7 @@ export default function Home() {
         <Button
           className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
           asChild
-          style={{ border: "0.5px solid #9ca3af" }}
+          style={{ border: "1px solid #6b7280" }}
         >
           <a
             // download= {true}
@@ -356,7 +356,7 @@ export default function Home() {
         <Button
           className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
           asChild
-          style={{ border: "0.5px solid #9ca3af" }}
+          style={{ border: "1px solid #6b7280" }}
         >
           <Link
             href="https://github.com/blynkosaur"
@@ -370,7 +370,7 @@ export default function Home() {
         <Button
           className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
           asChild
-          style={{ border: "0.5px solid #9ca3af" }}
+          style={{ border: "1px solid #6b7280" }}
         >
           <Link
             href="https://www.linkedin.com/in/bryan-lin-176785300/"
@@ -384,7 +384,7 @@ export default function Home() {
         <Button
           className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
           asChild
-          style={{ border: "0.5px solid #9ca3af" }}
+          style={{ border: "1px solid #6b7280" }}
         >
           <Link
             href="https://www.instagram.com/bry4n.lin/"

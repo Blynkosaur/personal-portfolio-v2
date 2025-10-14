@@ -56,7 +56,7 @@ export default function Projects() {
           asChild
           variant="outline"
           className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base max-w-fit"
-          style={{ border: "0.5px solid #9ca3af" }}
+          style={{ border: "1px solid #6b7280" }}
         >
           <Link href="/">
             <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
@@ -336,7 +336,7 @@ export default function Projects() {
           <Button
             className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
             asChild
-            style={{ border: "0.5px solid #9ca3af" }}
+            style={{ border: "1px solid #6b7280" }}
           >
             <a
               href="/Bryan_Lin_Resume.pdf"
@@ -350,7 +350,7 @@ export default function Projects() {
           <Button
             className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
             asChild
-            style={{ border: "0.5px solid #9ca3af" }}
+            style={{ border: "1px solid #6b7280" }}
           >
             <Link
               href="https://github.com/blynkosaur"
@@ -364,7 +364,7 @@ export default function Projects() {
           <Button
             className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
             asChild
-            style={{ border: "0.5px solid #9ca3af" }}
+            style={{ border: "1px solid #6b7280" }}
           >
             <Link
               href="https://www.linkedin.com/in/bryan-lin-176785300/"
