@@ -90,15 +90,36 @@ export default function Home() {
           className="text-3xl font-bold mt-12 mb-10 text-left"
           style={{ fontWeight: "250" }}
         >
-          {/* Mobile version - simple text */}
-          <span className="md:hidden" style={{
-            fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-            fontWeight: "400",
-            fontStyle: "italic",
-            color: "#ffffff"
-          }}>
-            👋Hi! I'm{" "}
-            <span style={{ color: "#c4a3ec" }}>Bryan.</span>
+          {/* Mobile version - with typing animation */}
+          <span className="md:hidden">
+            <TextType
+              text={["👋Hi! I'm"]}
+              typingSpeed={60}
+              pauseDuration={2000}
+              initialDelay={0}
+              showCursor={false}
+              textColors={["#ffffff"]}
+              loop={false}
+              style={{
+                fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+                fontWeight: "400",
+                fontStyle: "italic",
+              }}
+            />{" "}
+            <TextType
+              text={["Bryan"]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              initialDelay={500}
+              showCursor={false}
+              textColors={["#c4a3ec"]}
+              loop={false}
+              style={{
+                fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+                fontWeight: "400",
+                fontStyle: "italic",
+              }}
+            />
           </span>
           
           {/* Desktop version - with typing animation */}
@@ -107,7 +128,7 @@ export default function Home() {
               text={["👋Hi! I'm"]}
               typingSpeed={60}
               pauseDuration={2000}
-              initialDelay={500}
+              initialDelay={0}
               showCursor={false}
               textColors={["#ffffff"]}
               loop={false}
@@ -126,7 +147,7 @@ export default function Home() {
               ]}
               typingSpeed={75}
               pauseDuration={1500}
-              initialDelay={1000}
+              initialDelay={500}
               showCursor={true}
               cursorCharacter="|"
               textColors={["#c4a3ec"]}
