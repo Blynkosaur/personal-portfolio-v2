@@ -55,7 +55,7 @@ export default function Projects() {
         <Button
           asChild
           variant="outline"
-          className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base max-w-fit"
+          className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 md:backdrop-blur-sm px-6 py-3 text-base max-w-fit"
           style={{ border: "0.5px solid #9ca3af" }}
         >
           <Link href="/">
