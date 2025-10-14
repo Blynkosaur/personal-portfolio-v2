@@ -65,7 +65,7 @@ export default function Projects() {
         </Button>
 
         <h1
-          className="text-4xl font-bold mb-6 text-left"
+          className="text-4xl font-bold mb-6 text-left cursor-pointer hover:translate-x-3 transition-transform duration-200"
           style={{
             fontWeight: "700",
             color: "#c4a3ec",
@@ -332,7 +332,7 @@ export default function Projects() {
         <p className="text-gray-300 mb-8">
           Interested in collaborating or have questions about my projects?
         </p>
-        <div className="flex gap-4 justify-center flex-wrap">
+        <div className="flex gap-4 justify-between flex-wrap">
           <Button
             className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
             asChild
