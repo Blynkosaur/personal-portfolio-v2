@@ -36,6 +36,7 @@ export default function Home() {
   const [hover, setHover] = useState(false);
   const [livewellHover, setLivewellHover] = useState(false);
   const [programmingHover, setProgrammingHover] = useState(false);
+  const [imposterHover, setImposterHover] = useState(false);
   return (
     <div
       className={`${styles.page} relative flex flex-col justify-center items-center text-white p-10 scrollbar-hide overflow-x-hidden`}
@@ -89,40 +90,54 @@ export default function Home() {
           className="text-3xl font-bold mt-12 mb-10 text-left"
           style={{ fontWeight: "250" }}
         >
-          <TextType
-            text={["👋Hi! I'm"]}
-            typingSpeed={60}
-            pauseDuration={2000}
-            initialDelay={500}
-            showCursor={false}
-            textColors={["#ffffff"]}
-            loop={false}
-            style={{
-              fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-              fontWeight: "400",
-              fontStyle: "italic",
-            }}
-          />{" "}
-          <TextType
-            text={[
-              "Bryan.",
-              "a builder.",
-              "a problem solver.",
-              "a UWaterloo student.",
-            ]}
-            typingSpeed={75}
-            pauseDuration={1500}
-            initialDelay={1000}
-            showCursor={true}
-            cursorCharacter="|"
-            textColors={["#c4a3ec"]}
-            loop={true}
-            style={{
-              fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-              fontWeight: "400",
-              fontStyle: "italic",
-            }}
-          />
+          {/* Mobile version - simple text */}
+          <span className="md:hidden" style={{
+            fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+            fontWeight: "400",
+            fontStyle: "italic",
+            color: "#ffffff"
+          }}>
+            👋Hi! I'm{" "}
+            <span style={{ color: "#c4a3ec" }}>Bryan.</span>
+          </span>
+          
+          {/* Desktop version - with typing animation */}
+          <span className="hidden md:block">
+            <TextType
+              text={["👋Hi! I'm"]}
+              typingSpeed={60}
+              pauseDuration={2000}
+              initialDelay={500}
+              showCursor={false}
+              textColors={["#ffffff"]}
+              loop={false}
+              style={{
+                fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+                fontWeight: "400",
+                fontStyle: "italic",
+              }}
+            />{" "}
+            <TextType
+              text={[
+                "Bryan.",
+                "a builder.",
+                "a problem solver.",
+                "a UWaterloo student.",
+              ]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              initialDelay={1000}
+              showCursor={true}
+              cursorCharacter="|"
+              textColors={["#c4a3ec"]}
+              loop={true}
+              style={{
+                fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+                fontWeight: "400",
+                fontStyle: "italic",
+              }}
+            />
+          </span>
         </h1>
 
         <div
@@ -175,9 +190,32 @@ export default function Home() {
                 </a>
               </span>
             </li>
-            <li className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200">
+            <li  onMouseEnter={() => {
+                  setImposterHover(true);
+                }}
+                onMouseLeave={() => {
+                  setImposterHover(false);
+                }}className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200">
               <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              Fighting imposter syndrome by building things
+              Fighting{" "}
+              <span
+                className="font-medium hover:text-[#c4a3ec] transition-colors duration-200 cursor-pointer"
+                style={{
+                  textDecoration: imposterHover ? "underline" : "none",
+                  fontWeight: imposterHover ? "bold" : "normal",
+                }}
+               
+              >
+                {!imposterHover && "imposter syndrome"}
+                {imposterHover && (
+                  <Highlighter action="underline" color="#ffffff">
+                    <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                      imposter syndrome
+                    </span>
+                  </Highlighter>
+                )}
+              </span>{" "}
+              by building things
             </li>
             <li className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
             onMouseEnter={() => {
