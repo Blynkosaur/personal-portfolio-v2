@@ -37,6 +37,13 @@ export default function Home() {
   const [livewellHover, setLivewellHover] = useState(false);
   const [programmingHover, setProgrammingHover] = useState(false);
   const [imposterHover, setImposterHover] = useState(false);
+  const [homeHover, setHomeHover] = useState(false);
+  const [projectsHover, setProjectsHover] = useState(false);
+  const [emailHover, setEmailHover] = useState(false);
+  const [resumeHover, setResumeHover] = useState(false);
+  const [githubHover, setGithubHover] = useState(false);
+  const [linkedinHover, setLinkedinHover] = useState(false);
+  const [instagramHover, setInstagramHover] = useState(false);
   return (
     <div
       className={`${styles.page} relative flex flex-col justify-center items-center text-white p-10 scrollbar-hide overflow-x-hidden`}
@@ -64,10 +71,20 @@ export default function Home() {
           variant="outline"
           className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base "
           style={{ border: "1px solid #6b7280" }}
+          onMouseEnter={() => setHomeHover(true)}
+          onMouseLeave={() => setHomeHover(false)}
         >
         <Link href="/">
           <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
-          Home
+          {homeHover ? (
+            <Highlighter action="underline" iterations={1} padding={0} animationDuration={50} color="#ffffff">
+              <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                Home
+              </span>
+            </Highlighter>
+          ) : (
+            "Home"
+          )}
         </Link>
       </Button>
       <div
@@ -301,9 +318,19 @@ export default function Home() {
           className="cursor-target w-full bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-10 py-6 text-lg font-medium"
           asChild
           style={{ border: "1px solid #6b7280" }}
+          onMouseEnter={() => setProjectsHover(true)}
+          onMouseLeave={() => setProjectsHover(false)}
         >
           <Link href="/projects" className="!font-bold">
-            View My Projects
+            {projectsHover ? (
+              <Highlighter action="underline" iterations={1} padding={0} animationDuration={50} color="#ffffff">
+                <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                  View My Projects
+                </span>
+              </Highlighter>
+            ) : (
+              "View My Projects"
+            )}
           </Link>
         </Button>
       </div>
@@ -316,13 +343,24 @@ export default function Home() {
             className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
             asChild
             style={{ border: "1px solid #6b7280" }}
+            onMouseEnter={() => setEmailHover(true)}
+            onMouseLeave={() => setEmailHover(false)}
           >
             <a
               href="mailto:b86lin@uwaterloo.ca"
               target="_blank"
               rel="noopener noreferrer"
             >
-              b86lin@uwaterloo.ca <WaterlooImage style={{ color: "#c4a3ec" }} />
+              {emailHover ? (
+                <Highlighter action="underline" iterations={1} padding={0} animationDuration={200} color="#ffffff">
+                  <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                    b86lin@uwaterloo.ca
+                  </span>
+                </Highlighter>
+              ) : (
+                "b86lin@uwaterloo.ca"
+              )}{" "}
+              <WaterlooImage style={{ color: "#c4a3ec" }} />
             </a>
           </Button>
         </div>
@@ -342,6 +380,8 @@ export default function Home() {
           className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
           asChild
           style={{ border: "1px solid #6b7280" }}
+          onMouseEnter={() => setResumeHover(true)}
+          onMouseLeave={() => setResumeHover(false)}
         >
           <a
             // download= {true}
@@ -350,13 +390,23 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <FaPaperclip style={{ color: "#c4a3ec" }} />
-            Resume
+            {resumeHover ? (
+              <Highlighter action="underline" color="#ffffff" animationDuration={50} padding={0} iterations={1}>
+                <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                  Resume
+                </span>
+              </Highlighter>
+            ) : (
+              "Resume"
+            )}
           </a>
         </Button>
         <Button
           className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
           asChild
           style={{ border: "1px solid #6b7280" }}
+          onMouseEnter={() => setGithubHover(true)}
+          onMouseLeave={() => setGithubHover(false)}
         >
           <Link
             href="https://github.com/blynkosaur"
@@ -364,13 +414,23 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <FaGithub style={{ color: "#c4a3ec" }} />
-            GitHub
+            {githubHover ? (
+              <Highlighter action="underline" color="#ffffff" animationDuration={50} padding={0} iterations={1}>
+                <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                  GitHub
+                </span>
+              </Highlighter>
+            ) : (
+              "GitHub"
+            )}
           </Link>
         </Button>
         <Button
           className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
           asChild
           style={{ border: "1px solid #6b7280" }}
+          onMouseEnter={() => setLinkedinHover(true)}
+          onMouseLeave={() => setLinkedinHover(false)}
         >
           <Link
             href="https://www.linkedin.com/in/bryan-lin-176785300/"
@@ -378,13 +438,23 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <FaLinkedin style={{ color: "#c4a3ec" }} />
-            LinkedIn
+            {linkedinHover ? (
+              <Highlighter action="underline" color="#ffffff" animationDuration={50} padding={0} iterations={1}>
+                <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                  LinkedIn
+                </span>
+              </Highlighter>
+            ) : (
+              "LinkedIn"
+            )}
           </Link>
         </Button>
         <Button
           className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
           asChild
           style={{ border: "1px solid #6b7280" }}
+          onMouseEnter={() => setInstagramHover(true)}
+          onMouseLeave={() => setInstagramHover(false)}
         >
           <Link
             href="https://www.instagram.com/bry4n.lin/"
@@ -392,7 +462,15 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <FaInstagram style={{ color: "#c4a3ec" }} />
-            Instagram
+            {instagramHover ? (
+              <Highlighter action="underline"  animationDuration={200} padding={0} iterations={1} color="#ffffff">
+                <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                  Instagram
+                </span>
+              </Highlighter>
+            ) : (
+              "Instagram"
+            )}
           </Link>
         </Button>
       </div>

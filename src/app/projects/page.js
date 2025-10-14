@@ -1,10 +1,12 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { Highlighter } from "@/components/ui/highlighter";
 import Link from "next/link";
 import styles from "../Page.module.css";
 import TargetCursor from "@/components/TargetCursor";
 import TextType from "@/components/TextType";
 import DotGrid from "@/components/DotGrid";
+import { useState } from "react";
 import {
   FaHome,
   FaGithub,
@@ -26,6 +28,11 @@ export function WaterlooImage() {
 }
 
 export default function Projects() {
+  const [homeHover, setHomeHover] = useState(false);
+  const [emailHover, setEmailHover] = useState(false);
+  const [githubHover, setGithubHover] = useState(false);
+  const [linkedinHover, setLinkedinHover] = useState(false);
+
   return (
     <div
       className={`${styles.page} relative flex flex-col justify-start items-center text-white p-10 scrollbar-hide overflow-x-hidden`}
@@ -58,15 +65,25 @@ export default function Projects() {
           variant="outline"
           className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base max-w-fit"
           style={{ border: "1px solid #6b7280" }}
+          onMouseEnter={() => setHomeHover(true)}
+          onMouseLeave={() => setHomeHover(false)}
         >
           <Link href="/">
             <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
-            Home
+            {homeHover ? (
+              <Highlighter action="underline" color="#ffffff" animationDuration={50} padding={0} iterations={1}>
+                <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                  Home
+                </span>
+              </Highlighter>
+            ) : (
+              "Home"
+            )}
           </Link>
         </Button>
 
         <h1
-          className="text-4xl font-bold mb-6 text-left cursor-pointer hover:translate-x-3 transition-transform duration-200"
+          className="text-4xl font-bold mb-6 text-left cursor-pointer  " 
           style={{
             fontWeight: "700",
             color: "#c4a3ec",
@@ -76,9 +93,9 @@ export default function Projects() {
           My Projects
         </h1>
 
-        <p className="group   gap-4  relative hover:translate-x-3 hover:font-bold transition-transform duration-200text-gray-300 text-lg mb-2 pl-2 leading-7 text-left">
+        <p className="group   gap-4  relative  hover:font-bold transition-transform duration-200 text-gray-300 text-lg mb-2 pl-2 leading-7 text-left">
           <span
-            className="group-hover:font-bold hover:translate-x-3 font-bold italic"
+            className="group-hover:font-bold  font-bold italic"
             style={{
               fontFamily: "var(--font-space-mono), 'Courier New', monospace",
               marginBottom: "4px",
@@ -108,7 +125,7 @@ export default function Projects() {
       {/* Projects Grid */}
       <div className="w-full max-w-xl grid grid-cols-1  gap-6 mx-auto">
         {/* Project 1 */}
-        <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}>
+        <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}>
           <h3
             className="text-xl font-semibold mb-3"
             style={{
@@ -155,7 +172,7 @@ export default function Projects() {
         </div>
 
         {/* Project 2 */}
-        <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}>
+        <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}>
           <h3
             className="text-xl font-semibold mb-3"
             style={{
@@ -209,7 +226,7 @@ export default function Projects() {
         </div>
 
         {/* Project 3 */}
-        <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}>
+        <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}>
           <h3
             className="text-xl font-semibold mb-3"
             style={{
@@ -258,7 +275,7 @@ export default function Projects() {
         </div>
 
         {/* Project 4 */}
-        <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}>
+        <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}>
           <h3
             className="text-xl font-semibold mb-3"
             style={{
@@ -338,6 +355,8 @@ export default function Projects() {
             className="cursor-target w-full [@media(min-width:580px)]:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
             asChild
             style={{ border: "1px solid #6b7280" }}
+            onMouseEnter={() => setEmailHover(true)}
+            onMouseLeave={() => setEmailHover(false)}
           >
             <a
               href="mailto:b86lin@uwaterloo.ca"
@@ -345,13 +364,23 @@ export default function Projects() {
               rel="noopener noreferrer"
             >
               <FaEnvelope className="mr-2" style={{ color: "#c4a3ec" }} />
-              Email
+              {emailHover ? (
+                <Highlighter action="underline" color="#ffffff" animationDuration={50} padding={0} iterations={1}>
+                  <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                    Email
+                  </span>
+                </Highlighter>
+              ) : (
+                "Email"
+              )}
             </a>
           </Button>
           <Button
             className="cursor-target w-full [@media(min-width:580px)]:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
             asChild
             style={{ border: "1px solid #6b7280" }}
+            onMouseEnter={() => setGithubHover(true)}
+            onMouseLeave={() => setGithubHover(false)}
           >
             <Link
               href="https://github.com/blynkosaur"
@@ -359,13 +388,23 @@ export default function Projects() {
               rel="noopener noreferrer"
             >
               <FaGithub className="mr-2" style={{ color: "#c4a3ec" }} />
-              GitHub
+              {githubHover ? (
+                <Highlighter action="underline" color="#ffffff" animationDuration={50} padding={0} iterations={1}>
+                  <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                    GitHub
+                  </span>
+                </Highlighter>
+              ) : (
+                "GitHub"
+              )}
             </Link>
           </Button>
           <Button
             className="cursor-target w-full [@media(min-width:580px)]:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
             asChild
             style={{ border: "1px solid #6b7280" }}
+            onMouseEnter={() => setLinkedinHover(true)}
+            onMouseLeave={() => setLinkedinHover(false)}
           >
             <Link
               href="https://www.linkedin.com/in/bryan-lin-176785300/"
@@ -373,7 +412,15 @@ export default function Projects() {
               rel="noopener noreferrer"
             >
               <FaLinkedin className="mr-2" style={{ color: "#c4a3ec" }} />
-              LinkedIn
+              {linkedinHover ? (
+                <Highlighter action="underline" color="#ffffff" animationDuration={50} padding={0} iterations={1}>
+                  <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                    LinkedIn
+                  </span>
+                </Highlighter>
+              ) : (
+                "LinkedIn"
+              )}
             </Link>
           </Button>
         </div>
