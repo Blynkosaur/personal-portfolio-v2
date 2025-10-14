@@ -333,9 +333,9 @@ export default function Projects() {
         <p className="text-gray-300 mb-8">
           Interested in collaborating or have questions about any other projects?
         </p>
-        <div className="flex gap-4 justify-between flex-wrap">
+        <div className="flex gap-4 justify-between flex-col [@media(min-width:580px)]:flex-row [@media(min-width:580px)]:justify-between">
           <Button
-            className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+            className="cursor-target w-full [@media(min-width:580px)]:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
             asChild
             style={{ border: "1px solid #6b7280" }}
           >
@@ -349,7 +349,7 @@ export default function Projects() {
             </a>
           </Button>
           <Button
-            className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+            className="cursor-target w-full [@media(min-width:580px)]:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
             asChild
             style={{ border: "1px solid #6b7280" }}
           >
@@ -363,7 +363,7 @@ export default function Projects() {
             </Link>
           </Button>
           <Button
-            className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+            className="cursor-target w-full [@media(min-width:580px)]:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
             asChild
             style={{ border: "1px solid #6b7280" }}
           >
