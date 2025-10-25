@@ -66,21 +66,25 @@ export default function Home() {
       <div className="hidden md:block">
         <TargetCursor spinDuration={2} hideDefaultCursor={true} />
       </div>
-        <Button
-          asChild
-          variant="outline"
-          className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base "
-          style={{ border: "1px solid #6b7280" }}
-          onMouseEnter={() => setHomeHover(true)}
-          onMouseLeave={() => setHomeHover(false)}
-        >
+      <Button
+        asChild
+        variant="outline"
+        className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base "
+        style={{ border: "1px solid #6b7280" }}
+        onMouseEnter={() => setHomeHover(true)}
+        onMouseLeave={() => setHomeHover(false)}
+      >
         <Link href="/">
           <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
           {homeHover ? (
-            <Highlighter action="underline" iterations={1} padding={0} animationDuration={50} color="#ffffff">
-              <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                Home
-              </span>
+            <Highlighter
+              action="underline"
+              iterations={1}
+              padding={0}
+              animationDuration={50}
+              color="#ffffff"
+            >
+              <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>Home</span>
             </Highlighter>
           ) : (
             "Home"
@@ -105,7 +109,7 @@ export default function Home() {
       <div className="w-full max-w-xl mt-2 mx-1">
         <h1
           className="text-3xl font-bold mt-12 mb-10 text-left"
-          style={{ fontWeight: "250" }}
+          style={{ fontWeight: "700" }}
         >
           {/* Mobile version - with typing animation */}
           <span className="md:hidden">
@@ -119,7 +123,7 @@ export default function Home() {
               loop={false}
               style={{
                 fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-                fontWeight: "400",
+                fontWeight: "700",
                 fontStyle: "italic",
               }}
             />{" "}
@@ -133,12 +137,12 @@ export default function Home() {
               loop={false}
               style={{
                 fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-                fontWeight: "400",
+                fontWeight: "700",
                 fontStyle: "italic",
               }}
             />
           </span>
-          
+
           {/* Desktop version - with typing animation */}
           <span className="hidden md:block">
             <TextType
@@ -151,7 +155,7 @@ export default function Home() {
               loop={false}
               style={{
                 fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-                fontWeight: "400",
+                fontWeight: "700",
                 fontStyle: "italic",
               }}
             />{" "}
@@ -171,7 +175,7 @@ export default function Home() {
               loop={true}
               style={{
                 fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-                fontWeight: "400",
+                fontWeight: "700",
                 fontStyle: "italic",
               }}
             />
@@ -217,7 +221,7 @@ export default function Home() {
                   }}
                 >
                   {hover && (
-                    <Highlighter action="underline" color="#ffffff" >
+                    <Highlighter action="underline" color="#ffffff">
                       <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
                         @UWaterloo
                       </span>
@@ -227,12 +231,15 @@ export default function Home() {
                 </a>
               </span>
             </li>
-            <li  onMouseEnter={() => {
-                  setImposterHover(true);
-                }}
-                onMouseLeave={() => {
-                  setImposterHover(false);
-                }}className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200">
+            <li
+              onMouseEnter={() => {
+                setImposterHover(true);
+              }}
+              onMouseLeave={() => {
+                setImposterHover(false);
+              }}
+              className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
+            >
               <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               Fighting{" "}
               <span
@@ -241,7 +248,6 @@ export default function Home() {
                   textDecoration: imposterHover ? "underline" : "none",
                   fontWeight: imposterHover ? "bold" : "normal",
                 }}
-               
               >
                 {!imposterHover && "imposter syndrome"}
                 {imposterHover && (
@@ -254,13 +260,15 @@ export default function Home() {
               </span>{" "}
               by building things
             </li>
-            <li className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
-            onMouseEnter={() => {
-                  setProgrammingHover(true);
-                }}
-                onMouseLeave={() => {
-                  setProgrammingHover(false);
-                }}>
+            <li
+              className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
+              onMouseEnter={() => {
+                setProgrammingHover(true);
+              }}
+              onMouseLeave={() => {
+                setProgrammingHover(false);
+              }}
+            >
               <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               Building an{" "}
               <span
@@ -269,13 +277,12 @@ export default function Home() {
                   textDecoration: programmingHover ? "underline" : "none",
                   fontWeight: programmingHover ? "bold" : "normal",
                 }}
-                
               >
                 {!programmingHover && "VM interpreter"}
                 {programmingHover && (
                   <Highlighter action="underline" color="#ffffff">
                     <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                    VM interpreter
+                      VM interpreter
                     </span>
                   </Highlighter>
                 )}
@@ -283,13 +290,15 @@ export default function Home() {
               in C
             </li>
 
-            <li className="group  items-start gap-4 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
-            onMouseEnter={() => {
-                  setLivewellHover(true);
-                }}
-                onMouseLeave={() => {
-                  setLivewellHover(false);
-                }}>
+            <li
+              className="group  items-start gap-4 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
+              onMouseEnter={() => {
+                setLivewellHover(true);
+              }}
+              onMouseLeave={() => {
+                setLivewellHover(false);
+              }}
+            >
               <div className="absolute  left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               Prev. swe intern{" "}
               <a
@@ -300,7 +309,7 @@ export default function Home() {
               >
                 {!livewellHover && "@Livewell"}
                 {livewellHover && (
-                  <Highlighter  action="underline" color="#ffffff">
+                  <Highlighter action="underline" color="#ffffff">
                     <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
                       @Livewell
                     </span>
@@ -323,7 +332,13 @@ export default function Home() {
         >
           <Link href="/projects" className="!font-bold">
             {projectsHover ? (
-              <Highlighter action="underline" iterations={1} padding={0} animationDuration={50} color="#ffffff">
+              <Highlighter
+                action="underline"
+                iterations={1}
+                padding={0}
+                animationDuration={50}
+                color="#ffffff"
+              >
                 <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
                   View My Projects
                 </span>
@@ -352,7 +367,13 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               {emailHover ? (
-                <Highlighter action="underline" iterations={1} padding={0} animationDuration={200} color="#ffffff">
+                <Highlighter
+                  action="underline"
+                  iterations={1}
+                  padding={0}
+                  animationDuration={200}
+                  color="#ffffff"
+                >
                   <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
                     b86lin@uwaterloo.ca
                   </span>
@@ -391,7 +412,13 @@ export default function Home() {
           >
             <FaPaperclip style={{ color: "#c4a3ec" }} />
             {resumeHover ? (
-              <Highlighter action="underline" color="#ffffff" animationDuration={50} padding={0} iterations={1}>
+              <Highlighter
+                action="underline"
+                color="#ffffff"
+                animationDuration={50}
+                padding={0}
+                iterations={1}
+              >
                 <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
                   Resume
                 </span>
@@ -415,7 +442,13 @@ export default function Home() {
           >
             <FaGithub style={{ color: "#c4a3ec" }} />
             {githubHover ? (
-              <Highlighter action="underline" color="#ffffff" animationDuration={50} padding={0} iterations={1}>
+              <Highlighter
+                action="underline"
+                color="#ffffff"
+                animationDuration={50}
+                padding={0}
+                iterations={1}
+              >
                 <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
                   GitHub
                 </span>
@@ -439,7 +472,13 @@ export default function Home() {
           >
             <FaLinkedin style={{ color: "#c4a3ec" }} />
             {linkedinHover ? (
-              <Highlighter action="underline" color="#ffffff" animationDuration={50} padding={0} iterations={1}>
+              <Highlighter
+                action="underline"
+                color="#ffffff"
+                animationDuration={50}
+                padding={0}
+                iterations={1}
+              >
                 <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
                   LinkedIn
                 </span>
@@ -463,7 +502,13 @@ export default function Home() {
           >
             <FaInstagram style={{ color: "#c4a3ec" }} />
             {instagramHover ? (
-              <Highlighter action="underline"  animationDuration={200} padding={0} iterations={1} color="#ffffff">
+              <Highlighter
+                action="underline"
+                animationDuration={200}
+                padding={0}
+                iterations={1}
+                color="#ffffff"
+              >
                 <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
                   Instagram
                 </span>

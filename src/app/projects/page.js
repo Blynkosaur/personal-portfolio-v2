@@ -113,7 +113,7 @@ export default function Projects() {
               loop={false}
               style={{
                 fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-                fontWeight: "700",
+                fontWeight: "400",
                 fontStyle: "italic",
                 marginBottom: "4px",
               }}
