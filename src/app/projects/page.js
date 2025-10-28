@@ -71,7 +71,13 @@ export default function Projects() {
           <Link href="/">
             <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
             {homeHover ? (
-              <Highlighter action="underline" color="#ffffff" animationDuration={50} padding={0} iterations={1}>
+              <Highlighter
+                action="underline"
+                color="#ffffff"
+                animationDuration={50}
+                padding={0}
+                iterations={1}
+              >
                 <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
                   Home
                 </span>
@@ -83,7 +89,7 @@ export default function Projects() {
         </Button>
 
         <h1
-          className="text-4xl font-bold mb-6 text-left cursor-pointer  " 
+          className="text-4xl font-bold mb-6 text-left cursor-pointer  "
           style={{
             fontWeight: "700",
             color: "#c4a3ec",
@@ -125,7 +131,10 @@ export default function Projects() {
       {/* Projects Grid */}
       <div className="w-full max-w-xl grid grid-cols-1  gap-6 mx-auto">
         {/* Project 1 */}
-        <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}>
+        <div
+          className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm"
+          style={{ border: "1px solid #6b7280" }}
+        >
           <h3
             className="text-xl font-semibold mb-3"
             style={{
@@ -172,61 +181,64 @@ export default function Projects() {
         </div>
 
         {/* Project 2 */}
-        <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}>
-          <h3
-            className="text-xl font-semibold mb-3"
-            style={{
-              color: "#c4a3ec",
-              fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-              fontWeight: "700",
-            }}
-          >
-            MyNodes 🕸️
-          </h3>
-          <p className="text-gray-300 text-sm mb-4">
-            Working with 3 other students to create a full-stack knowledge
-            management system that improves knowledge retrieval through
-            automated organization. Featuring NLP pipelines for content
-            classification using TF-IDF vectorization, embeddings, and KMeans
-            clustering.
-            <br />
-            <br />
-            Upload your notes and create a graph of your knowledge!
-          </p>
-          <div className="flex gap-2 mb-4">
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-              React
-            </span>
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-              Django
-            </span>
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-              Cytoscape.js
-            </span>
-          </div>
-          <div className="flex gap-2">
-            <Button
-              className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200"
-              asChild
-            >
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="mr-1" style={{ color: "#c4a3ec" }} />
-                Code
-              </a>
-            </Button>
-            <Button
-              className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200"
-              asChild
-            >
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Docs
-              </a>
-            </Button>
-          </div>
-        </div>
+        {/* <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}> */}
+        {/*   <h3 */}
+        {/*     className="text-xl font-semibold mb-3" */}
+        {/*     style={{ */}
+        {/*       color: "#c4a3ec", */}
+        {/*       fontFamily: "var(--font-space-mono), 'Courier New', monospace", */}
+        {/*       fontWeight: "700", */}
+        {/*     }} */}
+        {/*   > */}
+        {/*     MyNodes 🕸️ */}
+        {/*   </h3> */}
+        {/*   <p className="text-gray-300 text-sm mb-4"> */}
+        {/*     Working with 3 other students to create a full-stack knowledge */}
+        {/*     management system that improves knowledge retrieval through */}
+        {/*     automated organization. Featuring NLP pipelines for content */}
+        {/*     classification using TF-IDF vectorization, embeddings, and KMeans */}
+        {/*     clustering. */}
+        {/*     <br /> */}
+        {/*     <br /> */}
+        {/*     Upload your notes and create a graph of your knowledge! */}
+        {/*   </p> */}
+        {/*   <div className="flex gap-2 mb-4"> */}
+        {/*     <span className="text-xs bg-slate-700/50 px-2 py-1 rounded"> */}
+        {/*       React */}
+        {/*     </span> */}
+        {/*     <span className="text-xs bg-slate-700/50 px-2 py-1 rounded"> */}
+        {/*       Django */}
+        {/*     </span> */}
+        {/*     <span className="text-xs bg-slate-700/50 px-2 py-1 rounded"> */}
+        {/*       Cytoscape.js */}
+        {/*     </span> */}
+        {/*   </div> */}
+        {/*   <div className="flex gap-2"> */}
+        {/*     <Button */}
+        {/*       className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200" */}
+        {/*       asChild */}
+        {/*     > */}
+        {/*       <a href="#" target="_blank" rel="noopener noreferrer"> */}
+        {/*         <FaGithub className="mr-1" style={{ color: "#c4a3ec" }} /> */}
+        {/*         Code */}
+        {/*       </a> */}
+        {/*     </Button> */}
+        {/*     <Button */}
+        {/*       className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200" */}
+        {/*       asChild */}
+        {/*     > */}
+        {/*       <a href="#" target="_blank" rel="noopener noreferrer"> */}
+        {/*         Docs */}
+        {/*       </a> */}
+        {/*     </Button> */}
+        {/*   </div> */}
+        {/* </div> */}
 
         {/* Project 3 */}
-        <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}>
+        <div
+          className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm"
+          style={{ border: "1px solid #6b7280" }}
+        >
           <h3
             className="text-xl font-semibold mb-3"
             style={{
@@ -275,7 +287,10 @@ export default function Projects() {
         </div>
 
         {/* Project 4 */}
-        <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}>
+        <div
+          className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm"
+          style={{ border: "1px solid #6b7280" }}
+        >
           <h3
             className="text-xl font-semibold mb-3"
             style={{
@@ -348,7 +363,8 @@ export default function Projects() {
           Let&apos;s Connect
         </h2>
         <p className="text-gray-300 mb-8">
-          Interested in collaborating or have questions about any other projects?
+          Interested in collaborating or have questions about any other
+          projects?
         </p>
         <div className="flex gap-4 justify-between flex-col [@media(min-width:580px)]:flex-row [@media(min-width:580px)]:justify-between">
           <Button
@@ -365,7 +381,13 @@ export default function Projects() {
             >
               <FaEnvelope className="mr-2" style={{ color: "#c4a3ec" }} />
               {emailHover ? (
-                <Highlighter action="underline" color="#ffffff" animationDuration={50} padding={0} iterations={1}>
+                <Highlighter
+                  action="underline"
+                  color="#ffffff"
+                  animationDuration={50}
+                  padding={0}
+                  iterations={1}
+                >
                   <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
                     Email
                   </span>
@@ -389,7 +411,13 @@ export default function Projects() {
             >
               <FaGithub className="mr-2" style={{ color: "#c4a3ec" }} />
               {githubHover ? (
-                <Highlighter action="underline" color="#ffffff" animationDuration={50} padding={0} iterations={1}>
+                <Highlighter
+                  action="underline"
+                  color="#ffffff"
+                  animationDuration={50}
+                  padding={0}
+                  iterations={1}
+                >
                   <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
                     GitHub
                   </span>
@@ -413,7 +441,13 @@ export default function Projects() {
             >
               <FaLinkedin className="mr-2" style={{ color: "#c4a3ec" }} />
               {linkedinHover ? (
-                <Highlighter action="underline" color="#ffffff" animationDuration={50} padding={0} iterations={1}>
+                <Highlighter
+                  action="underline"
+                  color="#ffffff"
+                  animationDuration={50}
+                  padding={0}
+                  iterations={1}
+                >
                   <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
                     LinkedIn
                   </span>
