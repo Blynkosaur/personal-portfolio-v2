@@ -64,7 +64,7 @@ export default function Home() {
         style={{ opacity: 0.18 }}
       />
       <div className="hidden md:block">
-        <TargetCursor spinDuration={2} hideDefaultCursor={true} />
+        <TargetCursor spinDuration={5} hideDefaultCursor={true} />
       </div>
       <Button
         asChild
