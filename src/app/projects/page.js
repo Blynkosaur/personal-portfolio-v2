@@ -47,11 +47,11 @@ export default function Projects() {
       }}
     >
       <DotGrid
-        dotSize={4}
-        gap={20}
-        baseColor="#c4a3ec"
+        dotSize={2}
+        gap={12}
+        baseColor="#6b4c93"
         activeColor="#ffffff"
-        style={{ opacity: 0.18 }}
+        style={{ opacity: 0.6 }}
       />
       <div className="hidden md:block">
         <TargetCursor spinDuration={5} hideDefaultCursor={true} />
