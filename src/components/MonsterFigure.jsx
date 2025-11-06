@@ -1,18 +1,26 @@
-export default function Monster() {
+import { motion } from "motion/dist/react";
 const figureOne = <pre>
+
    \.-./
  -(o o)-
   | - |
   | | |
   '-' '-'
   </pre>;
-  const figureTwo = <pre>
+function FigureTwo(){
+
+  const figureTwo = 
+    <pre>
    .--.
   (o_o )
   //||\\
  // || \\
     // 
   </pre>;
+  return (
+  <motion.ul animate= {{rotate: 360}}></motion>
+  )
+}
   const figureThree = 
 <pre>
  / \__/ \
@@ -22,6 +30,7 @@ const figureOne = <pre>
  (='.'=)
  (")_(")
 </pre>;
+
   const figureFour = 
 <pre>
   _   _
@@ -30,9 +39,9 @@ const figureOne = <pre>
  \ | | /
   \|_|/
 </pre>
-  return (
-    {figureOne}
-  )
-  
+export {
+  figureOne,
+  figureTwo,
+  figureThree,  
+  figureFour
 }
-
