@@ -5,14 +5,31 @@ const figureOne = <pre>
   | - |
   | | |
   '-' '-'
-  </pre>
+  </pre>;
   const figureTwo = <pre>
    .--.
   (o_o )
   //||\\
  // || \\
     // 
-  </pre>
+  </pre>;
+  const figureThree = 
+<pre>
+ / \__/ \
+ \_/  \_/
+/ _/\_  \
+ \__/\__/
+ (='.'=)
+ (")_(")
+</pre>;
+  const figureFour = 
+<pre>
+  _   _
+ /@`-'@\
+(  / \  )
+ \ | | /
+  \|_|/
+</pre>
   return (
     {figureOne}
   )
