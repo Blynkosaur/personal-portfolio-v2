@@ -18,7 +18,7 @@ function FigureTwo(){
     // 
   </pre>;
   return (
-  <motion.ul animate= {{rotate: 360}}></motion>
+  <motion.div>{figureTwo}</motion.div>
   )
 }
   const figureThree = 
@@ -41,7 +41,7 @@ function FigureTwo(){
 </pre>
 export {
   figureOne,
-  figureTwo,
+  FigureTwo,
   figureThree,  
   figureFour
 }
