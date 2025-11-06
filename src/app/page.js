@@ -16,7 +16,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import PixelTrail from "@/components/PixelTrail";
 import TargetCursor from "@/components/TargetCursor";
 import { useState, useEffect } from "react";
-
+import { FigureOne, FigureTwo, FigureThree, FigureFour } from "@/components/MonsterFigure";
 import React from "react";
 import { AlignCenterVertical } from "lucide-react";
 
@@ -488,6 +488,9 @@ export default function Home() {
             )}
           </Link>
         </Button>
+        <pre>i hate
+gooners
+        </pre>
         <Button
           className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
           asChild
@@ -521,6 +524,13 @@ export default function Home() {
       </div>
       {/* Bottom spacing for mobile scrolling */}
       <div className="h-20"></div>
+            <pre>i hate 
+
+        gooners :)</pre>
+      <FigureOne/>
+      <FigureTwo/>
+      <FigureThree/>
+      <FigureFour/>
     </div>
   );
 }

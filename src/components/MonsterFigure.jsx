@@ -1,47 +1,51 @@
-import { motion } from "motion/dist/react";
-const figureOne = <pre>
-
-   \.-./
- -(o o)-
-  | - |
-  | | |
+import { motion } from "motion/react";
+function FigureOne(){ 
+  return(<motion.pre>{` 
+  \\\\.-.//
+ -(o_o)-)
+  | _ | |
+  | | | |
   '-' '-'
-  </pre>;
+  `}</motion.pre>)
+}
 function FigureTwo(){
 
   const figureTwo = 
-    <pre>
-   .--.
+ `   .--.
   (o_o )
-  //||\\
- // || \\
-    // 
-  </pre>;
+  //||\\\\
+ // || \\\\
+    //   `;
   return (
-  <motion.div>{figureTwo}</motion.div>
+  <motion.pre>{figureTwo}</motion.pre>
   )
 }
-  const figureThree = 
-<pre>
- / \__/ \
- \_/  \_/
-/ _/\_  \
- \__/\__/
- (='.'=)
- (")_(")
-</pre>;
+  function FigureThree (){ 
+  const figureThree = `
+  _  _
+ / \\ / \\
+(o ) (o )
+/_/ o \\_\\
+  //  \\\\
+`;
 
-  const figureFour = 
-<pre>
-  _   _
- /@`-'@\
-(  / \  )
- \ | | /
-  \|_|/
-</pre>
+return(<motion.pre>
+ {figureThree}
+</motion.pre>)}
+
+  function  FigureFour (){ 
+  const figureFour = `
+   /@\`-'@\\
+  (  / \\  )
+   \\ | | /
+    \\|_|/
+        `;
+
+return(<motion.pre>{figureFour}</motion.pre>)
+}
 export {
-  figureOne,
+  FigureOne,
   FigureTwo,
-  figureThree,  
-  figureFour
+  FigureThree,  
+  FigureFour
 }
