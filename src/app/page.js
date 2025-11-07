@@ -70,10 +70,6 @@ export default function Home() {
         activeColor="#ffffff"
         style={{ opacity: 0.6 }}
       />
-      <GameToggle
-        checked={gameVis}
-        onChange={(e) => setGameVis(e.target.checked)}
-      />
       <div className="hidden md:block">
         <TargetCursor spinDuration={5} hideDefaultCursor={true} />
       </div>
@@ -102,6 +98,11 @@ export default function Home() {
           )}
         </Link>
       </Button>
+      <GameToggle
+        className="cursor-target absolute top-6 right-4 md:right-16 lg:right-24 z-10"
+        checked={gameVis}
+        onChange={(e) => setGameVis(e.target.checked)}
+      />
       <div
         style={{
           position: "fixed",
