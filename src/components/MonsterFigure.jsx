@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 function FigureOne() {
   return (
     <motion.pre
-      className="cursor-target"
+      className="cursor-target text-xs "
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
@@ -25,7 +25,7 @@ function FigureTwo() {
     //   `;
   return (
     <motion.pre
-      className="cursor-target"
+      className="cursor-target text-xs"
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
@@ -47,7 +47,7 @@ function FigureThree() {
 
   return (
     <motion.pre
-      className="cursor-target"
+      className="cursor-target text-xs"
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
@@ -69,7 +69,7 @@ function FigureFour() {
 
   return (
     <motion.pre
-      className="cursor-target"
+      className="cursor-target text-xs"
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
