@@ -99,7 +99,8 @@ export default function Home() {
         </Link>
       </Button>
       <GameToggle
-        className="cursor-target absolute top-6 right-4 md:right-16 lg:right-24 z-10"
+
+        className="cursor-target absolute top-6 right-4 md:right-16 lg:right-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base "
         checked={gameVis}
         onChange={(e) => setGameVis(e.target.checked)}
       />

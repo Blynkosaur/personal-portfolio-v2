@@ -1,6 +1,11 @@
 import { PiGameController, PiGameControllerFill } from "react-icons/pi";
+import { Button } from "./ui/button";
+import { Highlighter } from "./ui/highlighter";
+import { useState } from "react";
 
-export default function GameToggle({ checked, onChange, ...props }) {
+export default function GameToggle({ checked, onChange, className, ...props }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   const handleClick = () => {
     if (onChange) {
       onChange({ target: { checked: !checked } });
@@ -8,9 +13,11 @@ export default function GameToggle({ checked, onChange, ...props }) {
   };
 
   return (
-    <button
-      className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm"
+    <Button
+      className={className}
       onClick={handleClick}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       style={{
         display: "flex",
         alignItems: "center",
@@ -23,21 +30,47 @@ export default function GameToggle({ checked, onChange, ...props }) {
       }}
       {...props}
     >
-      {checked ? (
-        <PiGameControllerFill
-          style={{
-            color: "#c4a3ec",
-            fontSize: "24px",
-          }}
-        />
+      {isHovered ? (
+        <Highlighter
+          action="underline"
+          iterations={1}
+          padding={0}
+          animationDuration={50}
+          color="#ffffff"
+        >
+          {checked ? (
+            <PiGameControllerFill
+              style={{
+                color: "#c4a3ec",
+                fontSize: "24px",
+              }}
+            />
+          ) : (
+            <PiGameController
+              style={{
+                color: "#c4a3ec",
+                fontSize: "24px",
+              }}
+            />
+          )}
+        </Highlighter>
       ) : (
-        <PiGameController
-          style={{
-            color: "#c4a3ec",
-            fontSize: "24px",
-          }}
-        />
+        checked ? (
+          <PiGameControllerFill
+            style={{
+              color: "#c4a3ec",
+              fontSize: "24px",
+            }}
+          />
+        ) : (
+          <PiGameController
+            style={{
+              color: "#c4a3ec",
+              fontSize: "24px",
+            }}
+          />
+        )
       )}
-    </button>
+    </Button>
   );
 }
