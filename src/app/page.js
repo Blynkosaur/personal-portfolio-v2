@@ -5,6 +5,7 @@ import Link from "next/link";
 import styles from "./Page.module.css";
 import DotGrid from "@/components/DotGrid";
 import TextType from "@/components/TextType";
+import GameToggle from "@/components/GameToggle";
 import {
   FaGithub,
   FaLinkedin,
@@ -16,7 +17,12 @@ import { Checkbox } from "@/components/ui/checkbox";
 import PixelTrail from "@/components/PixelTrail";
 import TargetCursor from "@/components/TargetCursor";
 import { useState, useEffect } from "react";
-import { FigureOne, FigureTwo, FigureThree, FigureFour } from "@/components/MonsterFigure";
+import {
+  FigureOne,
+  FigureTwo,
+  FigureThree,
+  FigureFour,
+} from "@/components/MonsterFigure";
 import React from "react";
 import { AlignCenterVertical } from "lucide-react";
 
@@ -44,6 +50,7 @@ export default function Home() {
   const [githubHover, setGithubHover] = useState(false);
   const [linkedinHover, setLinkedinHover] = useState(false);
   const [instagramHover, setInstagramHover] = useState(false);
+  const [gameVis, setGameVis] = useState(true);
   return (
     <div
       className={`${styles.page} relative flex flex-col justify-center items-center text-white p-10 scrollbar-hide overflow-x-hidden`}
@@ -62,6 +69,10 @@ export default function Home() {
         baseColor="#6b4c93"
         activeColor="#ffffff"
         style={{ opacity: 0.6 }}
+      />
+      <GameToggle
+        checked={gameVis}
+        onChange={(e) => setGameVis(e.target.checked)}
       />
       <div className="hidden md:block">
         <TargetCursor spinDuration={5} hideDefaultCursor={true} />
@@ -521,10 +532,10 @@ export default function Home() {
       </div>
       {/* Bottom spacing for mobile scrolling */}
       <div className="h-20"></div>
-      <FigureOne/>
-      <FigureTwo/>
-      <FigureThree/>
-      <FigureFour/>
+      <FigureOne />
+      <FigureTwo />
+      <FigureThree />
+      <FigureFour />
     </div>
   );
 }

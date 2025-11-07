@@ -1,38 +1,48 @@
-import { styled } from "@mui/material/styles";
-import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Switch from "@mui/material/Switch";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
-export default Android12Switch = styled(Switch)(({ theme }) => ({
-  padding: 8,
-  "& .MuiSwitch-track": {
-    borderRadius: 22 / 2,
-    "&::before, &::after": {
-      content: '""',
-      position: "absolute",
-      top: "50%",
-      transform: "translateY(-50%)",
-      width: 16,
-      height: 16,
-    },
-    "&::before": {
-      backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 24 24"><path fill="${encodeURIComponent(
-        theme.palette.getContrastText(theme.palette.primary.main),
-      )}" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>')`,
-      left: 12,
-    },
-    "&::after": {
-      backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 24 24"><path fill="${encodeURIComponent(
-        theme.palette.getContrastText(theme.palette.primary.main),
-      )}" d="M19,13H5V11H19V13Z" /></svg>')`,
-      right: 12,
-    },
-  },
-  "& .MuiSwitch-thumb": {
-    boxShadow: "none",
-    width: 16,
-    height: 16,
-    margin: 2,
-  },
-}));
+import { PiGameController, PiGameControllerFill } from "react-icons/pi";
+import { useState } from "react";
+
+export default function GameToggle({ checked, onChange, ...props }) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleClick = () => {
+    if (onChange) {
+      onChange({ target: { checked: !checked } });
+    }
+  };
+
+  return (
+    <button
+      onClick={handleClick}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "8px 12px",
+        borderRadius: "8px",
+        border: "none",
+        backgroundColor: isHovered ? "#5a3d7a" : "transparent",
+        cursor: "pointer",
+        transition: "background-color 0.2s ease",
+      }}
+      {...props}
+    >
+      {checked ? (
+        <PiGameControllerFill
+          style={{
+            color: "#c4a3ec",
+            fontSize: "26px",
+          }}
+        />
+      ) : (
+        <PiGameController
+          style={{
+            color: "#c4a3ec",
+            fontSize: "26px",
+          }}
+        />
+      )}
+    </button>
+  );
+}
