@@ -81,4 +81,33 @@ function FigureFour() {
     </motion.pre>
   );
 }
-export { FigureOne, FigureTwo, FigureThree, FigureFour };
+
+function Door() {
+  const door = `   /|
+  / |
+ /__|_______
+ |  __  __  |
+ | |  ||  | |   
+ | |__||__| |  
+ |  __  __()|  
+ | |  ||  | |  
+ | |  ||  | |
+ | |__||__| |
+ |__________|  `;
+
+  return (
+    <motion.pre
+      className="cursor-target text-xs"
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.4,
+        scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+      }}
+    >
+      {door}
+    </motion.pre>
+  );
+}
+
+export { FigureOne, FigureTwo, FigureThree, FigureFour, Door };

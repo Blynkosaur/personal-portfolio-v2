@@ -22,6 +22,7 @@ import {
   FigureTwo,
   FigureThree,
   FigureFour,
+  Door
 } from "@/components/MonsterFigure";
 import React from "react";
 import { AlignCenterVertical } from "lucide-react";
@@ -538,6 +539,7 @@ export default function Home() {
       <FigureTwo />
       <FigureThree />
       <FigureFour />
+      <Door />
     </div>
   );
 }
