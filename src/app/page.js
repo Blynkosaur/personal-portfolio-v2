@@ -284,7 +284,7 @@ export default function Home() {
               }}
             >
               <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              Building an{" "}
+              Building a{" "}
               <span
                 className="font-medium hover:text-[#c4a3ec] transition-colors duration-200 cursor-pointer"
                 style={{
