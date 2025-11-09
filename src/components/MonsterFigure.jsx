@@ -1,5 +1,18 @@
 import { motion } from "motion/react";
+import { useState, useEffect } from "react";
 function FigureOne() {
+  const mouth_ls = ["_", "*", "."];
+  const [mouth, setMouth] = useState(mouth_ls[0]);
+  const [mouth_index, setMouthIndex] = useState(0);
+  useEffect(() => {
+    const change = setInterval(() => {
+      setMouthIndex((prevIndex) => {
+        const newIndex = (prevIndex + 1) % 3;
+        setMouth(mouth_ls[newIndex]);
+        return newIndex;
+      });
+    }, 1000);
+  }, []);
   return (
     <motion.pre
       className="cursor-target text-xs "
@@ -10,7 +23,7 @@ function FigureOne() {
         scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
       }}
     >{` \\\\.-.//
--(o_o)-)
+-(o${mouth}o)-)
  | _ | |
  | | | |
  '-' '-'`}</motion.pre>
@@ -18,8 +31,21 @@ function FigureOne() {
 }
 
 function FigureTwo() {
+  const mouth_ls = ["_", "*", "."];
+  const [mouth, setMouth] = useState(mouth_ls[0]);
+  const [mouth_index, setMouthIndex] = useState(0);
+  useEffect(() => {
+    const change = setInterval(() => {
+      setMouthIndex((prevIndex) => {
+        const newIndex = (prevIndex + 1) % 3;
+        setMouth(mouth_ls[newIndex]);
+        return newIndex;
+      });
+    }, 1000);
+  }, []);
+
   const figureTwo = `   .--.
-  (o_o )
+  (o${mouth}o )
   //||\\\\
  // || \\\\
     //   `;
@@ -38,10 +64,23 @@ function FigureTwo() {
   );
 }
 function FigureThree() {
+  const mouth_ls = ["_", "*", "."];
+  const [mouth, setMouth] = useState(mouth_ls[0]);
+  const [mouth_index, setMouthIndex] = useState(0);
+  useEffect(() => {
+    const change = setInterval(() => {
+      setMouthIndex((prevIndex) => {
+        const newIndex = (prevIndex + 1) % 3;
+        setMouth(mouth_ls[newIndex]);
+        return newIndex;
+      });
+    }, 1000);
+  }, []);
+
   const figureThree = `  _   _
  / \\ / \\
 (o ) (o )
-/_/ o \\_\\
+/_/ ${mouth} \\_\\
   //  \\\\
 `;
 
@@ -61,8 +100,21 @@ function FigureThree() {
 }
 
 function FigureFour() {
+  const mouth_ls = ["_", "*", "."];
+  const [mouth, setMouth] = useState(mouth_ls[0]);
+  const [mouth_index, setMouthIndex] = useState(0);
+  useEffect(() => {
+    const change = setInterval(() => {
+      setMouthIndex((prevIndex) => {
+        const newIndex = (prevIndex + 1) % 3;
+        setMouth(mouth_ls[newIndex]);
+        return newIndex;
+      });
+    }, 1000);
+  }, []);
+
   const figureFour = `  _   _
- /@\`-'@\\
+ /@\`${mouth}'@\\
 (  / \\  )
  \\ | | /
   \\|_|/  `;
