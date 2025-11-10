@@ -1,16 +1,12 @@
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { useState, useEffect, useRef } from "react";
 const flash = `
-         .            
-         :            
-         |_         +
- --+-<#>-+- ----  -
-      \`._|_,'
-         T
-         !
-         .       *
-  
-  `;
+      .     
+      |_    
+ +<#>-+- --
+   \`.|,'
+      T
+      .   `;
 function FigureOne() {
   const mouth_ls = ["_", "*", "."];
   const [mouth, setMouth] = useState(mouth_ls[0]);
@@ -44,7 +40,7 @@ function FigureOne() {
 
     setTimeout(() => {
       setVisible(false);
-    }, 200);
+    }, 1500);
   }, [alive]);
 
   useEffect(() => {
@@ -62,20 +58,23 @@ function FigureOne() {
  | | | |
  '-' '-'`;
   return (
-    visible && (
-      <motion.pre
-        onClick={handleClick}
-        className=" select-none cursor-target text-xs "
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 0.4,
-          scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
-        }}
-      >
-        {alive ? fig : flash}
-      </motion.pre>
-    )
+    <AnimatePresence>
+      {visible && (
+        <motion.pre
+          onClick={handleClick}
+          className=" select-none cursor-target text-xs "
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.4,
+            scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+          }}
+          exit={{ scale: 0, opacity: 0 }}
+        >
+          {alive ? fig : flash}
+        </motion.pre>
+      )}
+    </AnimatePresence>
   );
 }
 
@@ -110,7 +109,7 @@ function FigureTwo() {
 
     setTimeout(() => {
       setVisible(false);
-    }, 200);
+    }, 1500);
   }, [alive]);
 
   useEffect(() => {
@@ -129,20 +128,23 @@ function FigureTwo() {
  // || \\\\
     //   `;
   return (
-    visible && (
-      <motion.pre
-        onClick={handleClick}
-        className="select-none cursor-target text-xs"
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 0.4,
-          scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
-        }}
-      >
-        {alive ? figureTwo : flash}
-      </motion.pre>
-    )
+    <AnimatePresence>
+      {visible && (
+        <motion.pre
+          onClick={handleClick}
+          className="select-none cursor-target text-xs"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.4,
+            scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+          }}
+          exit={{ scale: 0, opacity: 0 }}
+        >
+          {alive ? figureTwo : flash}
+        </motion.pre>
+      )}
+    </AnimatePresence>
   );
 }
 function FigureThree() {
@@ -178,7 +180,7 @@ function FigureThree() {
 
     setTimeout(() => {
       setVisible(false);
-    }, 200);
+    }, 1500);
   }, [alive]);
 
   useEffect(() => {
@@ -199,20 +201,23 @@ function FigureThree() {
 `;
 
   return (
-    visible && (
-      <motion.pre
-        className="cursor-target text-xs"
-        onClick={handleClick}
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 0.4,
-          scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
-        }}
-      >
-        {alive ? figureThree : flash}
-      </motion.pre>
-    )
+    <AnimatePresence>
+      {visible && (
+        <motion.pre
+          className="cursor-target text-xs"
+          onClick={handleClick}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.4,
+            scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+          }}
+          exit={{ scale: 0, opacity: 0 }}
+        >
+          {alive ? figureThree : flash}
+        </motion.pre>
+      )}
+    </AnimatePresence>
   );
 }
 
@@ -243,7 +248,7 @@ function FigureFour() {
 
     setTimeout(() => {
       setVisible(false);
-    }, 200);
+    }, 1500);
   }, [alive]);
 
   const handleClick = () => {
@@ -266,20 +271,23 @@ function FigureFour() {
   \\|_|/  `;
 
   return (
-    visible && (
-      <motion.pre
-        className="cursor-target text-xs select-none "
-        onClick={handleClick}
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 0.4,
-          scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
-        }}
-      >
-        {alive ? figureFour : flash}
-      </motion.pre>
-    )
+    <AnimatePresence>
+      {visible && (
+        <motion.pre
+          className="cursor-target text-xs select-none "
+          onClick={handleClick}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.4,
+            scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+          }}
+          exit={{ scale: 0, opacity: 0 }}
+        >
+          {alive ? figureFour : flash}
+        </motion.pre>
+      )}
+    </AnimatePresence>
   );
 }
 
