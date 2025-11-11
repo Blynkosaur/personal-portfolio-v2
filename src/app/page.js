@@ -226,37 +226,15 @@ export default function Home() {
                   textDecoration: "none",
                 }}
               >
-                  {hover && (
-                    <Highlighter action="underline" color="#ffffff">
-                      <span
-                        style={{
-                          display: "flex",
-                          flexDirection: "row",
-                          gap: "4px",
-                          fontWeight: "bold",
-                          color: "#c4a3ec",
-                          alignItems: "center",
-                        }}
-                      >
-                        <Image
-                          src={`/UWaterloo.png`}
-                          alt="UWaterloo Logo"
-                          width={20}
-                          height={20}
-                          className="object-contain relative top-[1px]"
-                        />
-                        UWaterloo
-                      </span>
-                    </Highlighter>
-                  )}
-                  {!hover && (
+                {hover && (
+                  <Highlighter action="underline" color="#ffffff">
                     <span
                       style={{
                         display: "flex",
                         flexDirection: "row",
                         gap: "4px",
                         fontWeight: "bold",
-                        color: "white",
+                        color: "#c4a3ec",
                         alignItems: "center",
                       }}
                     >
@@ -269,8 +247,30 @@ export default function Home() {
                       />
                       UWaterloo
                     </span>
-                  )}
-                </a>
+                  </Highlighter>
+                )}
+                {!hover && (
+                  <span
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      gap: "4px",
+                      fontWeight: "bold",
+                      color: "white",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Image
+                      src={`/UWaterloo.png`}
+                      alt="UWaterloo Logo"
+                      width={20}
+                      height={20}
+                      className="object-contain relative top-[1px]"
+                    />
+                    UWaterloo
+                  </span>
+                )}
+              </a>
             </li>
             <li
               onMouseEnter={() => {
@@ -323,12 +323,12 @@ export default function Home() {
                 {programmingHover && (
                   <Highlighter action="underline" color="#ffffff">
                     <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                      VM interpreter 
+                      VM interpreter
                     </span>
                   </Highlighter>
                 )}
               </span>{" "}
-              in C 
+              in C
             </li>
 
             <li
@@ -341,7 +341,6 @@ export default function Home() {
               }}
             >
               <div className="absolute left-2 top-[1.875rem] xs:top-[0.875rem] w-[8px] h-[8px] bg-white rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              
               Prev. swe intern{"  "}
               <a
                 href="https://joinlivewell.ca"
@@ -373,15 +372,24 @@ export default function Home() {
                 )}
                 {livewellHover && (
                   <Highlighter action="underline" color="#ffffff">
-                    <span style={{display: "flex", flexDirection: "row", gap: "6px", fontWeight: "bold", color: "#c4a3ec", alignItems: "center" }}>
+                    <span
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        gap: "6px",
+                        fontWeight: "bold",
+                        color: "#c4a3ec",
+                        alignItems: "center",
+                      }}
+                    >
                       <Image
-                          src={`/oglivewell.png`}
-                          alt="Livewell Logo"
-                          width={16}
-                          height={16}
-                          className="object-contain relative top-[1px]"
-                        />
-                        Livewell
+                        src={`/oglivewell.png`}
+                        alt="Livewell Logo"
+                        width={16}
+                        height={16}
+                        className="object-contain relative top-[1px]"
+                      />
+                      Livewell
                     </span>
                   </Highlighter>
                 )}
@@ -461,7 +469,7 @@ export default function Home() {
           Here are my socials:
         </p>
       </div>
-      <div className="flex items-center gap-2 mb-6 max-w-xl w-full justify-center mx-auto px-4">
+      <div className="flex items-center gap-2 mb-6  w-full justify-center mx-auto px-4">
         <div className="flex-1 h-px bg-gray-600"></div>
         <span className="text-gray-400 text-sm px-2 ">↓</span>
         <div className="flex-1 h-px bg-gray-600"></div>
