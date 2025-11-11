@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
   	extend: {
+  		screens: {
+  			'xs': '430px',
+  		},
   		fontFamily: {
   			'comfortaa': ['var(--font-comfortaa)', 'Arial', 'Helvetica', 'sans-serif'],
   			'space-mono': ['var(--font-space-mono)', 'Courier New', 'monospace'],

@@ -204,7 +204,7 @@ export default function Home() {
             width: "100%",
           }}
         >
-          <ul className="space-y-8">
+          <ul className="space-y-4">
             <li
               className="group flex items-start gap-2 pl-8 relative hover:font-bold hover:translate-x-3 transition-transform duration-200"
               onMouseEnter={() => {
@@ -219,18 +219,19 @@ export default function Home() {
               <span
                 className="font-medium  hover:text-[#c4a3ec] transition-colors duration-200"
                 style={{
-                  textDecoration: hover ? "underline" : "none",
+                  textDecoration: "none",
                   fontWeight: hover ? "bold" : "normal",
                 }}
               >
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:font-bold  hover:underline hover:text-[#c4a3ec] transition-colors duration-200"
+                  className="hover:font-bold hover:text-[#c4a3ec] transition-colors duration-200 inline-flex items-center"
                   style={{
                     fontWeight: hover ? "bold" : "normal",
                     color: hover ? "#c4a3ec" : "inherit",
-                    textDecoration: hover ? "underline" : "none",
+                    textDecoration: "none",
+                    minHeight: "1.5rem",
                   }}
                 >
                   {hover && (
@@ -242,6 +243,7 @@ export default function Home() {
                           gap: "4px",
                           fontWeight: "bold",
                           color: "#c4a3ec",
+                          alignItems: "center",
                         }}
                       >
                         <Image
@@ -263,6 +265,7 @@ export default function Home() {
                         gap: "4px",
                         fontWeight: "bold",
                         color: "white",
+                        alignItems: "center",
                       }}
                     >
                       <Image
@@ -338,7 +341,7 @@ export default function Home() {
             </li>
 
             <li
-              className="group flex items-start gap-3 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
+              className="group flex flex-col xs:flex-row items-start xs:gap-2 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
               onMouseEnter={() => {
                 setLivewellHover(true);
               }}
@@ -346,13 +349,15 @@ export default function Home() {
                 setLivewellHover(false);
               }}
             >
-              <div className="absolute left-2 top-[0.875rem] w-[8px] h-[8px] bg-white rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              <div className="absolute left-2 top-[1.875rem] xs:top-[0.875rem] w-[8px] h-[8px] bg-white rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              
               Prev. swe intern{"  "}
               <a
                 href="https://joinlivewell.ca"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" hover:font-bold hover:underline hover:text-[#c4a3ec] transition-colors duration-200"
+                className="hover:font-bold hover:underline hover:text-[#c4a3ec] transition-colors duration-200 inline-flex items-center"
+                style={{ minHeight: "1.5rem" }}
               >
                 {!livewellHover && (
                   <span
@@ -362,6 +367,7 @@ export default function Home() {
                       gap: "6px",
                       fontWeight: "bold",
                       color: "white",
+                      alignItems: "center",
                     }}
                   >
                     <Image
@@ -376,7 +382,7 @@ export default function Home() {
                 )}
                 {livewellHover && (
                   <Highlighter action="underline" color="#ffffff">
-                    <span style={{display: "flex", flexDirection: "row", gap: "6px", fontWeight: "bold", color: "#c4a3ec" }}>
+                    <span style={{display: "flex", flexDirection: "row", gap: "6px", fontWeight: "bold", color: "#c4a3ec", alignItems: "center" }}>
                       <Image
                           src={`/oglivewell.png`}
                           alt="Livewell Logo"
