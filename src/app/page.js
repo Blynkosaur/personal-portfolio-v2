@@ -469,7 +469,7 @@ export default function Home() {
           Here are my socials:
         </p>
       </div>
-      <div className="flex items-center gap-2 mb-6  w-full justify-center mx-auto px-4">
+      <div className="flex items-center gap-2 mb-6 max-w-xl w-full justify-center mx-auto">
         <div className="flex-1 h-px bg-gray-600"></div>
         <span className="text-gray-400 text-sm px-2 ">↓</span>
         <div className="flex-1 h-px bg-gray-600"></div>
