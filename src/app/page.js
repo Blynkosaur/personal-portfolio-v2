@@ -216,24 +216,16 @@ export default function Home() {
             >
               <div className="absolute left-2 top-[0.875rem] w-[8px] h-[8px] bg-white rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               SWE{""}
-              <span
-                className="font-medium  hover:text-[#c4a3ec] transition-colors duration-200"
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium hover:font-bold hover:text-[#c4a3ec] transition-colors duration-200 inline-flex items-center"
                 style={{
-                  textDecoration: "none",
                   fontWeight: hover ? "bold" : "normal",
+                  color: hover ? "#c4a3ec" : "inherit",
+                  textDecoration: "none",
                 }}
               >
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:font-bold hover:text-[#c4a3ec] transition-colors duration-200 inline-flex items-center"
-                  style={{
-                    fontWeight: hover ? "bold" : "normal",
-                    color: hover ? "#c4a3ec" : "inherit",
-                    textDecoration: "none",
-                    minHeight: "1.5rem",
-                  }}
-                >
                   {hover && (
                     <Highlighter action="underline" color="#ffffff">
                       <span
@@ -279,7 +271,6 @@ export default function Home() {
                     </span>
                   )}
                 </a>
-              </span>
             </li>
             <li
               onMouseEnter={() => {
