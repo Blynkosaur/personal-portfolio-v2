@@ -99,11 +99,11 @@ export default function Home() {
           )}
         </Link>
       </Button>
-      <GameToggle
+      {/* <GameToggle
         className="cursor-target absolute top-6 right-4 md:right-16 lg:right-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base "
         checked={gameVis}
         onChange={(e) => setGameVis(e.target.checked)}
-      />
+      /> */}
       <div
         style={{
           position: "fixed",
@@ -594,11 +594,11 @@ export default function Home() {
       </div>
       {/* Bottom spacing for mobile scrolling */}
       <div className="h-20"></div>
-      <FigureOne />
+      {/* <FigureOne />
       <FigureTwo />
       <FigureThree />
       <FigureFour />
-      <Door />
+      <Door /> */}
     </div>
   );
 }
