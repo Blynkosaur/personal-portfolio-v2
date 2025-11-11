@@ -22,11 +22,11 @@ import {
   FigureTwo,
   FigureThree,
   FigureFour,
-  Door
+  Door,
 } from "@/components/MonsterFigure";
 import React from "react";
 import { AlignCenterVertical } from "lucide-react";
-
+import Image from "next/image";
 export function WaterlooImage() {
   return (
     <img
@@ -54,7 +54,7 @@ export default function Home() {
   const [gameVis, setGameVis] = useState(true);
   return (
     <div
-      className={`${styles.page} relative flex flex-col justify-center items-center text-white p-10 scrollbar-hide overflow-x-hidden`}
+      className={`${styles.page} relative overflow-y-hidden flex flex-col justify-center items-center text-white p-10 scrollbar-hide overflow-x-hidden`}
       style={{
         minHeight: "100vh",
         backgroundColor: "#1e1e2e",
@@ -100,7 +100,6 @@ export default function Home() {
         </Link>
       </Button>
       <GameToggle
-
         className="cursor-target absolute top-6 right-4 md:right-16 lg:right-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base "
         checked={gameVis}
         onChange={(e) => setGameVis(e.target.checked)}
@@ -207,7 +206,7 @@ export default function Home() {
         >
           <ul className="space-y-8">
             <li
-              className="group flex items-start gap-4 pl-8 relative hover:font-bold hover:translate-x-3 transition-transform duration-200"
+              className="group flex items-start gap-2 pl-8 relative hover:font-bold hover:translate-x-3 transition-transform duration-200"
               onMouseEnter={() => {
                 setHover(true);
               }}
@@ -215,8 +214,8 @@ export default function Home() {
                 setHover(false);
               }}
             >
-              <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              SWE{" "}
+              <div className="absolute left-2 top-[0.875rem] w-[8px] h-[8px] bg-white rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              SWE{""}
               <span
                 className="font-medium  hover:text-[#c4a3ec] transition-colors duration-200"
                 style={{
@@ -236,12 +235,46 @@ export default function Home() {
                 >
                   {hover && (
                     <Highlighter action="underline" color="#ffffff">
-                      <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                        @UWaterloo
+                      <span
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          gap: "4px",
+                          fontWeight: "bold",
+                          color: "#c4a3ec",
+                        }}
+                      >
+                        <Image
+                          src={`/UWaterloo.png`}
+                          alt="UWaterloo Logo"
+                          width={20}
+                          height={20}
+                          className="object-contain relative top-[1px]"
+                        />
+                        UWaterloo
                       </span>
                     </Highlighter>
                   )}
-                  {!hover && "@UWaterloo"}
+                  {!hover && (
+                    <span
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        gap: "4px",
+                        fontWeight: "bold",
+                        color: "white",
+                      }}
+                    >
+                      <Image
+                        src={`/UWaterloo.png`}
+                        alt="UWaterloo Logo"
+                        width={20}
+                        height={20}
+                        className="object-contain relative top-[1px]"
+                      />
+                      UWaterloo
+                    </span>
+                  )}
                 </a>
               </span>
             </li>
@@ -296,16 +329,16 @@ export default function Home() {
                 {programmingHover && (
                   <Highlighter action="underline" color="#ffffff">
                     <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                      VM interpreter
+                      VM interpreter 
                     </span>
                   </Highlighter>
                 )}
               </span>{" "}
-              in C
+              in C 
             </li>
 
             <li
-              className="group  items-start gap-4 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
+              className="group flex items-start gap-3 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
               onMouseEnter={() => {
                 setLivewellHover(true);
               }}
@@ -313,19 +346,45 @@ export default function Home() {
                 setLivewellHover(false);
               }}
             >
-              <div className="absolute  left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              Prev. swe intern{" "}
+              <div className="absolute left-2 top-[0.875rem] w-[8px] h-[8px] bg-white rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              Prev. swe intern{"  "}
               <a
                 href="https://joinlivewell.ca"
                 target="_blank"
                 rel="noopener noreferrer"
                 className=" hover:font-bold hover:underline hover:text-[#c4a3ec] transition-colors duration-200"
               >
-                {!livewellHover && "@Livewell"}
+                {!livewellHover && (
+                  <span
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      gap: "6px",
+                      fontWeight: "bold",
+                      color: "white",
+                    }}
+                  >
+                    <Image
+                      src={`/oglivewell.png`}
+                      alt="Livewell Logo"
+                      width={16}
+                      height={16}
+                      className="object-contain relative top-[1px]"
+                    />
+                    Livewell
+                  </span>
+                )}
                 {livewellHover && (
                   <Highlighter action="underline" color="#ffffff">
-                    <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                      @Livewell
+                    <span style={{display: "flex", flexDirection: "row", gap: "6px", fontWeight: "bold", color: "#c4a3ec" }}>
+                      <Image
+                          src={`/oglivewell.png`}
+                          alt="Livewell Logo"
+                          width={16}
+                          height={16}
+                          className="object-contain relative top-[1px]"
+                        />
+                        Livewell
                     </span>
                   </Highlighter>
                 )}

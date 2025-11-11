@@ -1,11 +1,17 @@
-import { AnimatePresence, motion } from "motion/react";
+import { useAnimation, AnimatePresence, motion } from "motion/react";
 import { useState, useEffect, useRef } from "react";
+function randomPosition() {
+  return {
+    x: Math.random() * 300 - 150,
+    y: Math.random() * 300 - 150,
+  };
+}
 const flash = `
-      .     
+      | +
+      .   * 
       |_    
  +<#>-+- --
    \`.|,'
-      T
       .   `;
 function FigureOne() {
   const mouth_ls = ["_", "*", "."];
@@ -58,12 +64,13 @@ function FigureOne() {
  | | | |
  '-' '-'`;
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {visible && (
         <motion.pre
           onClick={handleClick}
-          className=" select-none cursor-target text-xs "
-          initial={{ opacity: 0, scale: 0 }}
+          key={alive ? "figure" : "flash"}
+          className={`${alive ? "cursor-target" : ""} text-xs select-none z-50`}
+          initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 0.4,
@@ -128,12 +135,13 @@ function FigureTwo() {
  // || \\\\
     //   `;
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {visible && (
         <motion.pre
           onClick={handleClick}
-          className="select-none cursor-target text-xs"
-          initial={{ opacity: 0, scale: 0 }}
+          key={alive ? "figure" : "flash"}
+          className={`${alive ? "cursor-target" : ""} text-xs select-none z-50`}
+          initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 0.4,
@@ -201,12 +209,13 @@ function FigureThree() {
 `;
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {visible && (
         <motion.pre
-          className="cursor-target text-xs"
+          className={`${alive ? "cursor-target" : ""} text-xs select-none z-50`}
           onClick={handleClick}
-          initial={{ opacity: 0, scale: 0 }}
+          key={alive ? "figure" : "flash"}
+          initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 0.4,
@@ -271,12 +280,13 @@ function FigureFour() {
   \\|_|/  `;
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {visible && (
         <motion.pre
-          className="cursor-target text-xs select-none "
+          key={alive ? "figure" : "flash"}
+          className={`${alive ? "cursor-target" : ""} text-xs select-none z-50`}
           onClick={handleClick}
-          initial={{ opacity: 0, scale: 0 }}
+          initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 0.4,
@@ -307,7 +317,7 @@ function Door() {
   return (
     <motion.pre
       className="select-none  text-xs"
-      initial={{ opacity: 0, scale: 0 }}
+      initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
         duration: 0.4,
