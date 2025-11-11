@@ -77,7 +77,7 @@ export default function Home() {
       <Button
         asChild
         variant="outline"
-        className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base "
+        className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-4 py-2 text-sm "
         style={{ border: "1px solid #6b7280" }}
         onMouseEnter={() => setHomeHover(true)}
         onMouseLeave={() => setHomeHover(false)}
@@ -119,7 +119,7 @@ export default function Home() {
         }}
       />
       {/* <div style={{ height: "20px" }} /> */}
-      <div className="w-full max-w-xl mt-2 mx-1">
+      <div className="w-full max-w-xl mt-2 mx-auto px-4">
         <h1
           className="text-3xl font-bold mt-12 mb-10 text-left"
           style={{ fontWeight: "700" }}
@@ -392,7 +392,7 @@ export default function Home() {
       </div>
 
       {/* Projects Button */}
-      <div className="w-full max-w-xl mt-6 mb-16">
+      <div className="w-full max-w-xl mt-6 mb-16 mx-auto px-4">
         <Button
           className="cursor-target w-full bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-10 py-6 text-lg font-medium"
           asChild
@@ -419,7 +419,7 @@ export default function Home() {
           </Link>
         </Button>
       </div>
-      <div className="text-lg mb-10 w-full max-w-xl text-left flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center">
+      <div className="text-lg mb-10 w-full max-w-xl text-left flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center mx-auto px-4">
         <div className="flex flex-col items-center justify-center">
           ↳ You can contact me at
         </div>
@@ -456,19 +456,19 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      <div className="text-center mb-1 max-w-xl w-full mt-2">
-        <p className="font-thin text-xl text-center mb-4 max-w-xl w-full">
+      <div className="text-center mb-1 max-w-xl w-full mt-2 mx-auto px-4">
+        <p className="font-thin text-xl text-center mb-4 w-full">
           Here are my socials:
         </p>
       </div>
-      <div className="flex items-center gap-2 mb-6 max-w-xl w-full justify-center">
+      <div className="flex items-center gap-2 mb-6 max-w-xl w-full justify-center mx-auto px-4">
         <div className="flex-1 h-px bg-gray-600"></div>
         <span className="text-gray-400 text-sm px-2 ">↓</span>
         <div className="flex-1 h-px bg-gray-600"></div>
       </div>
-      <div className="flex gap-4 justify-start flex-col sm:flex-row sm:justify-between max-w-xl w-full">
+      <div className="flex gap-4 justify-center flex-col sm:flex-row max-w-xl w-full mx-auto px-4">
         <Button
-          className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+          className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-4 py-3 text-base"
           asChild
           style={{ border: "1px solid #6b7280" }}
           onMouseEnter={() => setResumeHover(true)}
@@ -499,7 +499,7 @@ export default function Home() {
           </a>
         </Button>
         <Button
-          className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+          className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-4 py-3 text-base"
           asChild
           style={{ border: "1px solid #6b7280" }}
           onMouseEnter={() => setGithubHover(true)}
@@ -529,7 +529,7 @@ export default function Home() {
           </Link>
         </Button>
         <Button
-          className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+          className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-4 py-3 text-base"
           asChild
           style={{ border: "1px solid #6b7280" }}
           onMouseEnter={() => setLinkedinHover(true)}
@@ -559,7 +559,7 @@ export default function Home() {
           </Link>
         </Button>
         <Button
-          className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+          className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-4 py-3 text-base"
           asChild
           style={{ border: "1px solid #6b7280" }}
           onMouseEnter={() => setInstagramHover(true)}

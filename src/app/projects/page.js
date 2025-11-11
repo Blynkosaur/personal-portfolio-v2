@@ -63,7 +63,7 @@ export default function Projects() {
         <Button
           asChild
           variant="outline"
-          className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base max-w-fit"
+          className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-4 py-2 text-sm max-w-fit"
           style={{ border: "1px solid #6b7280" }}
           onMouseEnter={() => setHomeHover(true)}
           onMouseLeave={() => setHomeHover(false)}
@@ -362,10 +362,14 @@ export default function Projects() {
         >
           Let&apos;s Connect
         </h2>
-        <p className="text-gray-300 mb-8">
+        <p className="text-gray-300 mb-4"> 
           Interested in collaborating or have questions about any other
           projects?
         </p>
+        <div className="flex items-center gap-2 mb-6 max-w-xl w-full justify-center">
+          <div className="flex-1 h-px bg-gray-600"></div>
+          
+        </div>
         <div className="flex gap-4 justify-between flex-col [@media(min-width:580px)]:flex-row [@media(min-width:580px)]:justify-between">
           <Button
             className="cursor-target w-full [@media(min-width:580px)]:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
