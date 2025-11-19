@@ -121,8 +121,8 @@ export default function Home() {
       {/* <div style={{ height: "20px" }} /> */}
       <div className="w-full max-w-xl mt-2 mx-auto px-4">
         <h1
-          className="text-3xl font-bold mt-12 mb-10 text-left"
-          style={{ fontWeight: "700" }}
+          className=" font-bold mt-12 mb-10 text-left"
+          style={{ fontWeight: "700", fontSize: "1.85rem" }}
         >
           {/* Mobile version - with typing animation */}
           <span className="md:hidden">
