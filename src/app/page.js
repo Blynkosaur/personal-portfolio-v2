@@ -299,7 +299,7 @@ export default function Home() {
                   </Highlighter>
                 )}
               </span>{" "}
-              by building things
+              by consistently building
             </li>
             <li
               className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
