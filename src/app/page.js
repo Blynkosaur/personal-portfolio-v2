@@ -319,7 +319,7 @@ export default function Home() {
                   fontWeight: programmingHover ? "bold" : "normal",
                 }}
               >
-                {!programmingHover && "VM interpreter"}
+                {!programmingHover && "Outreach Pilot"}
                 {programmingHover && (
                   <Highlighter action="underline" color="#ffffff">
                     <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
@@ -328,7 +328,6 @@ export default function Home() {
                   </Highlighter>
                 )}
               </span>{" "}
-              in C
             </li>
 
             <li
