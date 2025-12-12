@@ -135,31 +135,38 @@ export default function Projects() {
           style={{ border: "1px solid #6b7280" }}
         >
           <h3
-            className="text-xl font-semibold mb-3"
+            className="text-xl italic font-semibold mb-3"
             style={{
               color: "#c4a3ec",
               fontFamily: "var(--font-space-mono), 'Courier New', monospace",
               fontWeight: "700",
             }}
           >
-            BryteLinker 💻
+            Tailored 🪡
           </h3>
           <p className="text-gray-300 text-sm mb-4">
-            Building Bryte Linker, an interpreted programming language featuring
-            a custom bytecode virtual machine in C Implementing a full lexer,
-            parser, and bytecode compiler to translate high-level code into
-            executable bytecode.
+            Internship application season is approaching, but cold applying just
+            doesn’t work anymore. As they say,{" "}
+            <span className="italic">
+              &quot;It’s not what you know, but who you know.&quot;
+            </span>{" "}
+            Networking is key! But as a SWE student, I fear social interaction.
+            So I’m currently building <span className="italic">Tailored</span>,
+            a job application agent that connects you with recruiters or staff
+            to make you truly stand out.
             <br />
             <br />
-            Still dealing with segfaults...
+            bzzzz... MCP Servers??! bzz... bzz... RAG Pipelines?!?!?
           </p>
           <div className="flex gap-2 mb-4">
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">C</span>
             <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-              Makefile
+              GraphQL
             </span>
             <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-              GCC/GDB
+              FastAPI
+            </span>
+            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
+              MCP
             </span>
           </div>
           <div className="flex gap-2">
@@ -168,7 +175,7 @@ export default function Projects() {
               asChild
             >
               <a
-                href="https://github.com/Blynkosaur/BryteLinker"
+                href="https://github.com/Blynkosaur/Tailored"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -183,7 +190,7 @@ export default function Projects() {
           style={{ border: "1px solid #6b7280" }}
         >
           <h3
-            className="text-xl font-semibold mb-3"
+            className="text-xl italic font-semibold mb-3"
             style={{
               color: "#c4a3ec",
               fontFamily: "var(--font-space-mono), 'Courier New', monospace",
@@ -233,7 +240,7 @@ export default function Projects() {
           style={{ border: "1px solid #6b7280" }}
         >
           <h3
-            className="text-xl font-semibold mb-3"
+            className="text-xl italic font-semibold mb-3"
             style={{
               color: "#c4a3ec",
               fontFamily: "var(--font-space-mono), 'Courier New', monospace",
@@ -285,7 +292,7 @@ export default function Projects() {
           style={{ border: "1px solid #6b7280" }}
         >
           <h3
-            className="text-xl font-semibold mb-3"
+            className="text-xl italic font-semibold mb-3"
             style={{
               color: "#c4a3ec",
               fontFamily: "var(--font-space-mono), 'Courier New', monospace",
