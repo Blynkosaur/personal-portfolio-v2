@@ -550,7 +550,7 @@ export default function Home() {
           onMouseLeave={() => setLinkedinHover(false)}
         >
           <Link
-            href="https://www.linkedin.com/in/bryan-lin-176785300/"
+            href="https://www.linkedin.com/in/bry4n-lin"
             target="_blank"
             rel="noopener noreferrer"
           >

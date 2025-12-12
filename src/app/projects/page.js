@@ -127,7 +127,6 @@ export default function Projects() {
           </span>
         </p>
       </div>
-
       {/* Projects Grid */}
       <div className="w-full max-w-xl grid grid-cols-1  gap-6 mx-auto">
         {/* Project 1 */}
@@ -179,60 +178,54 @@ export default function Projects() {
             </Button>
           </div>
         </div>
-
-        {/* Project 2 */}
-        {/* <div className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm" style={{ border: "1px solid #6b7280" }}> */}
-        {/*   <h3 */}
-        {/*     className="text-xl font-semibold mb-3" */}
-        {/*     style={{ */}
-        {/*       color: "#c4a3ec", */}
-        {/*       fontFamily: "var(--font-space-mono), 'Courier New', monospace", */}
-        {/*       fontWeight: "700", */}
-        {/*     }} */}
-        {/*   > */}
-        {/*     MyNodes 🕸️ */}
-        {/*   </h3> */}
-        {/*   <p className="text-gray-300 text-sm mb-4"> */}
-        {/*     Working with 3 other students to create a full-stack knowledge */}
-        {/*     management system that improves knowledge retrieval through */}
-        {/*     automated organization. Featuring NLP pipelines for content */}
-        {/*     classification using TF-IDF vectorization, embeddings, and KMeans */}
-        {/*     clustering. */}
-        {/*     <br /> */}
-        {/*     <br /> */}
-        {/*     Upload your notes and create a graph of your knowledge! */}
-        {/*   </p> */}
-        {/*   <div className="flex gap-2 mb-4"> */}
-        {/*     <span className="text-xs bg-slate-700/50 px-2 py-1 rounded"> */}
-        {/*       React */}
-        {/*     </span> */}
-        {/*     <span className="text-xs bg-slate-700/50 px-2 py-1 rounded"> */}
-        {/*       Django */}
-        {/*     </span> */}
-        {/*     <span className="text-xs bg-slate-700/50 px-2 py-1 rounded"> */}
-        {/*       Cytoscape.js */}
-        {/*     </span> */}
-        {/*   </div> */}
-        {/*   <div className="flex gap-2"> */}
-        {/*     <Button */}
-        {/*       className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200" */}
-        {/*       asChild */}
-        {/*     > */}
-        {/*       <a href="#" target="_blank" rel="noopener noreferrer"> */}
-        {/*         <FaGithub className="mr-1" style={{ color: "#c4a3ec" }} /> */}
-        {/*         Code */}
-        {/*       </a> */}
-        {/*     </Button> */}
-        {/*     <Button */}
-        {/*       className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200" */}
-        {/*       asChild */}
-        {/*     > */}
-        {/*       <a href="#" target="_blank" rel="noopener noreferrer"> */}
-        {/*         Docs */}
-        {/*       </a> */}
-        {/*     </Button> */}
-        {/*   </div> */}
-        {/* </div> */}
+        <div
+          className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm"
+          style={{ border: "1px solid #6b7280" }}
+        >
+          <h3
+            className="text-xl font-semibold mb-3"
+            style={{
+              color: "#c4a3ec",
+              fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+              fontWeight: "700",
+            }}
+          >
+            BryteLinker 💻
+          </h3>
+          <p className="text-gray-300 text-sm mb-4">
+            Building Bryte Linker, an interpreted programming language featuring
+            a custom bytecode virtual machine in C Implementing a full lexer,
+            parser, and bytecode compiler to translate high-level code into
+            executable bytecode.
+            <br />
+            <br />
+            Still dealing with segfaults...
+          </p>
+          <div className="flex gap-2 mb-4">
+            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">C</span>
+            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
+              Makefile
+            </span>
+            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
+              GCC/GDB
+            </span>
+          </div>
+          <div className="flex gap-2">
+            <Button
+              className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200"
+              asChild
+            >
+              <a
+                href="https://github.com/Blynkosaur/BryteLinker"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub className="mr-1" style={{ color: "#c4a3ec" }} />
+                Code
+              </a>
+            </Button>
+          </div>
+        </div>
 
         {/* Project 3 */}
         <div
@@ -362,13 +355,12 @@ export default function Projects() {
         >
           Let&apos;s Connect
         </h2>
-        <p className="text-gray-300 mb-4"> 
+        <p className="text-gray-300 mb-4">
           Interested in collaborating or have questions about any other
           projects?
         </p>
         <div className="flex items-center gap-2 mb-6 max-w-xl w-full justify-center">
           <div className="flex-1 h-px bg-gray-600"></div>
-          
         </div>
         <div className="flex gap-4 justify-between flex-col [@media(min-width:580px)]:flex-row [@media(min-width:580px)]:justify-between">
           <Button
@@ -439,7 +431,7 @@ export default function Projects() {
             onMouseLeave={() => setLinkedinHover(false)}
           >
             <Link
-              href="https://www.linkedin.com/in/bryan-lin-176785300/"
+              href="https://www.linkedin.com/in/bry4n-lin"
               target="_blank"
               rel="noopener noreferrer"
             >
