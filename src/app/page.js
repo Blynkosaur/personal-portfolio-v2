@@ -323,7 +323,7 @@ export default function Home() {
                 {programmingHover && (
                   <Highlighter action="underline" color="#ffffff">
                     <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                      Outreach Pilot
+                      Network Pilot
                     </span>
                   </Highlighter>
                 )}
