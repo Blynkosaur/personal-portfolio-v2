@@ -490,7 +490,7 @@ export default function Home() {
         >
           <a
             // download= {true}
-            href={`./Bryan_Lin_Resume.pdf`}
+            href={`./BryanLin_Resume.pdf`}
             target="_blank"
             rel="noopener noreferrer"
           >
