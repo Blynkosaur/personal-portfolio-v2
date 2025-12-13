@@ -352,7 +352,7 @@ export default function Home() {
                 href="https://joinlivewell.ca"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:font-bold  hover:text-[#c4a3ec] transition-colors duration-200 inline-flex items-center"
+                className="cursor-none hover:font-bold  hover:text-[#c4a3ec] transition-colors duration-200 inline-flex items-center"
                 style={{ minHeight: "1.5rem" }}
               >
                 {!livewellHover && (
