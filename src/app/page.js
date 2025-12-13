@@ -368,13 +368,13 @@ export default function Home() {
                     }}
                   >
                     <Image
-                      src={`/oglivewell.png`}
+                      src={`/hims__hers_logo.jpeg`}
                       alt="Livewell Logo"
                       width={16}
                       height={16}
-                      className="object-contain relative top-[1px]"
+                      className="object-contain rounded-[2px] relative top-[1px]"
                     />
-                    Livewell
+                    Hims & Hers
                   </span>
                 )}
                 {livewellHover && (
@@ -391,13 +391,13 @@ export default function Home() {
                       }}
                     >
                       <Image
-                        src={`/oglivewell.png`}
+                        src={`/hims__hers_logo.jpeg`}
                         alt="Livewell Logo"
                         width={16}
                         height={16}
-                        className="object-contain relative top-[1px]"
+                        className="object-contain rounded-[2px] relative top-[1px]"
                       />
-                      Livewell
+                      Hims & Hers
                     </span>
                   </Highlighter>
                 )}
