@@ -1,5 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import ProjectCard from "@/components/ProjectCard";
+import projects from "./projects.json";
 import { Highlighter } from "@/components/ui/highlighter";
 import Link from "next/link";
 import styles from "../Page.module.css";
@@ -7,14 +9,7 @@ import TargetCursor from "@/components/TargetCursor";
 import TextType from "@/components/TextType";
 import DotGrid from "@/components/DotGrid";
 import { useState } from "react";
-import {
-  FaHome,
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaPaperclip,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaHome, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export function WaterlooImage() {
   return (
@@ -130,224 +125,17 @@ export default function Projects() {
       {/* Projects Grid */}
       <div className="w-full max-w-xl grid grid-cols-1  gap-6 mx-auto">
         {/* Project 1 */}
-        <div
-          className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm"
-          style={{ border: "1px solid #6b7280" }}
-        >
-          <h3
-            className="text-xl italic font-semibold mb-3"
-            style={{
-              color: "#c4a3ec",
-              fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-              fontWeight: "700",
-            }}
-          >
-            Tailored 🪡
-          </h3>
-          <p className="text-gray-300 text-sm mb-4">
-            Internship application season is approaching, but cold applying just
-            doesn’t work anymore. As they say,{" "}
-            <span className="italic">
-              &quot;It’s not what you know, but who you know.&quot;
-            </span>{" "}
-            Networking is key! But as a SWE student, I fear social interaction.
-            So I’m currently building <span className="italic">Tailored</span>,
-            a job application agent that connects you with recruiters or staff
-            to make you truly stand out.
-            <br />
-            <br />
-            bzzzz... MCP Servers??! bzz... bzz... RAG Pipelines?!?!?
-          </p>
-          <div className="flex gap-2 mb-4">
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-              GraphQL
-            </span>
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-              FastAPI
-            </span>
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-              MCP
-            </span>
-          </div>
-          <div className="flex gap-2">
-            <Button
-              className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200"
-              asChild
-            >
-              <a
-                href="https://github.com/Blynkosaur/Tailored"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub className="mr-1" style={{ color: "#c4a3ec" }} />
-                Code
-              </a>
-            </Button>
-          </div>
-        </div>
-        {/* Project 2 */}
-        <div
-          className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm"
-          style={{ border: "1px solid #6b7280" }}
-        >
-          <h3
-            className="text-xl italic font-semibold mb-3"
-            style={{
-              color: "#c4a3ec",
-              fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-              fontWeight: "700",
-            }}
-          >
-            BryteLinker 💻
-          </h3>
-          <p className="text-gray-300 text-sm mb-4">
-            Building Bryte Linker, an interpreted programming language featuring
-            a custom bytecode virtual machine in C Implementing a full lexer,
-            parser, and bytecode compiler to translate high-level code into
-            executable bytecode.
-            <br />
-            <br />
-            Still dealing with segfaults...
-          </p>
-          <div className="flex gap-2 mb-4">
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">C</span>
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-              Makefile
-            </span>
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-              GCC/GDB
-            </span>
-          </div>
-          <div className="flex gap-2">
-            <Button
-              className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200"
-              asChild
-            >
-              <a
-                href="https://github.com/Blynkosaur/BryteLinker"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub className="mr-1" style={{ color: "#c4a3ec" }} />
-                Code
-              </a>
-            </Button>
-          </div>
-        </div>
-
-        {/* Project 3 */}
-        <div
-          className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm"
-          style={{ border: "1px solid #6b7280" }}
-        >
-          <h3
-            className="text-xl italic font-semibold mb-3"
-            style={{
-              color: "#c4a3ec",
-              fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-              fontWeight: "700",
-            }}
-          >
-            League of Studies 📖
-          </h3>
-          <p className="text-gray-300 text-sm mb-4">
-            My mom told me to stop playing League of Legends 💔, so I made
-            League of Studies, a gamified study platform instead. Fight with
-            your friends or a boss to study for exams and climb the leaderboard!
-            <br />
-            <br />
-            <b>JACHacks 2025 Winner!</b>
-          </p>
-          <div className="flex gap-2 mb-4">
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-              React
-            </span>
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-              Supabase
-            </span>
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-              Gamification
-            </span>
-          </div>
-          <div className="flex gap-2">
-            <Button
-              className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200"
-              asChild
-            >
-              <a
-                href="https://github.com/Blynkosaur/LeagueOfStudies"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub className="mr-1" style={{ color: "#c4a3ec" }} />
-                Code
-              </a>
-            </Button>
-            <Button
-              className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200"
-              asChild
-            >
-              <a
-                href="https://ihatestudying.study"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Demo
-              </a>
-            </Button>
-          </div>
-        </div>
-        {/* Project 4 */}
-        <div
-          className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm"
-          style={{ border: "1px solid #6b7280" }}
-        >
-          <h3
-            className="text-xl italic font-semibold mb-3"
-            style={{
-              color: "#c4a3ec",
-              fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-              fontWeight: "700",
-            }}
-          >
-            Tumor Classifier 🧠
-          </h3>
-          <p className="text-gray-300 text-sm mb-4">
-            Designed and implemented a neural network from scratch using only
-            NumPy to classify breast growths as benign or malignant. Learning
-            the calculus and linear algebra behind supervised learning models
-            was a great experience.
-            <br />
-            <br />
-            Achieved 95% precision and 90% recall scores.
-          </p>
-          <div className="flex gap-2 mb-4">
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-              Python
-            </span>
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-              NumPy
-            </span>
-            <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-              Machine Learning
-            </span>
-          </div>
-          <div className="flex gap-2">
-            <Button
-              className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200"
-              asChild
-            >
-              <a
-                href="https://github.com/Blynkosaur/Tumor-Classification"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub className="mr-1" style={{ color: "#c4a3ec" }} />
-                Code
-              </a>
-            </Button>
-          </div>
-        </div>
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            title={project.title}
+            tags={project.tags}
+            description={project.description}
+            hook={project.hook}
+            github={project.github}
+            link={project.link}
+          />
+        ))}
       </div>
 
       {/* Contact Section */}

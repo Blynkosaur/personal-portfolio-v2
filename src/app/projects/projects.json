@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Tailored 🪡",
+    "description": "Internship application season is approaching, but cold applying just doesn't work anymore. As they say, \"It's not what you know, but who you know.\" Networking is key! But as a SWE student, I fear social interaction. So I'm currently building Tailored, a job application agent that connects you with recruiters or staff to make you truly stand out.",
+    "hook": "bzzzz... MCP Servers??! bzz... bzz... RAG Pipelines?!?!?",
+    "tags": ["GraphQL", "FastAPI", "MCP"],
+    "github": "https://github.com/Blynkosaur/Tailored",
+    "link": null
+  },
+  {
+    "title": "BryteLinker 💻",
+    "description": "Building Bryte Linker, an interpreted programming language featuring a custom bytecode virtual machine in C Implementing a full lexer, parser, and bytecode compiler to translate high-level code into executable bytecode.",
+    "hook": "Still dealing with segfaults...",
+    "tags": ["C", "Makefile", "GCC/GDB"],
+    "github": "https://github.com/Blynkosaur/BryteLinker",
+    "link": null
+  },
+  {
+    "title": "League of Studies 📖",
+    "description": "My mom told me to stop playing League of Legends 💔, so I made League of Studies, a gamified study platform instead. Fight with your friends or a boss to study for exams and climb the leaderboard!",
+    "hook": "JACHacks 2025 Winner!",
+    "tags": ["React", "Supabase", "Gamification"],
+    "github": "https://github.com/Blynkosaur/LeagueOfStudies",
+    "link": "https://ihatestudying.study"
+  },
+  {
+    "title": "Tumor Classifier 🧠",
+    "description": "Designed and implemented a neural network from scratch using only NumPy to classify breast growths as benign or malignant. Learning the calculus and linear algebra behind supervised learning models was a great experience.",
+    "hook": "Achieved 95% precision and 90% recall scores.",
+    "tags": ["Python", "NumPy", "Machine Learning"],
+    "github": "https://github.com/Blynkosaur/Tumor-Classification",
+    "link": null
+  }
+]

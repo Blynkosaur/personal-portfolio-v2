@@ -1,13 +1,14 @@
 import { FaGithub } from "react-icons/fa";
+import { Button } from "@/components/ui/button";
 
-export default function ProjectCard(
-  { title },
-  { description },
-  { hook },
-  { tags },
-  { github },
-  { link },
-) {
+export default function ProjectCard({
+  title,
+  description,
+  hook,
+  tags,
+  github,
+  link,
+}) {
   return (
     <div
       className="cursor-target p-6 bg-slate-800/20 rounded-lg hover:bg-slate-700/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm"
@@ -27,7 +28,7 @@ export default function ProjectCard(
         {description}
         <br />
         <br />
-        {hook}
+        <b>{hook}</b>
       </p>
       <div className="flex gap-2 mb-4">
         {tags.map((tag, index) => (
