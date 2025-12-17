@@ -5,7 +5,6 @@ import Link from "next/link";
 import styles from "./Page.module.css";
 import DotGrid from "@/components/DotGrid";
 import TextType from "@/components/TextType";
-import GameToggle from "@/components/GameToggle";
 import {
   FaGithub,
   FaLinkedin,
@@ -13,19 +12,9 @@ import {
   FaPaperclip,
   FaHome,
 } from "react-icons/fa";
-import { Checkbox } from "@/components/ui/checkbox";
-import PixelTrail from "@/components/PixelTrail";
 import TargetCursor from "@/components/TargetCursor";
-import { useState, useEffect } from "react";
-import {
-  FigureOne,
-  FigureTwo,
-  FigureThree,
-  FigureFour,
-  Door,
-} from "@/components/MonsterFigure";
+import { useState } from "react";
 import React from "react";
-import { AlignCenterVertical } from "lucide-react";
 import Image from "next/image";
 export function WaterlooImage() {
   return (
@@ -39,7 +28,6 @@ export function WaterlooImage() {
 }
 
 export default function Home() {
-  const [checked, setChecked] = useState(false);
   const [hover, setHover] = useState(false);
   const [livewellHover, setLivewellHover] = useState(false);
   const [programmingHover, setProgrammingHover] = useState(false);
@@ -51,7 +39,6 @@ export default function Home() {
   const [githubHover, setGithubHover] = useState(false);
   const [linkedinHover, setLinkedinHover] = useState(false);
   const [instagramHover, setInstagramHover] = useState(false);
-  const [gameVis, setGameVis] = useState(true);
   return (
     <div
       className={`${styles.page} relative overflow-y-hidden flex flex-col justify-center items-center text-white p-10 scrollbar-hide overflow-x-hidden`}
@@ -99,11 +86,6 @@ export default function Home() {
           )}
         </Link>
       </Button>
-      {/* <GameToggle
-        className="cursor-target absolute top-6 right-4 md:right-16 lg:right-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base "
-        checked={gameVis}
-        onChange={(e) => setGameVis(e.target.checked)}
-      /> */}
       <div
         style={{
           position: "fixed",
@@ -118,7 +100,6 @@ export default function Home() {
           alignItems: "center",
         }}
       />
-      {/* <div style={{ height: "20px" }} /> */}
       <div className="w-full max-w-xl mt-2 mx-auto px-4">
         <h1
           className=" font-bold mt-12 mb-10 text-left"
@@ -607,11 +588,6 @@ export default function Home() {
       </div>
       {/* Bottom spacing for mobile scrolling */}
       <div className="h-20"></div>
-      {/* <FigureOne />
-      <FigureTwo />
-      <FigureThree />
-      <FigureFour />
-      <Door /> */}
     </div>
   );
 }
