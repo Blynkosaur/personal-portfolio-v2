@@ -1,3 +1,5 @@
+import { FaGithub } from "react-icons/fa";
+
 export default function ProjectCard(
   { title },
   { description },
@@ -22,37 +24,41 @@ export default function ProjectCard(
         {title}
       </h3>
       <p className="text-gray-300 text-sm mb-4">
-        Designed and implemented a neural network from scratch using only NumPy
-        to classify breast growths as benign or malignant. Learning the calculus
-        and linear algebra behind supervised learning models was a great
-        experience.
+        {description}
         <br />
         <br />
-        Achieved 95% precision and 90% recall scores.
+        {hook}
       </p>
       <div className="flex gap-2 mb-4">
-        <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-          Python
-        </span>
-        <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">NumPy</span>
-        <span className="text-xs bg-slate-700/50 px-2 py-1 rounded">
-          Machine Learning
-        </span>
+        {tags.map((tag, index) => (
+          <span
+            key={index}
+            className="text-xs bg-slate-700/50 px-2 py-1 rounded"
+          >
+            {tag}
+          </span>
+        ))}
       </div>
       <div className="flex gap-2">
         <Button
           className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200"
           asChild
         >
-          <a
-            href="https://github.com/Blynkosaur/Tumor-Classification"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={github} target="_blank" rel="noopener noreferrer">
             <FaGithub className="mr-1" style={{ color: "#c4a3ec" }} />
             Code
           </a>
         </Button>
+        {link && (
+          <Button
+            className="cursor-target text-xs bg-slate-700/50 border-slate-500 text-slate-100 hover:bg-slate-600/50 hover:border-slate-400 transition-all duration-200"
+            asChild
+          >
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              Demo
+            </a>
+          </Button>
+        )}
       </div>
     </div>
   );
