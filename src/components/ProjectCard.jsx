@@ -25,7 +25,7 @@ export default function ProjectCard({
         {title}
       </h3>
       <p className="text-gray-300 text-sm mb-4">
-        {description}
+        <span dangerouslySetInnerHTML={{ __html: description }} />
         <br />
         <br />
         <b>{hook}</b>
