@@ -1,7 +1,7 @@
 [
   {
     "title": "Tailored 🪡",
-    "description": "Internship application season is approaching, but cold applying just doesn't work anymore. As they say, <i>\"It's not what you know, but who you know.\"</i> Networking is key! But as a SWE student, I fear social interaction. So I'm currently building <i>Tailored,</i> a job application agent that connects you with recruiters or staff to make you truly stand out.",
+    "description": "Internship application season is approaching. Bypass ATS with a custom resume and cover letter :)",
     "hook": "bzzzz... MCP Servers??! bzz... bzz... RAG Pipelines?!?!?",
     "tags": ["GraphQL", "FastAPI", "MCP"],
     "github": "https://github.com/Blynkosaur/Tailored",
