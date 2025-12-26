@@ -8,8 +8,8 @@
     "link": null
   },
   {
-    "title": "BryteLinker 💻",
-    "description": "Building Bryte Linker, an interpreted programming language featuring a custom bytecode virtual machine in C Implementing a full lexer, parser, and bytecode compiler to translate high-level code into executable bytecode.",
+    "title": "SaaScript 💻",
+    "description": "Building SaaScript, an <i>\"startup\"</i> buzzword interpreted programming language featuring a custom bytecode virtual machine in C Implementing a full lexer, parser, and bytecode compiler to translate high-level code into executable bytecode.",
     "hook": "Still dealing with segfaults...",
     "tags": ["C", "Makefile", "GCC/GDB"],
     "github": "https://github.com/Blynkosaur/BryteLinker",
