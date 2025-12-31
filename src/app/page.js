@@ -56,7 +56,7 @@ export default function Home() {
         gap={12}
         baseColor="#6b4c93"
         activeColor="#ffffff"
-        style={{ opacity: 0.6, zIndex: 0 }}
+        style={{ opacity: 0.6, zIndex: -9999 }}
       />
       <div className="hidden md:block">
         <TargetCursor spinDuration={5} hideDefaultCursor={true} />
