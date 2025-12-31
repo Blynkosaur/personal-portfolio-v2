@@ -9,7 +9,7 @@
   },
   {
     "title": "SaaScript 💻",
-    "description": "Building SaaScript, a <i>\"startup buzzword\"</i> interpreted programming language featuring a custom bytecode virtual machine in C Implementing a full lexer, parser, and bytecode compiler to translate high-level code into executable bytecode.",
+    "description": "Building <i>SaaScript</i>, a <i>\"startup buzzword\"</i> interpreted programming language featuring a custom bytecode virtual machine in C Implementing a full lexer, parser, and bytecode compiler to translate high-level code into executable bytecode.",
     "hook": "Still dealing with segfaults...",
     "tags": ["C", "Makefile", "GCC/GDB"],
     "github": "https://github.com/Blynkosaur/BryteLinker",
@@ -17,7 +17,7 @@
   },
   {
     "title": "League of Studies 📖",
-    "description": "My mom told me to stop playing League of Legends 💔, so I made League of Studies, a gamified study platform instead. Fight with your friends or a boss to study for exams and climb the leaderboard!",
+    "description": "My mom told me to stop playing League of Legends 💔, so I made <i>League of Studies</i>, a gamified study platform instead. Fight with your friends or a boss to study for exams and climb the leaderboard!",
     "hook": "JACHacks 2025 Winner!",
     "tags": ["React", "Supabase", "Gamification"],
     "github": "https://github.com/Blynkosaur/LeagueOfStudies",

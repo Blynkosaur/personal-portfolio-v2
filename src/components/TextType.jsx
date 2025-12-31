@@ -147,7 +147,7 @@ const TextType = ({
     ref: containerRef,
     className: `inline-block whitespace-pre-wrap tracking-tight ${className}`,
     ...props
-  }, <span className="inline" style={{ color: getCurrentTextColor(), ...props.style }}>
+  }, <span className="inline" style={{ color: getCurrentTextColor(), ...props.style, opacity: 1 }}>
     {displayedText}
   </span>, showCursor && (
     <span

@@ -56,7 +56,7 @@ export default function Home() {
         gap={12}
         baseColor="#6b4c93"
         activeColor="#ffffff"
-        style={{ opacity: 0.6 }}
+        style={{ opacity: 0.6, zIndex: 0 }}
       />
       <div className="hidden md:block">
         <TargetCursor spinDuration={5} hideDefaultCursor={true} />
@@ -100,7 +100,7 @@ export default function Home() {
           alignItems: "center",
         }}
       />
-      <div className="w-full max-w-xl mt-2 mx-auto px-4">
+      <div className="w-full  z-999 max-w-xl mt-2 mx-auto px-4">
         <h1
           className=" font-bold mt-12 mb-10 text-left"
           style={{ fontWeight: "700", fontSize: "1.8rem" }}
@@ -119,6 +119,7 @@ export default function Home() {
                 fontFamily: "var(--font-space-mono), 'Courier New', monospace",
                 fontWeight: "700",
                 fontStyle: "italic",
+                opacity: 1,
               }}
             />{" "}
             <TextType
