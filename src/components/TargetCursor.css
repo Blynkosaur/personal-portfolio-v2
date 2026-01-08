@@ -56,3 +56,10 @@
     border-top: none;
   }
   
+  /* Hide cursor on screens smaller than xl (1280px) */
+  @media (max-width: 1279px) {
+    .target-cursor-wrapper {
+      display: none !important;
+    }
+  }
+  

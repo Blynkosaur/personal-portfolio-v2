@@ -26,6 +26,10 @@ const TargetCursor = ({ targetSelector = '.cursor-target', spinDuration = 2, hid
   useEffect(() => {
     if (!cursorRef.current) return;
 
+    // Check if screen is xl or larger (1280px+)
+    const isXLScreen = window.innerWidth >= 1280;
+    if (!isXLScreen) return;
+
     const originalCursor = document.body.style.cursor;
     if (hideDefaultCursor) {
       document.body.style.cursor = 'none';
