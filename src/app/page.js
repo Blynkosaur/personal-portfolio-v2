@@ -58,7 +58,7 @@ export default function Home() {
         activeColor="#ffffff"
         style={{ opacity: 0.6, zIndex: -9999 }}
       />
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <TargetCursor spinDuration={5} hideDefaultCursor={true} />
       </div>
       <Button
