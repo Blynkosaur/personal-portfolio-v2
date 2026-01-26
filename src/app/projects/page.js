@@ -10,6 +10,7 @@ import TextType from "@/components/TextType";
 import DotGrid from "@/components/DotGrid";
 import { useState } from "react";
 import { FaHome, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import FooterBar from "@/components/FooterBar";
 
 export function WaterlooImage() {
   return (
@@ -24,9 +25,6 @@ export function WaterlooImage() {
 
 export default function Projects() {
   const [homeHover, setHomeHover] = useState(false);
-  const [emailHover, setEmailHover] = useState(false);
-  const [githubHover, setGithubHover] = useState(false);
-  const [linkedinHover, setLinkedinHover] = useState(false);
 
   return (
     <div
@@ -37,7 +35,7 @@ export default function Projects() {
         color: "#E8F4F8",
         fontFamily: "var(--font-space-mono), 'Courier New', monospace",
         fontWeight: "700",
-        paddingBottom: "80px",
+        paddingBottom: "40px",
         zIndex: 2,
       }}
     >
@@ -139,7 +137,7 @@ export default function Projects() {
       </div>
 
       {/* Contact Section */}
-      <div className="w-full max-w-xl mt-16 text-left">
+      <div className="w-full max-w-xl mt-16 mb-8 text-left">
         <h2
           className="text-2xl font-bold mb-6"
           style={{
@@ -154,101 +152,30 @@ export default function Projects() {
           Interested in collaborating or have questions about any other
           projects?
         </p>
-        <div className="flex items-center gap-2 mb-6 max-w-xl w-full justify-center">
-          <div className="flex-1 h-px bg-gray-600"></div>
-        </div>
-        <div className="flex gap-4 justify-between flex-col [@media(min-width:580px)]:flex-row [@media(min-width:580px)]:justify-between">
-          <Button
-            className="cursor-target w-full [@media(min-width:580px)]:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
-            asChild
-            style={{ border: "1px solid #6b7280" }}
-            onMouseEnter={() => setEmailHover(true)}
-            onMouseLeave={() => setEmailHover(false)}
-          >
-            <a
-              href="mailto:b86lin@uwaterloo.ca"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaEnvelope className="mr-2" style={{ color: "#c4a3ec" }} />
-              {emailHover ? (
-                <Highlighter
-                  action="underline"
-                  color="#ffffff"
-                  animationDuration={50}
-                  padding={0}
-                  iterations={1}
-                >
-                  <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                    Email
-                  </span>
-                </Highlighter>
-              ) : (
-                "Email"
-              )}
-            </a>
-          </Button>
-          <Button
-            className="cursor-target w-full [@media(min-width:580px)]:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
-            asChild
-            style={{ border: "1px solid #6b7280" }}
-            onMouseEnter={() => setGithubHover(true)}
-            onMouseLeave={() => setGithubHover(false)}
-          >
-            <Link
-              href="https://github.com/blynkosaur"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className="mr-2" style={{ color: "#c4a3ec" }} />
-              {githubHover ? (
-                <Highlighter
-                  action="underline"
-                  color="#ffffff"
-                  animationDuration={50}
-                  padding={0}
-                  iterations={1}
-                >
-                  <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                    GitHub
-                  </span>
-                </Highlighter>
-              ) : (
-                "GitHub"
-              )}
-            </Link>
-          </Button>
-          <Button
-            className="cursor-target w-full [@media(min-width:580px)]:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
-            asChild
-            style={{ border: "1px solid #6b7280" }}
-            onMouseEnter={() => setLinkedinHover(true)}
-            onMouseLeave={() => setLinkedinHover(false)}
-          >
-            <Link
-              href="https://www.linkedin.com/in/bry4n-lin"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin className="mr-2" style={{ color: "#c4a3ec" }} />
-              {linkedinHover ? (
-                <Highlighter
-                  action="underline"
-                  color="#ffffff"
-                  animationDuration={50}
-                  padding={0}
-                  iterations={1}
-                >
-                  <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                    LinkedIn
-                  </span>
-                </Highlighter>
-              ) : (
-                "LinkedIn"
-              )}
-            </Link>
-          </Button>
-        </div>
+      </div>
+      <div className="w-full max-w-xl mx-auto">
+        <FooterBar
+          links={[
+            {
+              icon: FaGithub,
+              label: "GitHub",
+              href: "https://github.com/blynkosaur",
+              external: true,
+            },
+            {
+              icon: FaLinkedin,
+              label: "LinkedIn",
+              href: "https://www.linkedin.com/in/bry4n-lin",
+              external: true,
+            },
+            {
+              icon: FaEnvelope,
+              label: "Email",
+              href: "mailto:b86lin@uwaterloo.ca",
+              external: true,
+            },
+          ]}
+        />
       </div>
     </div>
   );

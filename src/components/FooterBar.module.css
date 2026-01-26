@@ -1,0 +1,139 @@
+.footerBar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #1e1e2e;
+  z-index: 100;
+  padding: 1.5rem 0;
+  overflow: hidden;
+  margin: 0 auto;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  font-family: var(--font-space-mono), 'Courier New', monospace;
+}
+
+.dotGridContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.divider {
+  position: relative;
+  z-index: 1;
+  border: none;
+  border-top: 1px solid rgba(107, 76, 147, 0.3);
+  margin: 0;
+}
+
+.footerContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.linksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #9ca3af;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  gap: 0;
+}
+
+.link:hover {
+  color: #c4a3ec;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 0.5s ease-out;
+  flex-shrink: 0;
+}
+
+.link:hover .icon {
+  transform: scale(1.1);
+}
+
+.label {
+  font-family: var(--font-space-mono), 'Courier New', monospace;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-left: 0;
+  transition: all 0.5s ease-out;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .link:hover .label {
+    max-width: 200px;
+    opacity: 1;
+    margin-left: 0.5rem;
+  }
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navLink {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+
+.navLink:hover {
+  color: #c4a3ec;
+}
+
+.navIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #9ca3af;
+  opacity: 0.8;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.navLink:hover + .navIcon,
+.navIcon:hover {
+  opacity: 1;
+  background-color: #c4a3ec;
+}
+
+.copyright {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  text-align: left;
+}
