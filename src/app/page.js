@@ -99,8 +99,8 @@ export default function Home() {
       />
       <div className="w-full  z-999 max-w-xl mt-2 mx-auto px-4">
         <h1
-          className=" font-bold mt-16 mb-10 text-left"
-          style={{ fontWeight: "700", fontSize: "1.8rem" }}
+          className=" font-bold mt-16 mb-10 text-left text-2xl md:text-[1.8rem]"
+          style={{ fontWeight: "700" }}
         >
           {/* Mobile version - with typing animation */}
           <span className="md:hidden">
@@ -175,7 +175,7 @@ export default function Home() {
         </h1>
 
         <div
-          className="text-white-600 text-lg mb-12 leading-9"
+          className="text-white-600 text-sm md:text-lg mb-12 leading-7 md:leading-9"
           style={{
             fontWeight: "300",
             alignContent: "left",
@@ -193,7 +193,7 @@ export default function Home() {
                 setHover(false);
               }}
             >
-              <div className="absolute left-2 top-[0.875rem] w-[8px] h-[8px] bg-white rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              <div className="absolute left-2 top-[0.5rem] md:top-[0.875rem] w-[8px] h-[8px] bg-white rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               SWE{""}
               <a
                 target="_blank"
@@ -262,8 +262,8 @@ export default function Home() {
               }}
               className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
             >
-              <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              Building through{" "}
+              <div className="absolute left-2 top-[0.5rem] md:top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform md:-translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              Building with{" "}
               <span
                 className="font-medium hover:text-[#c4a3ec] transition-colors duration-200 cursor-none"
                 style={{
@@ -290,7 +290,7 @@ export default function Home() {
                 setProgrammingHover(false);
               }}
             >
-              <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              <div className="absolute left-2 top-[0.5rem] md:top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform md:-translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               Currently working on{" "}
               <Link href={"/projects"}>
                 <span
@@ -316,7 +316,7 @@ export default function Home() {
             </li>
 
             <li
-              className="group cursor-none flex flex-col xs:flex-row items-start xs:gap-2 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
+              className="group cursor-none flex flex-row items-start gap-2 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
               onMouseEnter={() => {
                 setLivewellHover(true);
               }}
@@ -324,8 +324,8 @@ export default function Home() {
                 setLivewellHover(false);
               }}
             >
-              <div className="absolute left-2 top-[1.875rem] xs:top-[0.875rem] w-[8px] h-[8px] bg-white rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              Prev. swe intern{"  "}
+              <div className="absolute left-2 top-[0.5rem] md:top-[0.875rem] w-[8px] h-[8px] bg-white rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              Prev.{"  "}
               <a
                 href="https://joinlivewell.ca"
                 target="_blank"
@@ -388,7 +388,7 @@ export default function Home() {
       {/* Projects Button */}
       <div className="w-full max-w-xl mt-2 mb-16 mx-auto px-4">
         <Button
-          className="cursor-target w-full bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-10 py-6 text-lg font-medium"
+          className="cursor-target w-full bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-10 py-6 text-sm md:text-lg font-medium"
           asChild
           style={{ border: "1px solid #6b7280" }}
           onMouseEnter={() => setProjectsHover(true)}
@@ -413,13 +413,13 @@ export default function Home() {
           </Link>
         </Button>
       </div>
-      <div className="text-lg mb-4 w-full max-w-xl text-left flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center mx-auto px-4">
+      <div className="text-sm md:text-lg mb-4 w-full max-w-xl text-left flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center mx-auto px-4">
         <div className="flex flex-col items-center justify-center">
           ↳ You can contact me at
         </div>
         <div className="flex flex-col justify-center items-center">
           <Button
-            className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-base"
+            className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-sm md:text-base"
             asChild
             style={{ border: "1px solid #6b7280" }}
             onMouseEnter={() => setEmailHover(true)}
