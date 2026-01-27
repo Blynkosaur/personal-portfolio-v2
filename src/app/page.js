@@ -53,7 +53,7 @@ export default function Home() {
         gap={12}
         baseColor="#6b4c93"
         activeColor="#ffffff"
-        style={{ opacity: 0.6, zIndex: -9999 }}
+        style={{ opacity: 0.6, zIndex: -999999 }}
       />
       <div className="hidden xl:block">
         <TargetCursor spinDuration={5} hideDefaultCursor={true} />
@@ -194,7 +194,7 @@ export default function Home() {
               }}
             >
               <div className="absolute left-2 top-[0.875rem] w-[8px] h-[8px] bg-white rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              SWE{""}
+              SWE student @{""}
               <a
                 target="_blank"
                 rel="noopener noreferrer"

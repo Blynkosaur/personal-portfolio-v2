@@ -53,7 +53,7 @@ export default function Projects() {
 
       {/* Home Button */}
       {/* Header */}
-      <div className="w-full max-w-xl mt-16 mx-auto text-left">
+      <div className="w-full max-w-xl mt-16 mx-auto px-4 text-left">
         <Button
           asChild
           variant="outline"
@@ -83,7 +83,7 @@ export default function Projects() {
         </Button>
 
         <h1
-          className="text-4xl font-bold mt-4 mb-6 text-left cursor-pointer  "
+          className="text-4xl font-bold mt-4 mb-4 text-left cursor-pointer  "
           style={{
             fontWeight: "700",
             color: "#c4a3ec",
@@ -93,7 +93,7 @@ export default function Projects() {
           My Projects
         </h1>
 
-        <p className="group   gap-4  relative  hover:font-bold transition-transform duration-200 text-gray-300 text-lg mb-2 pl-2 leading-7 text-left">
+        <p className="group   gap-4  relative  hover:font-bold transition-transform duration-200 text-gray-300 text-lg mb-2 leading-7 text-left">
           <span
             className="group-hover:font-bold  font-bold italic"
             style={{
@@ -122,7 +122,7 @@ export default function Projects() {
         </p>
       </div>
       {/* Projects Grid */}
-      <div className="w-full max-w-xl grid grid-cols-1  gap-6 mx-auto">
+      <div className="w-full max-w-xl grid grid-cols-1 gap-6 mx-auto px-4">
         {/* Project 1 */}
         {projects.map((project, index) => (
           <ProjectCard
@@ -137,24 +137,7 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* Contact Section */}
-      <div className="w-full max-w-xl mt-16 mb-8 text-left">
-        <h2
-          className="text-2xl font-bold mb-6"
-          style={{
-            fontWeight: "700",
-            color: "#c4a3ec",
-            fontFamily: "var(--font-space-mono), 'Courier New', monospace",
-          }}
-        >
-          Let&apos;s Connect
-        </h2>
-        <p className="text-gray-300 mb-4">
-          Interested in collaborating or have questions about any other
-          projects?
-        </p>
-      </div>
-      <div className="w-full max-w-xl mx-auto px-4">
+      <div className="w-full max-w-xl mx-auto px-4 mt-8">
         <FooterBar
           links={[
             {
