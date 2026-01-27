@@ -38,7 +38,7 @@ export default function Home() {
   const [emailHover, setEmailHover] = useState(false);
   return (
     <div
-      className={`${styles.page} relative overflow-y-hidden flex flex-col justify-center items-center text-white px-10 pb-10 pt-0 scrollbar-hide overflow-x-hidden`}
+      className={`${styles.page} relative overflow-y-hidden flex flex-col justify-center items-center text-white px-2 md:px-10 pb-10 pt-0 scrollbar-hide overflow-x-hidden`}
       style={{
         minHeight: "100vh",
         backgroundColor: "#1e1e2e",
@@ -194,7 +194,7 @@ export default function Home() {
               }}
             >
               <div className="absolute left-2 top-[0.875rem] w-[8px] h-[8px] bg-white rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              SWE student @{""}
+              SWE{""}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -263,7 +263,7 @@ export default function Home() {
               className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
             >
               <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              Fighting{" "}
+              Building through{" "}
               <span
                 className="font-medium hover:text-[#c4a3ec] transition-colors duration-200 cursor-none"
                 style={{
@@ -279,8 +279,7 @@ export default function Home() {
                     </span>
                   </Highlighter>
                 )}
-              </span>{" "}
-              by building
+              </span>
             </li>
             <li
               className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
@@ -292,7 +291,7 @@ export default function Home() {
               }}
             >
               <div className="absolute left-2 top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              Curently fighting homelessness with{" "}
+              Currently working on{" "}
               <Link href={"/projects"}>
                 <span
                   className="font-medium italic hover:text-[#c4a3ec] transition-colors duration-200 cursor-none"

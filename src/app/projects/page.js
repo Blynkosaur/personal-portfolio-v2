@@ -29,7 +29,7 @@ export default function Projects() {
 
   return (
     <div
-      className={`${styles.page} relative flex flex-col justify-start items-center text-white px-10 pb-10 pt-0 scrollbar-hide overflow-x-hidden`}
+      className={`${styles.page} relative flex flex-col justify-start items-center text-white px-2 md:px-10 pb-10 pt-0 scrollbar-hide overflow-x-hidden`}
       style={{
         minHeight: "100vh",
         backgroundColor: "#1e1e2e",
