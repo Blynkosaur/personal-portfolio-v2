@@ -13,6 +13,7 @@ import {
   FaHome,
 } from "react-icons/fa";
 import TargetCursor from "@/components/TargetCursor";
+import FooterBar from "@/components/FooterBar";
 import { useState } from "react";
 import React from "react";
 import Image from "next/image";
@@ -35,13 +36,9 @@ export default function Home() {
   const [homeHover, setHomeHover] = useState(false);
   const [projectsHover, setProjectsHover] = useState(false);
   const [emailHover, setEmailHover] = useState(false);
-  const [resumeHover, setResumeHover] = useState(false);
-  const [githubHover, setGithubHover] = useState(false);
-  const [linkedinHover, setLinkedinHover] = useState(false);
-  const [instagramHover, setInstagramHover] = useState(false);
   return (
     <div
-      className={`${styles.page} relative overflow-y-hidden flex flex-col justify-center items-center text-white p-10 scrollbar-hide overflow-x-hidden`}
+      className={`${styles.page} relative overflow-y-hidden flex flex-col justify-center items-center text-white px-10 pb-10 pt-0 scrollbar-hide overflow-x-hidden`}
       style={{
         minHeight: "100vh",
         backgroundColor: "#1e1e2e",
@@ -56,7 +53,7 @@ export default function Home() {
         gap={12}
         baseColor="#6b4c93"
         activeColor="#ffffff"
-        style={{ opacity: 0.6, zIndex: -9999 }}
+        style={{ opacity: 0.6, zIndex: -999999 }}
       />
       <div className="hidden xl:block">
         <TargetCursor spinDuration={5} hideDefaultCursor={true} />
@@ -102,7 +99,7 @@ export default function Home() {
       />
       <div className="w-full  z-999 max-w-xl mt-2 mx-auto px-4">
         <h1
-          className=" font-bold mt-12 mb-10 text-left"
+          className=" font-bold mt-16 mb-10 text-left"
           style={{ fontWeight: "700", fontSize: "1.8rem" }}
         >
           {/* Mobile version - with typing animation */}
@@ -178,7 +175,7 @@ export default function Home() {
         </h1>
 
         <div
-          className="text-white-600 text-lg mb-8 leading-9"
+          className="text-white-600 text-lg mb-12 leading-9"
           style={{
             fontWeight: "300",
             alignContent: "left",
@@ -197,7 +194,7 @@ export default function Home() {
               }}
             >
               <div className="absolute left-2 top-[0.875rem] w-[8px] h-[8px] bg-white rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              SWE{""}
+              SWE student @{""}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -283,7 +280,7 @@ export default function Home() {
                   </Highlighter>
                 )}
               </span>{" "}
-              by consistently building
+              by building
             </li>
             <li
               className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
@@ -390,7 +387,7 @@ export default function Home() {
       </div>
 
       {/* Projects Button */}
-      <div className="w-full max-w-xl mt-6 mb-16 mx-auto px-4">
+      <div className="w-full max-w-xl mt-2 mb-16 mx-auto px-4">
         <Button
           className="cursor-target w-full bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-10 py-6 text-lg font-medium"
           asChild
@@ -417,7 +414,7 @@ export default function Home() {
           </Link>
         </Button>
       </div>
-      <div className="text-lg mb-10 w-full max-w-xl text-left flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center mx-auto px-4">
+      <div className="text-lg mb-4 w-full max-w-xl text-left flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center mx-auto px-4">
         <div className="flex flex-col items-center justify-center">
           ↳ You can contact me at
         </div>
@@ -454,141 +451,11 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      <div className="text-center mb-1 max-w-xl w-full mt-2 mx-auto px-4">
-        <p className="font-thin text-xl text-center mb-4 w-full">
-          Here are my socials:
-        </p>
+      {/* Bottom spacing for footer */}
+      <div className="w-full max-w-xl mx-auto px-4">
+        <FooterBar />
       </div>
-      <div className="flex items-center gap-2 mb-6 max-w-xl w-full justify-center mx-auto">
-        <div className="flex-1 h-px bg-gray-600"></div>
-        <span className="text-gray-400 text-sm px-2 ">↓</span>
-        <div className="flex-1 h-px bg-gray-600"></div>
-      </div>
-      <div className="flex gap-4 justify-center flex-col sm:flex-row max-w-xl w-full mx-auto px-4">
-        <Button
-          className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-4 py-3 text-base"
-          asChild
-          style={{ border: "1px solid #6b7280" }}
-          onMouseEnter={() => setResumeHover(true)}
-          onMouseLeave={() => setResumeHover(false)}
-        >
-          <a
-            // download= {true}
-            href={`./BryanLin_Resume.pdf`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaPaperclip style={{ color: "#c4a3ec" }} />
-            {resumeHover ? (
-              <Highlighter
-                action="underline"
-                color="#ffffff"
-                animationDuration={50}
-                padding={0}
-                iterations={1}
-              >
-                <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                  Resume
-                </span>
-              </Highlighter>
-            ) : (
-              "Resume"
-            )}
-          </a>
-        </Button>
-        <Button
-          className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-4 py-3 text-base"
-          asChild
-          style={{ border: "1px solid #6b7280" }}
-          onMouseEnter={() => setGithubHover(true)}
-          onMouseLeave={() => setGithubHover(false)}
-        >
-          <Link
-            href="https://github.com/blynkosaur"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub style={{ color: "#c4a3ec" }} />
-            {githubHover ? (
-              <Highlighter
-                action="underline"
-                color="#ffffff"
-                animationDuration={50}
-                padding={0}
-                iterations={1}
-              >
-                <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                  GitHub
-                </span>
-              </Highlighter>
-            ) : (
-              "GitHub"
-            )}
-          </Link>
-        </Button>
-        <Button
-          className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-4 py-3 text-base"
-          asChild
-          style={{ border: "1px solid #6b7280" }}
-          onMouseEnter={() => setLinkedinHover(true)}
-          onMouseLeave={() => setLinkedinHover(false)}
-        >
-          <Link
-            href="https://www.linkedin.com/in/bry4n-lin"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin style={{ color: "#c4a3ec" }} />
-            {linkedinHover ? (
-              <Highlighter
-                action="underline"
-                color="#ffffff"
-                animationDuration={50}
-                padding={0}
-                iterations={1}
-              >
-                <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                  LinkedIn
-                </span>
-              </Highlighter>
-            ) : (
-              "LinkedIn"
-            )}
-          </Link>
-        </Button>
-        <Button
-          className="cursor-target w-full sm:w-auto bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-4 py-3 text-base"
-          asChild
-          style={{ border: "1px solid #6b7280" }}
-          onMouseEnter={() => setInstagramHover(true)}
-          onMouseLeave={() => setInstagramHover(false)}
-        >
-          <Link
-            href="https://www.instagram.com/bry4n.lin/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram style={{ color: "#c4a3ec" }} />
-            {instagramHover ? (
-              <Highlighter
-                action="underline"
-                animationDuration={200}
-                padding={0}
-                iterations={1}
-                color="#ffffff"
-              >
-                <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                  Instagram
-                </span>
-              </Highlighter>
-            ) : (
-              "Instagram"
-            )}
-          </Link>
-        </Button>
-      </div>
-      {/* Bottom spacing for mobile scrolling */}
-      <div className="h-20"></div>
+      <div className="h-8"></div>
     </div>
   );
 }
