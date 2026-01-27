@@ -38,7 +38,7 @@ export default function Home() {
   const [emailHover, setEmailHover] = useState(false);
   return (
     <div
-      className={`${styles.page} relative overflow-y-hidden flex flex-col justify-center items-center text-white p-10 scrollbar-hide overflow-x-hidden`}
+      className={`${styles.page} relative overflow-y-hidden flex flex-col justify-center items-center text-white px-10 pb-10 pt-0 scrollbar-hide overflow-x-hidden`}
       style={{
         minHeight: "100vh",
         backgroundColor: "#1e1e2e",
@@ -99,7 +99,7 @@ export default function Home() {
       />
       <div className="w-full  z-999 max-w-xl mt-2 mx-auto px-4">
         <h1
-          className=" font-bold mt-12 mb-10 text-left"
+          className=" font-bold mt-16 mb-10 text-left"
           style={{ fontWeight: "700", fontSize: "1.8rem" }}
         >
           {/* Mobile version - with typing animation */}
@@ -175,7 +175,7 @@ export default function Home() {
         </h1>
 
         <div
-          className="text-white-600 text-lg mb-8 leading-9"
+          className="text-white-600 text-lg mb-12 leading-9"
           style={{
             fontWeight: "300",
             alignContent: "left",
@@ -280,7 +280,7 @@ export default function Home() {
                   </Highlighter>
                 )}
               </span>{" "}
-              by consistently building
+              by building
             </li>
             <li
               className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
@@ -387,7 +387,7 @@ export default function Home() {
       </div>
 
       {/* Projects Button */}
-      <div className="w-full max-w-xl mt-6 mb-16 mx-auto px-4">
+      <div className="w-full max-w-xl mt-2 mb-16 mx-auto px-4">
         <Button
           className="cursor-target w-full bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-10 py-6 text-lg font-medium"
           asChild
@@ -414,7 +414,7 @@ export default function Home() {
           </Link>
         </Button>
       </div>
-      <div className="text-lg mb-10 w-full max-w-xl text-left flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center mx-auto px-4">
+      <div className="text-lg mb-4 w-full max-w-xl text-left flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center mx-auto px-4">
         <div className="flex flex-col items-center justify-center">
           ↳ You can contact me at
         </div>
@@ -452,7 +452,7 @@ export default function Home() {
         </div>
       </div>
       {/* Bottom spacing for footer */}
-      <div className="w-full max-w-xl mx-auto mt-8">
+      <div className="w-full max-w-xl mx-auto px-4">
         <FooterBar />
       </div>
       <div className="h-8"></div>

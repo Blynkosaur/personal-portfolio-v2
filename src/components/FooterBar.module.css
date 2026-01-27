@@ -24,11 +24,21 @@
   z-index: 0;
 }
 
+.socialsText {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 1rem 0;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  text-align: left;
+  font-weight: 300;
+}
+
 .divider {
   position: relative;
   z-index: 1;
   border: none;
-  border-top: 1px solid rgba(107, 76, 147, 0.3);
+  border-top: 1px solid rgba(156, 163, 175, 0.5);
   margin: 0;
 }
 
@@ -55,7 +65,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #9ca3af;
+  color: #ffffff;
   transition: color 0.3s ease;
   cursor: pointer;
   gap: 0;
@@ -70,6 +80,7 @@
   height: 1.25rem;
   transition: transform 0.5s ease-out;
   flex-shrink: 0;
+  color: #ffffff;
 }
 
 .link:hover .icon {
@@ -99,34 +110,31 @@
 .navContainer {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
 }
 
-.navLink {
-  color: #9ca3af;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-size: 1rem;
-}
-
-.navLink:hover {
-  color: #c4a3ec;
+.navContainer .link {
+  display: flex;
+  align-items: center;
+  gap: 0;
 }
 
 .navIcon {
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #9ca3af;
-  opacity: 0.8;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+  width: 1.75rem;
+  height: 1.75rem;
+  transition: transform 0.5s ease-out;
   flex-shrink: 0;
+  object-fit: contain;
 }
 
-.navLink:hover + .navIcon,
-.navIcon:hover {
+.navContainer .link:hover .navIcon {
+  transform: scale(1.1);
+}
+
+.navContainer .link:hover .label {
+  max-width: 200px;
   opacity: 1;
-  background-color: #c4a3ec;
+  margin-left: 0.5rem;
 }
 
 .copyright {
@@ -136,4 +144,9 @@
   font-size: 0.875rem;
   color: #9ca3af;
   text-align: left;
+}
+
+.copyrightSymbol {
+  font-size: 1em;
+  vertical-align: baseline;
 }

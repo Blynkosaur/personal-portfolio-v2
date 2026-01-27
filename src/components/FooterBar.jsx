@@ -1,13 +1,13 @@
 "use client";
 import Link from "next/link";
 import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaEnvelope,
-  FaPaperclip,
-  FaCode,
-} from "react-icons/fa";
+  Github,
+  Linkedin,
+  Mail,
+  FileText,
+  Code,
+  Instagram,
+} from "lucide-react";
 import DotGrid from "@/components/DotGrid";
 import styles from "./FooterBar.module.css";
 
@@ -16,27 +16,27 @@ const FooterBar = ({ links = [], className = "" }) => {
     {
       name: "github",
       href: "https://github.com/blynkosaur",
-      icon: FaGithub,
+      icon: Github,
     },
     {
       name: "linkedin",
       href: "https://www.linkedin.com/in/bry4n-lin",
-      icon: FaLinkedin,
+      icon: Linkedin,
     },
     {
       name: "email",
       href: "mailto:b86lin@uwaterloo.ca",
-      icon: FaEnvelope,
+      icon: Mail,
     },
     {
       name: "resume",
       href: "./BryanLin_Resume.pdf",
-      icon: FaPaperclip,
+      icon: FileText,
     },
     {
       name: "repo",
       href: "https://github.com/blynkosaur/personal-portfolio-v2",
-      icon: FaCode,
+      icon: Code,
     },
   ];
 
@@ -53,6 +53,7 @@ const FooterBar = ({ links = [], className = "" }) => {
           style={{ opacity: 0.4 }}
         />
       </div>
+      <p className={styles.socialsText}>Here are my socials:</p>
       <hr className={styles.divider} />
       <div className={styles.footerContent}>
         <div className={styles.linksContainer}>
@@ -86,17 +87,25 @@ const FooterBar = ({ links = [], className = "" }) => {
           })}
         </div>
         <div className={styles.navContainer}>
-          <a href="#" className={styles.navLink}>
-            ←
-          </a>
-          <div className={styles.navIcon} />
-          <a href="#" className={styles.navLink}>
-            →
+          <a 
+            href="https://se-webring.xyz/" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            <img 
+              src="/se-webring.svg" 
+              alt="Webring" 
+              className={styles.navIcon}
+            />
+            <span className={styles.label}>
+              webring
+            </span>
           </a>
         </div>
       </div>
       <p className={styles.copyright}>
-        {new Date().getFullYear()} &copy; Bryan Lin
+        {new Date().getFullYear()}<span className={styles.copyrightSymbol}>©</span> Bryan Lin
       </p>
     </footer>
   );

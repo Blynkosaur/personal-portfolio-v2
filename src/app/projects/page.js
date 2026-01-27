@@ -9,7 +9,8 @@ import TargetCursor from "@/components/TargetCursor";
 import TextType from "@/components/TextType";
 import DotGrid from "@/components/DotGrid";
 import { useState } from "react";
-import { FaHome, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
+import { Github, Linkedin, Mail, FileText } from "lucide-react";
 import FooterBar from "@/components/FooterBar";
 
 export function WaterlooImage() {
@@ -28,7 +29,7 @@ export default function Projects() {
 
   return (
     <div
-      className={`${styles.page} relative flex flex-col justify-start items-center text-white p-10 scrollbar-hide overflow-x-hidden`}
+      className={`${styles.page} relative flex flex-col justify-start items-center text-white px-10 pb-10 pt-0 scrollbar-hide overflow-x-hidden`}
       style={{
         minHeight: "100vh",
         backgroundColor: "#1e1e2e",
@@ -52,7 +53,7 @@ export default function Projects() {
 
       {/* Home Button */}
       {/* Header */}
-      <div className="w-full max-w-xl mt-12 mx-auto text-left">
+      <div className="w-full max-w-xl mt-16 mx-auto text-left">
         <Button
           asChild
           variant="outline"
@@ -82,7 +83,7 @@ export default function Projects() {
         </Button>
 
         <h1
-          className="text-4xl font-bold mb-6 text-left cursor-pointer  "
+          className="text-4xl font-bold mt-4 mb-6 text-left cursor-pointer  "
           style={{
             fontWeight: "700",
             color: "#c4a3ec",
@@ -153,26 +154,28 @@ export default function Projects() {
           projects?
         </p>
       </div>
-      <div className="w-full max-w-xl mx-auto">
+      <div className="w-full max-w-xl mx-auto px-4">
         <FooterBar
           links={[
             {
-              icon: FaGithub,
-              label: "GitHub",
+              name: "github",
               href: "https://github.com/blynkosaur",
-              external: true,
+              icon: Github,
             },
             {
-              icon: FaLinkedin,
-              label: "LinkedIn",
+              name: "linkedin",
               href: "https://www.linkedin.com/in/bry4n-lin",
-              external: true,
+              icon: Linkedin,
             },
             {
-              icon: FaEnvelope,
-              label: "Email",
+              name: "email",
               href: "mailto:b86lin@uwaterloo.ca",
-              external: true,
+              icon: Mail,
+            },
+            {
+              name: "resume",
+              href: "./BryanLin_Resume.pdf",
+              icon: FileText,
             },
           ]}
         />
