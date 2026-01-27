@@ -103,7 +103,7 @@ export default function Projects() {
           >
             {" "}
             <TextType
-              text={["Here is what I've been spending my time on."]}
+              text={["Here is where I've been spending my time."]}
               typingSpeed={50}
               pauseDuration={2000}
               initialDelay={500}
