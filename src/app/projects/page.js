@@ -83,7 +83,7 @@ export default function Projects() {
         </Button>
 
         <h1
-          className="text-4xl font-bold mt-4 mb-4 text-left cursor-pointer  "
+          className="text-2xl md:text-4xl font-bold mt-4 mb-4 text-left cursor-pointer  "
           style={{
             fontWeight: "700",
             color: "#c4a3ec",
@@ -93,7 +93,7 @@ export default function Projects() {
           My Projects
         </h1>
 
-        <p className="group   gap-4  relative  hover:font-bold transition-transform duration-200 text-gray-300 text-lg mb-2 leading-7 text-left">
+        <p className="group   gap-4  relative  hover:font-bold transition-transform duration-200 text-gray-300 text-sm md:text-lg mb-2 leading-7 md:leading-7 text-left">
           <span
             className="group-hover:font-bold  font-bold italic"
             style={{
