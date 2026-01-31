@@ -97,7 +97,7 @@ export default function Home() {
           alignItems: "center",
         }}
       />
-      <div className="w-full  z-999 max-w-xl mt-2 mx-auto px-4">
+      <div className="w-full  z-999 max-w-xl mt-4 mx-auto px-4">
         <h1
           className=" font-bold mt-16 mb-10 text-left text-2xl md:text-[1.8rem]"
           style={{ fontWeight: "700" }}
