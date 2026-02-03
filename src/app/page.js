@@ -403,7 +403,7 @@ export default function Home() {
                 animationDuration={50}
                 color="#CCD6F5"
               >
-                <span style={{ fontWeight: "bold", color: "#CCD6F5" }}>
+                <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
                   View My Projects
                 </span>
               </Highlighter>
@@ -438,14 +438,20 @@ export default function Home() {
                   animationDuration={200}
                   color="#CCD6F5"
                 >
-                  <span style={{ fontWeight: "bold", color: "#CCD6F5" }}>
+                  <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
                     b86lin@uwaterloo.ca
                   </span>
                 </Highlighter>
               ) : (
                 <span style={{ color: "#CCD6F5" }}>b86lin@uwaterloo.ca</span>
               )}{" "}
-              <WaterlooImage style={{ color: "#c4a3ec" }} />
+              <Image
+                src="/UWaterloo.png"
+                alt="UWaterloo Logo"
+                width={20}
+                height={20}
+                className="object-contain relative top-[1px]"
+              />
             </a>
           </Button>
         </div>
