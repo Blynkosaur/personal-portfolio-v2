@@ -29,7 +29,7 @@ export default function Projects() {
 
   return (
     <div
-      className={`${styles.page} relative flex flex-col justify-start items-center text-white px-2 md:px-10 pb-10 pt-0 scrollbar-hide overflow-x-hidden`}
+      className={`${styles.page} relative flex flex-col justify-start items-center text-[#CCD6F5] px-2 md:px-10 pb-10 pt-0 scrollbar-hide overflow-x-hidden`}
       style={{
         minHeight: "100vh",
         backgroundColor: "#1e1e2e",
@@ -44,7 +44,7 @@ export default function Projects() {
         dotSize={2}
         gap={12}
         baseColor="#6b4c93"
-        activeColor="#ffffff"
+        activeColor="#CCD6F5"
         style={{ opacity: 0.6 }}
       />
       <div className="hidden md:block">
@@ -62,17 +62,17 @@ export default function Projects() {
           onMouseEnter={() => setHomeHover(true)}
           onMouseLeave={() => setHomeHover(false)}
         >
-          <Link href="/">
+          <Link href="/" style={{ color: "#CCD6F5" }}>
             <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
             {homeHover ? (
               <Highlighter
                 action="underline"
-                color="#ffffff"
+                color="#CCD6F5"
                 animationDuration={50}
                 padding={0}
                 iterations={1}
               >
-                <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                <span style={{ fontWeight: "bold", color: "#CCD6F5" }}>
                   Home
                 </span>
               </Highlighter>
@@ -109,7 +109,7 @@ export default function Projects() {
               initialDelay={500}
               showCursor={true}
               cursorCharacter="|"
-              textColors={["#ffffff"]}
+              textColors={["#CCD6F5"]}
               loop={false}
               style={{
                 fontFamily: "var(--font-space-mono), 'Courier New', monospace",

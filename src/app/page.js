@@ -38,7 +38,7 @@ export default function Home() {
   const [emailHover, setEmailHover] = useState(false);
   return (
     <div
-      className={`${styles.page} relative overflow-y-hidden flex flex-col justify-center items-center text-white px-2 md:px-10 pb-10 pt-0 scrollbar-hide overflow-x-hidden`}
+      className={`${styles.page} relative overflow-y-hidden flex flex-col justify-center items-center text-[#CCD6F5] px-2 md:px-10 pb-10 pt-0 scrollbar-hide overflow-x-hidden`}
       style={{
         minHeight: "100vh",
         backgroundColor: "#1e1e2e",
@@ -52,7 +52,7 @@ export default function Home() {
         dotSize={2}
         gap={12}
         baseColor="#6b4c93"
-        activeColor="#ffffff"
+        activeColor="#CCD6F5"
         style={{ opacity: 0.6, zIndex: -999999 }}
       />
       <div className="hidden xl:block">
@@ -66,7 +66,7 @@ export default function Home() {
         onMouseEnter={() => setHomeHover(true)}
         onMouseLeave={() => setHomeHover(false)}
       >
-        <Link href="/">
+        <Link href="/" style={{ color: "#CCD6F5" }}>
           <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
           {homeHover ? (
             <Highlighter
@@ -74,9 +74,9 @@ export default function Home() {
               iterations={1}
               padding={0}
               animationDuration={50}
-              color="#ffffff"
+              color="#CCD6F5"
             >
-              <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>Home</span>
+              <span style={{ fontWeight: "bold", color: "#CCD6F5" }}>Home</span>
             </Highlighter>
           ) : (
             "Home"
@@ -110,7 +110,7 @@ export default function Home() {
               pauseDuration={2000}
               initialDelay={0}
               showCursor={false}
-              textColors={["#ffffff"]}
+              textColors={["#CCD6F5"]}
               loop={false}
               style={{
                 fontFamily: "var(--font-space-mono), 'Courier New', monospace",
@@ -143,7 +143,7 @@ export default function Home() {
               pauseDuration={2000}
               initialDelay={0}
               showCursor={false}
-              textColors={["#ffffff"]}
+              textColors={["#CCD6F5"]}
               loop={false}
               style={{
                 fontFamily: "var(--font-space-mono), 'Courier New', monospace",
@@ -175,7 +175,7 @@ export default function Home() {
         </h1>
 
         <div
-          className="text-white-600 text-sm md:text-lg mb-12 leading-7 md:leading-9"
+          className="text-[#CCD6F5] text-sm md:text-lg mb-12 leading-7 md:leading-9"
           style={{
             fontWeight: "300",
             alignContent: "left",
@@ -206,7 +206,7 @@ export default function Home() {
                 }}
               >
                 {hover && (
-                  <Highlighter action="underline" color="#ffffff">
+                  <Highlighter action="underline" color="#CCD6F5">
                     <span
                       className="italic"
                       style={{
@@ -237,7 +237,7 @@ export default function Home() {
                       flexDirection: "row",
                       gap: "4px",
                       fontWeight: "bold",
-                      color: "white",
+                      color: "#CCD6F5",
                       alignItems: "center",
                     }}
                   >
@@ -273,7 +273,7 @@ export default function Home() {
               >
                 {!imposterHover && "imposter syndrome"}
                 {imposterHover && (
-                  <Highlighter action="underline" color="#ffffff">
+                  <Highlighter action="underline" color="#CCD6F5">
                     <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
                       imposter syndrome
                     </span>
@@ -302,7 +302,7 @@ export default function Home() {
                 >
                   {!programmingHover && "Tailored"}
                   {programmingHover && (
-                    <Highlighter action="underline" color="#ffffff">
+                    <Highlighter action="underline" color="#CCD6F5">
                       <span
                         className="italic"
                         style={{ fontWeight: "bold", color: "#c4a3ec" }}
@@ -341,7 +341,7 @@ export default function Home() {
                       flexDirection: "row",
                       gap: "6px",
                       fontWeight: "bold",
-                      color: "white",
+                      color: "#CCD6F5",
                       alignItems: "center",
                     }}
                   >
@@ -356,7 +356,7 @@ export default function Home() {
                   </span>
                 )}
                 {livewellHover && (
-                  <Highlighter action="underline" color="#ffffff">
+                  <Highlighter action="underline" color="#CCD6F5">
                     <span
                       className="italic"
                       style={{
@@ -401,19 +401,19 @@ export default function Home() {
                 iterations={1}
                 padding={0}
                 animationDuration={50}
-                color="#ffffff"
+                color="#CCD6F5"
               >
-                <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                <span style={{ fontWeight: "bold", color: "#CCD6F5" }}>
                   View My Projects
                 </span>
               </Highlighter>
             ) : (
-              "View My Projects"
+              <span style={{ color: "#CCD6F5" }}>View My Projects</span>
             )}
           </Link>
         </Button>
       </div>
-      <div className="text-sm md:text-lg mb-4 w-full max-w-xl text-left flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center mx-auto px-4">
+      <div className="text-sm md:text-lg mb-4 w-full max-w-xl text-left flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center mx-auto px-4" style={{ color: "#CCD6F5" }}>
         <div className="flex flex-col items-center justify-center">
           ↳ You can contact me at
         </div>
@@ -436,14 +436,14 @@ export default function Home() {
                   iterations={1}
                   padding={0}
                   animationDuration={200}
-                  color="#ffffff"
+                  color="#CCD6F5"
                 >
-                  <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
+                  <span style={{ fontWeight: "bold", color: "#CCD6F5" }}>
                     b86lin@uwaterloo.ca
                   </span>
                 </Highlighter>
               ) : (
-                "b86lin@uwaterloo.ca"
+                <span style={{ color: "#CCD6F5" }}>b86lin@uwaterloo.ca</span>
               )}{" "}
               <WaterlooImage style={{ color: "#c4a3ec" }} />
             </a>

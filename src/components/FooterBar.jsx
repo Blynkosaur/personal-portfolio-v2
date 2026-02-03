@@ -49,7 +49,7 @@ const FooterBar = ({ links = [], className = "" }) => {
           dotSize={2}
           gap={12}
           baseColor="#4a5568"
-          activeColor="#ffffff"
+          activeColor="#CCD6F5"
           style={{ opacity: 0.4 }}
         />
       </div>
