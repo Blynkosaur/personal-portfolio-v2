@@ -300,14 +300,14 @@ export default function Home() {
                     fontWeight: programmingHover ? "bold" : "normal",
                   }}
                 >
-                  {!programmingHover && "Tailored"}
+                  {!programmingHover && "Janitor"}
                   {programmingHover && (
                     <Highlighter action="underline" color="#CCD6F5">
                       <span
                         className="italic"
                         style={{ fontWeight: "bold", color: "#c4a3ec" }}
                       >
-                        Tailored
+                        Janitor
                       </span>
                     </Highlighter>
                   )}
@@ -413,7 +413,10 @@ export default function Home() {
           </Link>
         </Button>
       </div>
-      <div className="text-sm md:text-lg mb-4 w-full max-w-xl text-left flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center mx-auto px-4" style={{ color: "#CCD6F5" }}>
+      <div
+        className="text-sm md:text-lg mb-4 w-full max-w-xl text-left flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center mx-auto px-4"
+        style={{ color: "#CCD6F5" }}
+      >
         <div className="flex flex-col items-center justify-center">
           ↳ You can contact me at
         </div>

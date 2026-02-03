@@ -1,5 +1,12 @@
 [
   {
+    "title": "Janitor 🧹",
+    "description": "A C++ CLI that deduplicates files and automatically organizes them into a tidy structure.",
+    "hook": "What's a mutex?",
+    "tags": ["C++", "CLI", "CMake"],
+    "github": "https://github.com/Blynkosaur/Janitor"
+  },
+  {
     "title": "Tailored 🪡",
     "description": "Internship application season is approaching. Bypass ATS with a custom resume and cover letter :)",
     "hook": "bzzzz...  AI Agents??! bzz... bzz... LLMS.. Tokens?!?!?",
