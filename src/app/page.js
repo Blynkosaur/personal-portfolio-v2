@@ -32,7 +32,7 @@ export default function Home() {
   const [hover, setHover] = useState(false);
   const [livewellHover, setLivewellHover] = useState(false);
   const [programmingHover, setProgrammingHover] = useState(false);
-  const [imposterHover, setImposterHover] = useState(false);
+  const [curiosityHover, setCuriosityHover] = useState(false);
   const [homeHover, setHomeHover] = useState(false);
   const [projectsHover, setProjectsHover] = useState(false);
   const [emailHover, setEmailHover] = useState(false);
@@ -255,10 +255,10 @@ export default function Home() {
             </li>
             <li
               onMouseEnter={() => {
-                setImposterHover(true);
+                setCuriosityHover(true);
               }}
               onMouseLeave={() => {
-                setImposterHover(false);
+                setCuriosityHover(false);
               }}
               className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
             >
@@ -267,15 +267,15 @@ export default function Home() {
               <span
                 className="font-medium hover:text-[#c4a3ec] transition-colors duration-200 cursor-none"
                 style={{
-                  textDecoration: imposterHover ? "underline" : "none",
-                  fontWeight: imposterHover ? "bold" : "normal",
+                  textDecoration: curiosityHover ? "underline" : "none",
+                  fontWeight: curiosityHover ? "bold" : "normal",
                 }}
               >
-                {!imposterHover && "imposter syndrome"}
-                {imposterHover && (
+                {!curiosityHover && "curiosity"}
+                {curiosityHover && (
                   <Highlighter action="underline" color="#CCD6F5">
                     <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                      imposter syndrome
+                      curiosity
                     </span>
                   </Highlighter>
                 )}
