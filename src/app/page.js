@@ -300,14 +300,16 @@ export default function Home() {
                     fontWeight: programmingHover ? "bold" : "normal",
                   }}
                 >
-                  {!programmingHover && "Janitor"}
+                  {!programmingHover && (
+                    <span className="font-bold">CleanMe</span>
+                  )}
                   {programmingHover && (
                     <Highlighter action="underline" color="#CCD6F5">
                       <span
                         className="italic"
                         style={{ fontWeight: "bold", color: "#c4a3ec" }}
                       >
-                        Janitor
+                        CleanMe
                       </span>
                     </Highlighter>
                   )}

@@ -3,8 +3,8 @@
     "title": "CleanMe 🧹",
     "description": "A C++ CLI that deduplicates files and automatically organizes them into a tidy structure.",
     "hook": "What's a mutex?",
-    "tags": ["C++", "CLI", "CMake"],
-    "github": "https://github.com/Blynkosaur/Janitor"
+    "tags": ["C++", "CLI", "Regex"],
+    "github": "https://github.com/Blynkosaur/CleanMe"
   },
   {
     "title": "Tailored 🪡",
