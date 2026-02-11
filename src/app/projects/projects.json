@@ -4,7 +4,7 @@
     "description": "A C++ CLI that deduplicates files and automatically organizes them into a tidy structure.",
     "hook": "What's a mutex?",
     "tags": ["C++", "CLI", "Regex"],
-    "github": "https://github.com/Blynkosaur/CleanMe"
+    "github": "https://github.com/blynkosaur/CleanMe"
   },
   {
     "title": "Tailored 🪡",
