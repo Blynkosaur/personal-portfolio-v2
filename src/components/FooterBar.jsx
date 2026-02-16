@@ -1,13 +1,6 @@
 "use client";
 import Link from "next/link";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  FileText,
-  Code,
-  Instagram,
-} from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, FileText, Code } from "lucide-react";
 import DotGrid from "@/components/DotGrid";
 import styles from "./FooterBar.module.css";
 
@@ -22,6 +15,11 @@ const FooterBar = ({ links = [], className = "" }) => {
       name: "linkedin",
       href: "https://www.linkedin.com/in/bry4n-lin",
       icon: Linkedin,
+    },
+    {
+      name: "twitter",
+      href: "https://x.com/bry4n_lin",
+      icon: Twitter,
     },
     {
       name: "email",
@@ -58,27 +56,25 @@ const FooterBar = ({ links = [], className = "" }) => {
       <div className={styles.footerContent}>
         <div className={styles.linksContainer}>
           {linkItems.map((link, index) => {
-            const LinkComponent = link.href?.startsWith("mailto:") || link.href?.startsWith("http") ? "a" : Link;
-            const linkProps = link.href?.startsWith("mailto:") || link.href?.startsWith("http")
-              ? {
-                  href: link.href,
-                  target: "_blank",
-                  rel: "noopener noreferrer",
-                }
-              : { href: link.href };
+            const LinkComponent =
+              link.href?.startsWith("mailto:") || link.href?.startsWith("http")
+                ? "a"
+                : Link;
+            const linkProps =
+              link.href?.startsWith("mailto:") || link.href?.startsWith("http")
+                ? {
+                    href: link.href,
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  }
+                : { href: link.href };
 
             return (
-              <LinkComponent
-                key={index}
-                {...linkProps}
-                className={styles.link}
-              >
+              <LinkComponent key={index} {...linkProps} className={styles.link}>
                 {link.icon && (
                   <>
                     <link.icon className={styles.icon} />
-                    <span className={styles.label}>
-                      {link.name}
-                    </span>
+                    <span className={styles.label}>{link.name}</span>
                   </>
                 )}
                 {!link.icon && <span>{link.name}</span>}
@@ -87,25 +83,24 @@ const FooterBar = ({ links = [], className = "" }) => {
           })}
         </div>
         <div className={styles.navContainer}>
-          <a 
-            href="https://se-webring.xyz/" 
+          <a
+            href="https://se-webring.xyz/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.link}
           >
-            <img 
-              src="/se-webring.svg" 
-              alt="Webring" 
+            <img
+              src="/se-webring.svg"
+              alt="Webring"
               className={styles.navIcon}
             />
-            <span className={styles.label}>
-              webring
-            </span>
+            <span className={styles.label}>webring</span>
           </a>
         </div>
       </div>
       <p className={styles.copyright}>
-        {new Date().getFullYear()}<span className={styles.copyrightSymbol}>©</span> Bryan Lin
+        {new Date().getFullYear()}
+        <span className={styles.copyrightSymbol}>©</span> Bryan Lin
       </p>
     </footer>
   );
