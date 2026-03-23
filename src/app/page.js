@@ -35,7 +35,7 @@ export default function Home() {
       className={`${styles.page} relative overflow-y-hidden flex flex-col justify-center items-center text-[#CCD6F5] px-2 md:px-10 pb-10 pt-0 scrollbar-hide overflow-x-hidden`}
       style={{
         minHeight: "100vh",
-        backgroundColor: "#1e1e2e",
+        backgroundColor: "#1B1B27",
         color: "#E8F4F8",
         fontFamily: "var(--font-inconsolata), 'Courier New', monospace",
         paddingBottom: "40px",
