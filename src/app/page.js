@@ -100,7 +100,7 @@ export default function Home() {
           <span className="md:hidden">
             <TextType
               text={["👋Hi! I'm"]}
-              typingSpeed={60}
+              typingSpeed={75}
               pauseDuration={2000}
               initialDelay={0}
               showCursor={false}
@@ -117,7 +117,7 @@ export default function Home() {
               text={["Bryan"]}
               typingSpeed={75}
               pauseDuration={1500}
-              initialDelay={500}
+              initialDelay={750}
               showCursor={true}
               cursorCharacter="|"
               textColors={["#c4a3ec"]}
@@ -134,8 +134,8 @@ export default function Home() {
           <span className="hidden md:block">
             <TextType
               text={["👋Hi! I'm"]}
-              typingSpeed={60}
-              pauseDuration={2000}
+              typingSpeed={75}
+              pauseDuration={1000}
               initialDelay={0}
               showCursor={false}
               textColors={["#CCD6F5"]}
@@ -155,7 +155,7 @@ export default function Home() {
               ]}
               typingSpeed={75}
               pauseDuration={1500}
-              initialDelay={500}
+              initialDelay={750}
               showCursor={true}
               cursorCharacter="|"
               textColors={["#c4a3ec"]}
