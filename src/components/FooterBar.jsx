@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import { Github, Linkedin, Twitter, Mail, FileText, Code } from "lucide-react";
+import { Github, Linkedin, Mail, FileText, Code } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 import DotGrid from "@/components/DotGrid";
 import styles from "./FooterBar.module.css";
 
@@ -17,9 +18,9 @@ const FooterBar = ({ links = [], className = "" }) => {
       icon: Linkedin,
     },
     {
-      name: "twitter",
+      name: "x",
       href: "https://x.com/bry4n_lin",
-      icon: Twitter,
+      icon: FaXTwitter,
     },
     {
       name: "email",
