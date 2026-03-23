@@ -12,8 +12,8 @@ export default {
   			'xs': '430px',
   		},
   		fontFamily: {
-  			'comfortaa': ['var(--font-comfortaa)', 'Arial', 'Helvetica', 'sans-serif'],
-  			'space-mono': ['var(--font-space-mono)', 'Courier New', 'monospace'],
+  			'gowun-batang': ['var(--font-gowun-batang)', 'Georgia', 'serif'],
+  			'inconsolata': ['var(--font-inconsolata)', 'Courier New', 'monospace'],
   		},
   		colors: {
   			background: 'hsl(var(--background))',

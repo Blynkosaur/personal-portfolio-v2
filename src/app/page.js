@@ -5,13 +5,8 @@ import Link from "next/link";
 import styles from "./Page.module.css";
 import DotGrid from "@/components/DotGrid";
 import TextType from "@/components/TextType";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaPaperclip,
-  FaHome,
-} from "react-icons/fa";
+import { BiHomeAlt } from "react-icons/bi";
+import { FaHome } from "react-icons/fa";
 import TargetCursor from "@/components/TargetCursor";
 import FooterBar from "@/components/FooterBar";
 import { useState } from "react";
@@ -43,7 +38,7 @@ export default function Home() {
         minHeight: "100vh",
         backgroundColor: "#1e1e2e",
         color: "#E8F4F8",
-        fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+        fontFamily: "var(--font-inconsolata), 'Courier New', monospace",
         paddingBottom: "40px",
         zIndex: 2,
       }}
@@ -55,9 +50,9 @@ export default function Home() {
         activeColor="#CCD6F5"
         style={{ opacity: 0.6, zIndex: -999999 }}
       />
-      <div className="hidden xl:block">
-        <TargetCursor spinDuration={5} hideDefaultCursor={true} />
-      </div>
+      {/* <div className="hidden xl:block"> */}
+      {/*   <TargetCursor spinDuration={5} hideDefaultCursor={true} /> */}
+      {/* </div> */}
       <Button
         asChild
         variant="outline"
@@ -67,7 +62,7 @@ export default function Home() {
         onMouseLeave={() => setHomeHover(false)}
       >
         <Link href="/" style={{ color: "#CCD6F5" }}>
-          <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
+          <BiHomeAlt className="mr-2" style={{ color: "#c4a3ec" }} />
           {homeHover ? (
             <Highlighter
               action="underline"
@@ -99,7 +94,7 @@ export default function Home() {
       />
       <div className="w-full  z-999 max-w-xl mt-4 mx-auto px-4">
         <h1
-          className=" font-bold mt-16 mb-10 text-left text-2xl md:text-[1.8rem]"
+          className=" font-bold mt-16 mb-6 text-left text-2xl md:text-4xl"
           style={{ fontWeight: "700" }}
         >
           {/* Mobile version - with typing animation */}
@@ -109,13 +104,12 @@ export default function Home() {
               typingSpeed={60}
               pauseDuration={2000}
               initialDelay={0}
-              showCursor={false}
               textColors={["#CCD6F5"]}
               loop={false}
               style={{
-                fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+                fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
                 fontWeight: "700",
-                fontStyle: "italic",
+                fontStyle: "normal",
                 opacity: 1,
               }}
             />{" "}
@@ -128,9 +122,9 @@ export default function Home() {
               textColors={["#c4a3ec"]}
               loop={false}
               style={{
-                fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+                fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
                 fontWeight: "700",
-                fontStyle: "italic",
+                fontStyle: "normal",
               }}
             />
           </span>
@@ -146,9 +140,9 @@ export default function Home() {
               textColors={["#CCD6F5"]}
               loop={false}
               style={{
-                fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+                fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
                 fontWeight: "700",
-                fontStyle: "italic",
+                fontStyle: "normal",
               }}
             />{" "}
             <TextType
@@ -166,9 +160,9 @@ export default function Home() {
               textColors={["#c4a3ec"]}
               loop={true}
               style={{
-                fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+                fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
                 fontWeight: "700",
-                fontStyle: "italic",
+                fontStyle: "normal",
               }}
             />
           </span>
@@ -196,6 +190,7 @@ export default function Home() {
               <div className="absolute left-2 top-[0.5rem] md:top-[0.875rem] w-[8px] h-[8px] bg-white rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               SWE{""}
               <a
+                href="https://uwaterloo.ca"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium hover:font-bold hover:text-[#c4a3ec] transition-colors duration-200 inline-flex items-center"
@@ -265,7 +260,7 @@ export default function Home() {
               <div className="absolute left-2 top-[0.5rem] md:top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform md:-translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               Building with{" "}
               <span
-                className="font-medium hover:text-[#c4a3ec] transition-colors duration-200 cursor-none"
+                className="font-medium hover:text-[#c4a3ec] transition-colors duration-200 "
                 style={{
                   textDecoration: curiosityHover ? "underline" : "none",
                   fontWeight: curiosityHover ? "bold" : "normal",
@@ -294,7 +289,7 @@ export default function Home() {
               Currently working on{" "}
               <Link href={"/projects"}>
                 <span
-                  className="font-medium italic hover:text-[#c4a3ec] transition-colors duration-200 cursor-none"
+                  className="font-medium italic hover:text-[#c4a3ec] transition-colors duration-200 "
                   style={{
                     textDecoration: programmingHover ? "underline" : "none",
                     fontWeight: programmingHover ? "bold" : "normal",
@@ -318,7 +313,7 @@ export default function Home() {
             </li>
 
             <li
-              className="group cursor-none flex flex-row items-start gap-2 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
+              className="group  flex flex-row items-start gap-2 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
               onMouseEnter={() => {
                 setLivewellHover(true);
               }}
@@ -332,7 +327,7 @@ export default function Home() {
                 href="https://joinlivewell.ca"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-none hover:font-bold  hover:text-[#c4a3ec] transition-colors duration-200 inline-flex items-center"
+                className=" hover:font-bold  hover:text-[#c4a3ec] transition-colors duration-200 inline-flex items-center"
                 style={{ minHeight: "1.5rem" }}
               >
                 {!livewellHover && (

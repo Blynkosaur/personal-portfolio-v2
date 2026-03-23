@@ -18,7 +18,7 @@ export default function ProjectCard({
         className="text-xl italic font-semibold mb-3"
         style={{
           color: "#c4a3ec",
-          fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+          fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
           fontWeight: "700",
         }}
       >

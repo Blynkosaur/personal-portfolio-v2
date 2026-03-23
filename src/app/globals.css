@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: var(--font-space-mono), "Courier New", monospace;
+  font-family: var(--font-inconsolata), 'Courier New', monospace;
   background-color: #1e1e2e;
   color: #e8f4f8;
   overflow-x: hidden;
@@ -11,10 +11,16 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
-/* Ensure all text elements use Space Mono */
+/* Ensure all text elements use Karla */
 * {
-  font-family: var(--font-space-mono), "Courier New", monospace !important;
+  font-family: var(--font-inconsolata), 'Courier New', monospace !important;
   font-weight: 400;
+}
+
+/* Headers use Gowun Batang */
+h1, h2, h3, h4, h5, h6,
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+  font-family: var(--font-gowun-batang), 'Georgia', serif !important;
 }
 
 body::-webkit-scrollbar {
@@ -111,15 +117,5 @@ html::-webkit-scrollbar-thumb {
   }
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-/* Hide default cursor on TargetCursor elements - only on medium screens and up */
-@media (min-width: 768px) {
-  .cursor-target,
-  .cursor-target *,
-  .cursor-target button,
-  .cursor-target a {
-    cursor: none !important;
   }
 }

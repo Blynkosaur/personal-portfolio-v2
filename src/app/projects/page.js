@@ -5,7 +5,6 @@ import projects from "./projects.json";
 import { Highlighter } from "@/components/ui/highlighter";
 import Link from "next/link";
 import styles from "../Page.module.css";
-import TargetCursor from "@/components/TargetCursor";
 import TextType from "@/components/TextType";
 import DotGrid from "@/components/DotGrid";
 import { useState } from "react";
@@ -34,7 +33,7 @@ export default function Projects() {
         minHeight: "100vh",
         backgroundColor: "#1e1e2e",
         color: "#E8F4F8",
-        fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+        fontFamily: "var(--font-inconsolata), 'Courier New', monospace",
         fontWeight: "700",
         paddingBottom: "40px",
         zIndex: 2,
@@ -47,9 +46,9 @@ export default function Projects() {
         activeColor="#CCD6F5"
         style={{ opacity: 0.6 }}
       />
-      <div className="hidden md:block">
-        <TargetCursor spinDuration={5} hideDefaultCursor={true} />
-      </div>
+      {/* <div className="hidden md:block"> */}
+      {/*   <TargetCursor spinDuration={5} hideDefaultCursor={true} /> */}
+      {/* </div> */}
 
       {/* Home Button */}
       {/* Header */}
@@ -87,7 +86,7 @@ export default function Projects() {
           style={{
             fontWeight: "700",
             color: "#c4a3ec",
-            fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+            fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
           }}
         >
           My Projects
@@ -97,7 +96,7 @@ export default function Projects() {
           <span
             className="group-hover:font-bold  font-bold italic"
             style={{
-              fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+              fontFamily: "var(--font-inconsolata), 'Courier New', monospace",
               marginBottom: "4px",
             }}
           >
@@ -112,7 +111,7 @@ export default function Projects() {
               textColors={["#CCD6F5"]}
               loop={false}
               style={{
-                fontFamily: "var(--font-space-mono), 'Courier New', monospace",
+                fontFamily: "var(--font-inconsolata), 'Courier New', monospace",
                 fontWeight: "400",
                 fontStyle: "italic",
                 marginBottom: "4px",
@@ -138,30 +137,7 @@ export default function Projects() {
       </div>
 
       <div className="w-full max-w-xl mx-auto px-4 mt-8">
-        <FooterBar
-          links={[
-            {
-              name: "github",
-              href: "https://github.com/blynkosaur",
-              icon: Github,
-            },
-            {
-              name: "linkedin",
-              href: "https://www.linkedin.com/in/bry4n-lin",
-              icon: Linkedin,
-            },
-            {
-              name: "email",
-              href: "mailto:b86lin@uwaterloo.ca",
-              icon: Mail,
-            },
-            {
-              name: "resume",
-              href: "./BryanLin_Resume.pdf",
-              icon: FileText,
-            },
-          ]}
-        />
+        <FooterBar />
       </div>
     </div>
   );

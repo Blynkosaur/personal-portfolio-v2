@@ -11,7 +11,7 @@
   margin: 0 auto;
   font-size: 0.875rem;
   color: #9ca3af;
-  font-family: var(--font-space-mono), 'Courier New', monospace;
+  font-family: var(--font-inconsolata), 'Courier New', monospace;
 }
 
 .dotGridContainer {
@@ -88,7 +88,7 @@
 }
 
 .label {
-  font-family: var(--font-space-mono), 'Courier New', monospace;
+  font-family: var(--font-inconsolata), 'Courier New', monospace;
   font-size: 0.875rem;
   white-space: nowrap;
   max-width: 0;

@@ -1,17 +1,16 @@
-import { Comfortaa, Space_Mono } from "next/font/google";
+import { Gowun_Batang, Inconsolata } from "next/font/google";
 import "./globals.css";
 
-const comfortaa = Comfortaa({
-  variable: "--font-comfortaa",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const spaceMono = Space_Mono({
-  variable: "--font-space-mono",
+const gowunBatang = Gowun_Batang({
+  variable: "--font-gowun-batang",
   subsets: ["latin"],
   weight: ["400", "700"],
-  style: ["normal", "italic"],
+});
+
+const inconsolata = Inconsolata({
+  variable: "--font-inconsolata",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata = {
@@ -23,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${comfortaa.variable} ${spaceMono.variable} antialiased overflow-x-hidden overscroll-x-none w-full`}
+        className={`${gowunBatang.variable} ${inconsolata.variable} antialiased overflow-x-hidden overscroll-x-none w-full`}
       >
         {children}
       </body>
