@@ -5,9 +5,7 @@ import Link from "next/link";
 import styles from "./Page.module.css";
 import DotGrid from "@/components/DotGrid";
 import TextType from "@/components/TextType";
-import { BiHomeAlt } from "react-icons/bi";
 import { FaHome } from "react-icons/fa";
-import TargetCursor from "@/components/TargetCursor";
 import FooterBar from "@/components/FooterBar";
 import { useState } from "react";
 import React from "react";
@@ -26,6 +24,7 @@ export function WaterlooImage() {
 export default function Home() {
   const [hover, setHover] = useState(false);
   const [livewellHover, setLivewellHover] = useState(false);
+  const [pepperHover, setPepperHover] = useState(false);
   const [programmingHover, setProgrammingHover] = useState(false);
   const [curiosityHover, setCuriosityHover] = useState(false);
   const [homeHover, setHomeHover] = useState(false);
@@ -62,7 +61,7 @@ export default function Home() {
         onMouseLeave={() => setHomeHover(false)}
       >
         <Link href="/" style={{ color: "#CCD6F5" }}>
-          <BiHomeAlt className="mr-2" style={{ color: "#c4a3ec" }} />
+          <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
           {homeHover ? (
             <Highlighter
               action="underline"
@@ -187,7 +186,7 @@ export default function Home() {
                 setHover(false);
               }}
             >
-              <div className="absolute left-2 top-[0.5rem] md:top-[0.875rem] w-[8px] h-[8px] bg-white rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              <div className="absolute left-2 top-[0.6rem] md:top-[1rem] w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               SWE{""}
               <a
                 href="https://uwaterloo.ca"
@@ -249,34 +248,6 @@ export default function Home() {
               </a>
             </li>
             <li
-              onMouseEnter={() => {
-                setCuriosityHover(true);
-              }}
-              onMouseLeave={() => {
-                setCuriosityHover(false);
-              }}
-              className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
-            >
-              <div className="absolute left-2 top-[0.5rem] md:top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform md:-translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              Building with{" "}
-              <span
-                className="font-medium hover:text-[#c4a3ec] transition-colors duration-200 "
-                style={{
-                  textDecoration: curiosityHover ? "underline" : "none",
-                  fontWeight: curiosityHover ? "bold" : "normal",
-                }}
-              >
-                {!curiosityHover && "curiosity"}
-                {curiosityHover && (
-                  <Highlighter action="underline" color="#CCD6F5">
-                    <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                      curiosity
-                    </span>
-                  </Highlighter>
-                )}
-              </span>
-            </li>
-            <li
               className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
               onMouseEnter={() => {
                 setProgrammingHover(true);
@@ -285,7 +256,7 @@ export default function Home() {
                 setProgrammingHover(false);
               }}
             >
-              <div className="absolute left-2 top-[0.5rem] md:top-1/2 w-[8px] h-[8px] bg-white rotate-45 transform md:-translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              <div className="absolute left-2 top-[0.6rem] md:top-1/2 w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform md:-translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               Currently working on{" "}
               <Link href={"/projects"}>
                 <span
@@ -315,14 +286,81 @@ export default function Home() {
             <li
               className="group  flex flex-row items-start gap-2 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
               onMouseEnter={() => {
+                setPepperHover(true);
+              }}
+              onMouseLeave={() => {
+                setPepperHover(false);
+              }}
+            >
+              <div className="absolute left-2 top-[0.6rem] md:top-[1rem] w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              Incoming @{"  "}
+              <a
+                href="https://usepepper.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" hover:font-bold  hover:text-[#c4a3ec] transition-colors duration-200 inline-flex items-center"
+                style={{ minHeight: "1.5rem" }}
+              >
+                {!pepperHover && (
+                  <span
+                    className="italic"
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      gap: "6px",
+                      fontWeight: "bold",
+                      color: "#CCD6F5",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Image
+                      src={`/usepepper_logo.jpg`}
+                      alt="Pepper Logo"
+                      width={16}
+                      height={16}
+                      className="object-contain rounded-[2px] relative top-[1px]"
+                    />
+                    Pepper
+                  </span>
+                )}
+                {pepperHover && (
+                  <Highlighter action="underline" color="#CCD6F5">
+                    <span
+                      className="italic"
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        gap: "6px",
+                        fontWeight: "bold",
+                        color: "#c4a3ec",
+                        alignItems: "center",
+                      }}
+                    >
+                      <Image
+                        src={`/usepepper_logo.jpg`}
+                        alt="Pepper Logo"
+                        width={16}
+                        height={16}
+                        className="object-contain rounded-[2px] relative top-[1px]"
+                      />
+                      Pepper
+                    </span>
+                  </Highlighter>
+                )}
+              </a>
+            </li>
+
+            <li
+              className="group  flex flex-row items-start gap-2 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
+              onMouseEnter={() => {
                 setLivewellHover(true);
               }}
               onMouseLeave={() => {
                 setLivewellHover(false);
               }}
             >
-              <div className="absolute left-2 top-[0.5rem] md:top-[0.875rem] w-[8px] h-[8px] bg-white rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              Prev.{"  "}
+              <div className="absolute left-2 top-[0.6rem] md:top-[1rem] w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              Prev. @{"  "}
               <a
                 href="https://joinlivewell.ca"
                 target="_blank"
