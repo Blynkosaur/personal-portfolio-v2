@@ -92,7 +92,7 @@ export default function Projects() {
           My Projects
         </h1>
 
-        <p className="group   gap-4  relative  hover:font-bold transition-transform duration-200 text-gray-300 text-sm md:text-lg mb-2 leading-7 md:leading-7 text-left">
+        <p className="group   gap-4  relative  hover:font-bold transition-transform duration-200 text-[#CCD6F5] text-sm md:text-lg mb-2 leading-7 md:leading-7 text-left">
           <span
             className="group-hover:font-bold  font-bold italic"
             style={{

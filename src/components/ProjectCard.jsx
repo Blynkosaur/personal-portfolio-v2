@@ -24,7 +24,7 @@ export default function ProjectCard({
       >
         {title}
       </h3>
-      <p className="text-gray-300 text-xs md:text-sm mb-4 text-justify">
+      <p className="text-[#CCD6F5] text-xs md:text-sm mb-4 text-justify">
         <span dangerouslySetInnerHTML={{ __html: description }} />
         <br />
         <br />

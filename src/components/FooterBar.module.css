@@ -10,7 +10,7 @@
   overflow: hidden;
   margin: 0 auto;
   font-size: 0.875rem;
-  color: #9ca3af;
+  color: #CCD6F5;
   font-family: var(--font-inconsolata), 'Courier New', monospace;
 }
 
@@ -29,7 +29,7 @@
   z-index: 1;
   margin: 0 0 1rem 0;
   font-size: 0.875rem;
-  color: #9ca3af;
+  color: #CCD6F5;
   text-align: left;
   font-weight: 300;
 }
@@ -142,7 +142,7 @@
   z-index: 1;
   margin: 0;
   font-size: 0.875rem;
-  color: #9ca3af;
+  color: #CCD6F5;
   text-align: left;
 }
 

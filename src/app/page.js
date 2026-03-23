@@ -103,6 +103,7 @@ export default function Home() {
               typingSpeed={60}
               pauseDuration={2000}
               initialDelay={0}
+              showCursor={false}
               textColors={["#CCD6F5"]}
               loop={false}
               style={{
@@ -117,7 +118,8 @@ export default function Home() {
               typingSpeed={75}
               pauseDuration={1500}
               initialDelay={500}
-              showCursor={false}
+              showCursor={true}
+              cursorCharacter="|"
               textColors={["#c4a3ec"]}
               loop={false}
               style={{
@@ -186,7 +188,7 @@ export default function Home() {
                 setHover(false);
               }}
             >
-              <div className="absolute left-2 top-[0.6rem] md:top-[1rem] w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              <div className="absolute left-2 top-1/2 w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               SWE{""}
               <a
                 href="https://uwaterloo.ca"
@@ -256,7 +258,7 @@ export default function Home() {
                 setProgrammingHover(false);
               }}
             >
-              <div className="absolute left-2 top-[0.6rem] md:top-1/2 w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform md:-translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              <div className="absolute left-2 top-1/2 w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               Currently working on{" "}
               <Link href={"/projects"}>
                 <span
@@ -292,7 +294,7 @@ export default function Home() {
                 setPepperHover(false);
               }}
             >
-              <div className="absolute left-2 top-[0.6rem] md:top-[1rem] w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              <div className="absolute left-2 top-1/2 w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               Incoming @{"  "}
               <a
                 href="https://usepepper.com"
@@ -320,7 +322,7 @@ export default function Home() {
                       height={16}
                       className="object-contain rounded-[2px] relative top-[1px]"
                     />
-                    Pepper
+                    Pepper (ICONIQ)
                   </span>
                 )}
                 {pepperHover && (
@@ -343,7 +345,7 @@ export default function Home() {
                         height={16}
                         className="object-contain rounded-[2px] relative top-[1px]"
                       />
-                      Pepper
+                      Pepper (ICONIQ)
                     </span>
                   </Highlighter>
                 )}
@@ -359,7 +361,7 @@ export default function Home() {
                 setLivewellHover(false);
               }}
             >
-              <div className="absolute left-2 top-[0.6rem] md:top-[1rem] w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              <div className="absolute left-2 top-1/2 w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
               Prev. @{"  "}
               <a
                 href="https://joinlivewell.ca"
