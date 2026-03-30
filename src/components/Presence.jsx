@@ -78,11 +78,7 @@ export default function Presence() {
 
   return (
     <div
-      className="fixed z-50 w-[min(280px,90vw)] sm:w-[min(300px,90vw)] origin-bottom-right scale-[0.75] sm:scale-100"
-      style={{
-        bottom: "max(2.5rem, env(safe-area-inset-bottom, 2.5rem))",
-        right: "max(1rem, env(safe-area-inset-right, 1rem))",
-      }}
+      className="fixed z-50 w-[min(280px,90vw)] sm:w-[min(300px,90vw)] origin-bottom-right scale-[0.75] sm:scale-100 bottom-8 sm:bottom-10 right-4"
     >
       <motion.div
         initial={{ x: 200 }}
