@@ -1,5 +1,6 @@
 import { Gowun_Batang, Inconsolata } from "next/font/google";
 import "./globals.css";
+import Presence from "@/components/Presence";
 
 const gowunBatang = Gowun_Batang({
   variable: "--font-gowun-batang",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
         className={`${gowunBatang.variable} ${inconsolata.variable} antialiased overflow-x-hidden overscroll-x-none w-full`}
       >
         {children}
+        <Presence />
       </body>
     </html>
   );
