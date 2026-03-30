@@ -1,6 +1,7 @@
 import { Gowun_Batang, Inconsolata } from "next/font/google";
 import "./globals.css";
 import Presence from "@/components/Presence";
+import { Analytics } from "@vercel/analytics/next";
 
 const gowunBatang = Gowun_Batang({
   variable: "--font-gowun-batang",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${gowunBatang.variable} ${inconsolata.variable} antialiased overflow-x-hidden overscroll-x-none w-full`}
       >
+        <Analytics />
         {children}
         <Presence />
       </body>
