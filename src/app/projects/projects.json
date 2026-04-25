@@ -1,7 +1,7 @@
 [
   {
-    "title": "ClockedIn⏳",
-    "description": "Quick little CLI that allows you to amend your commits to correct timelines for coding assignments ",
+    "title": "ClockedIn >_,
+    "description": "Quick little CLI that allows you to amend your commits and correct timelines for coding assignments ",
     "hook": "What's a mutex?",
     "tags": ["C++", "CLI", "Git"],
     "github": "https://github.com/blynkosaur/CleanMe"
