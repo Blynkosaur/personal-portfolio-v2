@@ -24,7 +24,7 @@ export function WaterlooImage() {
 export default function Home() {
   const [hover, setHover] = useState(false);
   const [livewellHover, setLivewellHover] = useState(false);
-  const [pepperHover, setPepperHover] = useState(false);
+  const [yolandoHover, setYolandoHover] = useState(false);
   const [programmingHover, setProgrammingHover] = useState(false);
   const [curiosityHover, setCuriosityHover] = useState(false);
   const [homeHover, setHomeHover] = useState(false);
@@ -42,16 +42,6 @@ export default function Home() {
         zIndex: 2,
       }}
     >
-      <DotGrid
-        dotSize={2}
-        gap={12}
-        baseColor="#6b4c93"
-        activeColor="#CCD6F5"
-        style={{ opacity: 0.6, zIndex: -999999 }}
-      />
-      {/* <div className="hidden xl:block"> */}
-      {/*   <TargetCursor spinDuration={5} hideDefaultCursor={true} /> */}
-      {/* </div> */}
       <Button
         asChild
         variant="outline"
@@ -269,7 +259,7 @@ export default function Home() {
                   }}
                 >
                   {!programmingHover && (
-                    <span className="font-bold">ClockedIn</span>
+                    <span className="font-bold">Timely</span>
                   )}
                   {programmingHover && (
                     <Highlighter action="underline" color="#CCD6F5">
@@ -277,12 +267,78 @@ export default function Home() {
                         className="italic"
                         style={{ fontWeight: "bold", color: "#c4a3ec" }}
                       >
-                        ClockedIn
+                        Timely
                       </span>
                     </Highlighter>
                   )}
                 </span>{" "}
               </Link>
+            </li>
+            <li
+              className="group  flex flex-row items-start gap-2 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
+              onMouseEnter={() => {
+                setYolandoHover(true);
+              }}
+              onMouseLeave={() => {
+                setYolandoHover(false);
+              }}
+            >
+              <div className="absolute left-2 top-1/2 w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
+              Inc. engineering @{"  "}
+              <a
+                href="https://yolando.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" hover:font-bold  hover:text-[#c4a3ec] transition-colors duration-200 inline-flex items-center"
+                style={{ minHeight: "1.5rem" }}
+              >
+                {!yolandoHover && (
+                  <span
+                    className="italic"
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      gap: "6px",
+                      fontWeight: "bold",
+                      color: "#CCD6F5",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Image
+                      src={`/yolando_logo.jpeg`}
+                      alt="Yolando Logo"
+                      width={16}
+                      height={16}
+                      className="object-contain rounded-[2px] relative top-[1px]"
+                    />
+                    Yolando
+                  </span>
+                )}
+                {yolandoHover && (
+                  <Highlighter action="underline" color="#CCD6F5">
+                    <span
+                      className="italic"
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        gap: "6px",
+                        fontWeight: "bold",
+                        color: "#c4a3ec",
+                        alignItems: "center",
+                      }}
+                    >
+                      <Image
+                        src={`/yolando_logo.jpeg`}
+                        alt="Yolando Logo"
+                        width={16}
+                        height={16}
+                        className="object-contain rounded-[2px] relative top-[1px]"
+                      />
+                      Yolando
+                    </span>
+                  </Highlighter>
+                )}
+              </a>
             </li>
 
             <li

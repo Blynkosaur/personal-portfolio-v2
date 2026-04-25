@@ -6,7 +6,6 @@ import { Highlighter } from "@/components/ui/highlighter";
 import Link from "next/link";
 import styles from "../Page.module.css";
 import TextType from "@/components/TextType";
-import DotGrid from "@/components/DotGrid";
 import { useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { Github, Linkedin, Mail, FileText } from "lucide-react";
@@ -39,17 +38,6 @@ export default function Projects() {
         zIndex: 2,
       }}
     >
-      <DotGrid
-        dotSize={2}
-        gap={12}
-        baseColor="#6b4c93"
-        activeColor="#CCD6F5"
-        style={{ opacity: 0.6 }}
-      />
-      {/* <div className="hidden md:block"> */}
-      {/*   <TargetCursor spinDuration={5} hideDefaultCursor={true} /> */}
-      {/* </div> */}
-
       {/* Home Button */}
       {/* Header */}
       <div className="w-full max-w-xl mt-16 mx-auto px-4 text-left">

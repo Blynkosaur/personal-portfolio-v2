@@ -1,6 +1,6 @@
 [
   {
-    "title": "ClockedIn 👾",
+    "title": "Timely ⏳",
     "description": "Quick little CLI that allows you to amend your commits and correct timelines for coding assignments ",
     "hook": "What's a mutex?",
     "tags": ["C++", "CLI", "Git"],
