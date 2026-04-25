@@ -269,7 +269,7 @@ export default function Home() {
                   }}
                 >
                   {!programmingHover && (
-                    <span className="font-bold">CleanMe</span>
+                    <span className="font-bold">ClockedIn</span>
                   )}
                   {programmingHover && (
                     <Highlighter action="underline" color="#CCD6F5">
@@ -277,7 +277,7 @@ export default function Home() {
                         className="italic"
                         style={{ fontWeight: "bold", color: "#c4a3ec" }}
                       >
-                        CleanMe
+                        ClockedIn
                       </span>
                     </Highlighter>
                   )}

@@ -1,9 +1,9 @@
 [
   {
-    "title": "CleanMe 🧹",
-    "description": "A C++ CLI that deduplicates files and automatically organizes them into a tidy structure.",
+    "title": "ClockedIn⏳",
+    "description": "Quick little CLI that allows you to amend your commits to the correct time for coding assignments ",
     "hook": "What's a mutex?",
-    "tags": ["C++", "CLI", "Regex"],
+    "tags": ["C++", "CLI", "Git"],
     "github": "https://github.com/blynkosaur/CleanMe"
   },
   {
