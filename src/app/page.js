@@ -6,10 +6,31 @@ import styles from "./Page.module.css";
 import DotGrid from "@/components/DotGrid";
 import TextType from "@/components/TextType";
 import { FaHome } from "react-icons/fa";
+import { MapPin } from "lucide-react";
 import FooterBar from "@/components/FooterBar";
 import { useState } from "react";
 import React from "react";
 import Image from "next/image";
+import { motion } from "motion/react";
+
+const pageContainerAnimation = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.08,
+    },
+  },
+};
+
+const pageItemAnimation = {
+  hidden: { opacity: 0, y: 28 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
 export function WaterlooImage() {
   return (
     <img
@@ -31,8 +52,11 @@ export default function Home() {
   const [projectsHover, setProjectsHover] = useState(false);
   const [emailHover, setEmailHover] = useState(false);
   return (
-    <div
+    <motion.main
       className={`${styles.page} relative overflow-y-hidden flex flex-col justify-center items-center text-[#CCD6F5] px-2 md:px-10 pb-10 pt-0 scrollbar-hide overflow-x-hidden`}
+      initial="hidden"
+      animate="visible"
+      variants={pageContainerAnimation}
       style={{
         minHeight: "100vh",
         backgroundColor: "#151520",
@@ -42,32 +66,8 @@ export default function Home() {
         zIndex: 2,
       }}
     >
-      <Button
-        asChild
-        variant="outline"
-        className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-4 py-2 text-sm "
-        style={{ border: "1px solid #6b7280" }}
-        onMouseEnter={() => setHomeHover(true)}
-        onMouseLeave={() => setHomeHover(false)}
-      >
-        <Link href="/" style={{ color: "#CCD6F5" }}>
-          <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
-          {homeHover ? (
-            <Highlighter
-              action="underline"
-              iterations={1}
-              padding={0}
-              animationDuration={50}
-              color="#CCD6F5"
-            >
-              <span style={{ fontWeight: "bold", color: "#CCD6F5" }}>Home</span>
-            </Highlighter>
-          ) : (
-            "Home"
-          )}
-        </Link>
-      </Button>
-      <div
+      <motion.div
+        variants={pageItemAnimation}
         style={{
           position: "fixed",
           top: 0,
@@ -81,83 +81,53 @@ export default function Home() {
           alignItems: "center",
         }}
       />
-      <div className="w-full  z-999 max-w-xl mt-4 mx-auto px-4">
-        <h1
-          className=" font-bold mt-16 mb-6 text-left text-2xl md:text-4xl"
-          style={{ fontWeight: "700" }}
-        >
-          {/* Mobile version - with typing animation */}
-          <span className="md:hidden">
-            <TextType
-              text={["👋Hi! I'm"]}
-              typingSpeed={75}
-              pauseDuration={2000}
-              initialDelay={0}
-              showCursor={false}
-              textColors={["#CCD6F5"]}
-              loop={false}
-              style={{
-                fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
-                fontWeight: "700",
-                fontStyle: "normal",
-                opacity: 1,
-              }}
-            />{" "}
-            <TextType
-              text={["Bryan"]}
-              typingSpeed={75}
-              pauseDuration={1500}
-              initialDelay={750}
-              showCursor={true}
-              cursorCharacter="|"
-              textColors={["#c4a3ec"]}
-              loop={false}
-              style={{
-                fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
-                fontWeight: "700",
-                fontStyle: "normal",
-              }}
-            />
+      <motion.div
+        variants={pageItemAnimation}
+        className="w-full  z-999 max-w-xl mt-4 mx-auto px-4"
+      >
+        <div className="mt-16 mb-6 flex items-end justify-between gap-4">
+          <h1
+            className="font-bold text-left text-2xl md:text-4xl"
+            style={{ fontWeight: "700" }}
+          >
+            <span>
+              <TextType
+                text={["👋Hi! I'm"]}
+                typingSpeed={75}
+                pauseDuration={2000}
+                initialDelay={0}
+                showCursor={false}
+                textColors={["#CCD6F5"]}
+                loop={false}
+                style={{
+                  fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
+                  fontWeight: "700",
+                  fontStyle: "normal",
+                  opacity: 1,
+                }}
+              />{" "}
+              <TextType
+                text={["Bryan"]}
+                typingSpeed={75}
+                pauseDuration={1500}
+                initialDelay={750}
+                showCursor={true}
+                cursorCharacter="|"
+                textColors={["#c4a3ec"]}
+                loop={false}
+                style={{
+                  fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
+                  fontWeight: "700",
+                  fontStyle: "normal",
+                }}
+              />
+            </span>
+          </h1>
+          <span className="shrink-0 inline-flex items-center gap-1.5 text-sm md:text-base text-[#CCD6F5]">
+            <MapPin size={14} className="text-[#c4a3ec]" />
+            <span>Montreal, QC</span>
           </span>
-
-          {/* Desktop version - with typing animation */}
-          <span className="hidden md:block">
-            <TextType
-              text={["👋Hi! I'm"]}
-              typingSpeed={75}
-              pauseDuration={1000}
-              initialDelay={0}
-              showCursor={false}
-              textColors={["#CCD6F5"]}
-              loop={false}
-              style={{
-                fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
-                fontWeight: "700",
-                fontStyle: "normal",
-              }}
-            />{" "}
-            <TextType
-              text={[
-                "Bryan.",
-                "a builder.",
-                "a problem solver.",
-                "a UWaterloo student.",
-              ]}
-              typingSpeed={75}
-              pauseDuration={1500}
-              initialDelay={750}
-              showCursor={true}
-              cursorCharacter="|"
-              textColors={["#c4a3ec"]}
-              loop={true}
-              style={{
-                fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
-                fontWeight: "700",
-                fontStyle: "normal",
-              }}
-            />
-          </span>
-        </h1>
+        </div>
 
         <div
           className="text-[#CCD6F5] text-sm md:text-lg mb-12 leading-7 md:leading-9"
@@ -409,10 +379,13 @@ export default function Home() {
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
 
       {/* Projects Button */}
-      <div className="w-full max-w-xl mt-2 mb-16 mx-auto px-4">
+      <motion.div
+        variants={pageItemAnimation}
+        className="w-full max-w-xl mt-2 mb-16 mx-auto px-4"
+      >
         <Button
           className="cursor-target w-full bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-10 py-6 text-sm md:text-lg font-medium"
           asChild
@@ -438,8 +411,9 @@ export default function Home() {
             )}
           </Link>
         </Button>
-      </div>
-      <div
+      </motion.div>
+      <motion.div
+        variants={pageItemAnimation}
         className="text-sm md:text-lg mb-4 w-full max-w-xl text-left flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center mx-auto px-4"
         style={{ color: "#CCD6F5" }}
       >
@@ -484,12 +458,15 @@ export default function Home() {
             </a>
           </Button>
         </div>
-      </div>
+      </motion.div>
       {/* Bottom spacing for footer */}
-      <div className="w-full max-w-xl mx-auto px-4">
+      <motion.div
+        variants={pageItemAnimation}
+        className="w-full max-w-xl mx-auto px-4"
+      >
         <FooterBar />
-      </div>
-      <div className="h-8"></div>
-    </div>
+      </motion.div>
+      <motion.div variants={pageItemAnimation} className="h-8"></motion.div>
+    </motion.main>
   );
 }

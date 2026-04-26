@@ -8,8 +8,28 @@ import styles from "../Page.module.css";
 import TextType from "@/components/TextType";
 import { useState } from "react";
 import { FaHome } from "react-icons/fa";
-import { Github, Linkedin, Mail, FileText } from "lucide-react";
+import { ArrowLeft, MapPin } from "lucide-react";
 import FooterBar from "@/components/FooterBar";
+import { motion } from "motion/react";
+
+const pageContainerAnimation = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.08,
+    },
+  },
+};
+
+const pageItemAnimation = {
+  hidden: { opacity: 0, y: 28 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
 
 export function WaterlooImage() {
   return (
@@ -24,10 +44,14 @@ export function WaterlooImage() {
 
 export default function Projects() {
   const [homeHover, setHomeHover] = useState(false);
+  const [backHomeHover, setBackHomeHover] = useState(false);
 
   return (
-    <div
+    <motion.main
       className={`${styles.page} relative flex flex-col justify-start items-center text-[#CCD6F5] px-2 md:px-10 pb-10 pt-0 scrollbar-hide overflow-x-hidden`}
+      initial="hidden"
+      animate="visible"
+      variants={pageContainerAnimation}
       style={{
         minHeight: "100vh",
         backgroundColor: "#151520",
@@ -40,45 +64,45 @@ export default function Projects() {
     >
       {/* Home Button */}
       {/* Header */}
-      <div className="w-full max-w-xl mt-16 mx-auto px-4 text-left">
-        <Button
-          asChild
-          variant="outline"
-          className="cursor-target absolute top-6 left-4 md:left-16 lg:left-24 z-10 bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-4 py-2 text-sm max-w-fit"
-          style={{ border: "1px solid #6b7280" }}
-          onMouseEnter={() => setHomeHover(true)}
-          onMouseLeave={() => setHomeHover(false)}
-        >
-          <Link href="/" style={{ color: "#CCD6F5" }}>
-            <FaHome className="mr-2" style={{ color: "#c4a3ec" }} />
-            {homeHover ? (
-              <Highlighter
-                action="underline"
-                color="#CCD6F5"
-                animationDuration={50}
-                padding={0}
-                iterations={1}
-              >
-                <span style={{ fontWeight: "bold", color: "#CCD6F5" }}>
-                  Home
+      <motion.div
+        variants={pageItemAnimation}
+        className="w-full max-w-xl mt-16 mx-auto px-4 text-left"
+      >
+        <div className="mt-4 mb-4 flex items-center justify-between gap-3">
+          <h1
+            className="text-2xl md:text-4xl font-bold text-left"
+            style={{
+              fontWeight: "700",
+              color: "#c4a3ec",
+              fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
+            }}
+          >
+            My Projects
+          </h1>
+          <Link
+            href="/"
+            className={`text-sm md:text-base text-[#CCD6F5] whitespace-nowrap inline-flex items-center gap-1.5 transition-transform duration-200 ${
+              backHomeHover ? "-translate-x-1" : "translate-x-0"
+            }`}
+            style={{ fontWeight: "600" }}
+            onMouseEnter={() => setBackHomeHover(true)}
+            onMouseLeave={() => setBackHomeHover(false)}
+          >
+            {backHomeHover ? (
+              <Highlighter action="underline" color="#CCD6F5" padding={0}>
+                <span className="inline-flex items-center gap-1.5" style={{ color: "#c4a3ec", fontWeight: "700" }}>
+                  <ArrowLeft size={14} />
+                  Back Home
                 </span>
               </Highlighter>
             ) : (
-              "Home"
+              <>
+                <ArrowLeft size={14} />
+                <span>Back Home</span>
+              </>
             )}
           </Link>
-        </Button>
-
-        <h1
-          className="text-2xl md:text-4xl font-bold mt-4 mb-4 text-left cursor-pointer  "
-          style={{
-            fontWeight: "700",
-            color: "#c4a3ec",
-            fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
-          }}
-        >
-          My Projects
-        </h1>
+        </div>
 
         <p className="group   gap-4  relative  hover:font-bold transition-transform duration-200 text-[#CCD6F5] text-sm md:text-lg mb-2 leading-7 md:leading-7 text-left">
           <span
@@ -107,9 +131,12 @@ export default function Projects() {
             />
           </span>
         </p>
-      </div>
+      </motion.div>
       {/* Projects Grid */}
-      <div className="w-full max-w-xl grid grid-cols-1 gap-6 mx-auto px-4">
+      <motion.div
+        variants={pageItemAnimation}
+        className="w-full max-w-xl grid grid-cols-1 gap-6 mx-auto px-4"
+      >
         {/* Project 1 */}
         {projects.map((project, index) => (
           <ProjectCard
@@ -122,11 +149,14 @@ export default function Projects() {
             link={project.link}
           />
         ))}
-      </div>
+      </motion.div>
 
-      <div className="w-full max-w-xl mx-auto px-4 mt-8">
+      <motion.div
+        variants={pageItemAnimation}
+        className="w-full max-w-xl mx-auto px-4 mt-8"
+      >
         <FooterBar />
-      </div>
-    </div>
+      </motion.div>
+    </motion.main>
   );
 }

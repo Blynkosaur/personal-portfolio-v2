@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
           gap={12}
           baseColor="#6b4c93"
           activeColor="#CCD6F5"
-          style={{ opacity: 0.6, zIndex: -999999 }}
+          style={{ opacity: 0.6 }}
         />
 
         <Analytics />
