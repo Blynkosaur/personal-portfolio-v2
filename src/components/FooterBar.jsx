@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { Github, Linkedin, Mail, FileText, Code } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
-import DotGrid from "@/components/DotGrid";
 import styles from "./FooterBar.module.css";
 
 const FooterBar = ({ links = [], className = "" }) => {
@@ -43,15 +42,6 @@ const FooterBar = ({ links = [], className = "" }) => {
 
   return (
     <footer className={`${styles.footerBar} ${className}`}>
-      <div className={styles.dotGridContainer}>
-        <DotGrid
-          dotSize={2}
-          gap={12}
-          baseColor="#4a5568"
-          activeColor="#CCD6F5"
-          style={{ opacity: 0.4 }}
-        />
-      </div>
       <p className={styles.socialsText}>Here are my socials:</p>
       <hr className={styles.divider} />
       <div className={styles.footerContent}>
