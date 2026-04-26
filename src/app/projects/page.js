@@ -54,7 +54,7 @@ export default function Projects() {
       variants={pageContainerAnimation}
       style={{
         minHeight: "100vh",
-        backgroundColor: "rgba(21, 21, 32, 0.88)",
+        backgroundColor: "transparent",
         color: "#E8F4F8",
         fontFamily: "var(--font-inconsolata), 'Courier New', monospace",
         fontWeight: "700",
