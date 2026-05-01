@@ -6,7 +6,8 @@ export default function Montreal() {
       className="hidden md:block absolute left-1/2 top-full z-30 mt-2 w-56 -translate-x-[38%] md:left-auto md:right-[-30px] md:translate-x-0"
       initial={{ opacity: 0, y: -6, scale: 0.97 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.22, ease: "easeOut" }}
+      exit={{ opacity: 0, y: -6, scale: 0.97 }}
+      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
     >
       <motion.div
         aria-label="Montreal illustration"
@@ -23,7 +24,7 @@ export default function Montreal() {
         }}
         initial={{ opacity: 0.85 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.18, ease: "easeOut", delay: 0.03 }}
+        transition={{ duration: 0.3, ease: "easeOut", delay: 0.08 }}
       />
     </motion.div>
   );

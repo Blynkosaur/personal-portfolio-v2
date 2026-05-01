@@ -9,7 +9,7 @@ import { MapPin } from "lucide-react";
 import FooterBar from "@/components/FooterBar";
 import { useState } from "react";
 import Image from "next/image";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 
 const pageContainerAnimation = {
   hidden: {},
@@ -46,6 +46,7 @@ export default function Home() {
   const [yolandoHover, setYolandoHover] = useState(false);
   const [programmingHover, setProgrammingHover] = useState(false);
   const [montrealHover, setMontrealHover] = useState(false);
+  const [montrealPinned, setMontrealPinned] = useState(false);
   const [projectsHover, setProjectsHover] = useState(false);
   const [emailHover, setEmailHover] = useState(false);
   return (
@@ -121,17 +122,25 @@ export default function Home() {
             </span>
           </h1>
           <span
-            className="relative cursor-pointer shrink-0 inline-flex items-center gap-1.5 text-sm md:text-base text-[#CCD6F5]"
+            className="select-none relative cursor-pointer shrink-0 inline-flex items-center gap-1.5 text-sm md:text-base text-[#CCD6F5]"
             onMouseEnter={() => {
               setMontrealHover(true);
             }}
             onMouseLeave={() => {
               setMontrealHover(false);
             }}
+            onClick={() => {
+              setMontrealPinned((prev) => !prev);
+              setMontrealHover(false);
+            }}
           >
             <MapPin size={14} className="text-[#c4a3ec]" />
-            <span>Montreal, QC</span>
-            {montrealHover && <Montreal />}
+            <span className={montrealHover ? "font-bold" : "font-normal"}>
+              Montreal, QC
+            </span>
+            <AnimatePresence>
+              {(montrealHover || montrealPinned) && <Montreal />}
+            </AnimatePresence>
           </span>
         </div>
 
