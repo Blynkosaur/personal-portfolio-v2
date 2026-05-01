@@ -3,13 +3,11 @@ import { Highlighter } from "@/components/ui/highlighter";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import styles from "./Page.module.css";
-import DotGrid from "@/components/DotGrid";
 import TextType from "@/components/TextType";
-import { FaHome } from "react-icons/fa";
+import Montreal from "@/components/Montreal";
 import { MapPin } from "lucide-react";
 import FooterBar from "@/components/FooterBar";
 import { useState } from "react";
-import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 
@@ -47,8 +45,7 @@ export default function Home() {
   const [livewellHover, setLivewellHover] = useState(false);
   const [yolandoHover, setYolandoHover] = useState(false);
   const [programmingHover, setProgrammingHover] = useState(false);
-  const [curiosityHover, setCuriosityHover] = useState(false);
-  const [homeHover, setHomeHover] = useState(false);
+  const [montrealHover, setMontrealHover] = useState(false);
   const [projectsHover, setProjectsHover] = useState(false);
   const [emailHover, setEmailHover] = useState(false);
   return (
@@ -123,9 +120,18 @@ export default function Home() {
               />
             </span>
           </h1>
-          <span className="shrink-0 inline-flex items-center gap-1.5 text-sm md:text-base text-[#CCD6F5]">
+          <span
+            className="relative cursor-pointer shrink-0 inline-flex items-center gap-1.5 text-sm md:text-base text-[#CCD6F5]"
+            onMouseEnter={() => {
+              setMontrealHover(true);
+            }}
+            onMouseLeave={() => {
+              setMontrealHover(false);
+            }}
+          >
             <MapPin size={14} className="text-[#c4a3ec]" />
             <span>Montreal, QC</span>
+            {montrealHover && <Montreal />}
           </span>
         </div>
 
