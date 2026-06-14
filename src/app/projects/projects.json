@@ -1,12 +1,5 @@
 [
   {
-    "title": "Timely ⏳",
-    "description": "Quick little CLI that allows you to amend your commits and correct timelines for coding assignments ",
-    "hook": "What's a mutex?",
-    "tags": ["C++", "CLI", "Git"],
-    "github": "https://github.com/blynkosaur/CleanMe"
-  },
-  {
     "title": "Tailored 🪡",
     "description": "Internship application season is approaching. Bypass ATS with a custom resume and cover letter :)",
     "hook": "bzzzz...  AI Agents??! bzz... bzz... LLMS.. Tokens?!?!?",
