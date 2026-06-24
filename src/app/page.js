@@ -4,49 +4,18 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import styles from "./Page.module.css";
 import TextType from "@/components/TextType";
-import Montreal from "@/components/Montreal";
-import { MapPin } from "lucide-react";
+import LocationBadge from "@/components/LocationBadge";
 import FooterBar from "@/components/FooterBar";
+import IntroItem from "@/components/IntroItem";
+import BrandLink from "@/components/BrandLink";
+import HighlightLabel from "@/components/HighlightLabel";
 import { useState } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion } from "motion/react";
-
-const pageContainerAnimation = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.08,
-    },
-  },
-};
-
-const pageItemAnimation = {
-  hidden: { opacity: 0, y: 28 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
-  },
-};
-export function WaterlooImage() {
-  return (
-    <img
-      style={{ height: "24px", width: "24px" }}
-      src="/watimage.png"
-      alt="icon"
-      class="icon"
-    />
-  );
-}
+import { motion } from "motion/react";
+import { pageContainerAnimation, pageItemAnimation } from "@/lib/animations";
+import { SOFT_BUTTON_CLASS, SOFT_BUTTON_BORDER } from "@/lib/ui";
 
 export default function Home() {
-  const [hover, setHover] = useState(false);
-  const [livewellHover, setLivewellHover] = useState(false);
-  const [yolandoHover, setYolandoHover] = useState(false);
-  const [programmingHover, setProgrammingHover] = useState(false);
-  const [montrealHover, setMontrealHover] = useState(false);
-  const [montrealPinned, setMontrealPinned] = useState(false);
   const [projectsHover, setProjectsHover] = useState(false);
   const [emailHover, setEmailHover] = useState(false);
   return (
@@ -121,27 +90,7 @@ export default function Home() {
               />
             </span>
           </h1>
-          <span
-            className="select-none relative cursor-pointer shrink-0 inline-flex items-center gap-1.5 text-sm md:text-base text-[#CCD6F5]"
-            onMouseEnter={() => {
-              setMontrealHover(true);
-            }}
-            onMouseLeave={() => {
-              setMontrealHover(false);
-            }}
-            onClick={() => {
-              setMontrealPinned((prev) => !prev);
-              setMontrealHover(false);
-            }}
-          >
-            <MapPin size={14} className="text-[#c4a3ec]" />
-            <span className={montrealHover ? "font-bold" : "font-normal"}>
-              Montreal, QC
-            </span>
-            <AnimatePresence>
-              {(montrealHover || montrealPinned) && <Montreal />}
-            </AnimatePresence>
-          </span>
+          <LocationBadge />
         </div>
 
         <div
@@ -154,244 +103,91 @@ export default function Home() {
           }}
         >
           <ul className="space-y-4">
-            <li
+            <IntroItem
+              prefix="SWE"
               className="group flex items-start gap-2 pl-8 relative hover:font-bold hover:translate-x-3 transition-transform duration-200"
-              onMouseEnter={() => {
-                setHover(true);
-              }}
-              onMouseLeave={() => {
-                setHover(false);
-              }}
             >
-              <div className="absolute left-2 top-1/2 w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              SWE{""}
-              <a
-                href="https://uwaterloo.ca"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium hover:font-bold hover:text-[#c4a3ec] transition-colors duration-200 inline-flex items-center"
-                style={{
-                  fontWeight: hover ? "bold" : "normal",
-                  color: hover ? "#c4a3ec" : "inherit",
-                  textDecoration: "none",
-                }}
-              >
-                {hover && (
-                  <Highlighter action="underline" color="#CCD6F5">
-                    <span
-                      className="italic"
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        gap: "4px",
-                        fontWeight: "bold",
-                        color: "#c4a3ec",
-                        alignItems: "center",
-                      }}
-                    >
-                      <Image
-                        src={`/UWaterloo.png`}
-                        alt="UWaterloo Logo"
-                        width={20}
-                        height={20}
-                        className="object-contain relative top-[1px]"
-                      />
-                      UWaterloo
-                    </span>
-                  </Highlighter>
-                )}
-                {!hover && (
-                  <span
-                    className="italic"
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      gap: "4px",
-                      fontWeight: "bold",
-                      color: "#CCD6F5",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Image
-                      src={`/UWaterloo.png`}
-                      alt="UWaterloo Logo"
-                      width={20}
-                      height={20}
-                      className="object-contain relative top-[1px]"
-                    />
-                    UWaterloo
-                  </span>
-                )}
-              </a>
-            </li>
-            <li
-              className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
-              onMouseEnter={() => {
-                setProgrammingHover(true);
-              }}
-              onMouseLeave={() => {
-                setProgrammingHover(false);
-              }}
-            >
-              <div className="absolute left-2 top-1/2 w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              Currently working on{" "}
-              <Link href={"/projects"}>
-                <span
-                  className="font-medium italic hover:text-[#c4a3ec] transition-colors duration-200 "
-                  style={{
-                    textDecoration: programmingHover ? "underline" : "none",
-                    fontWeight: programmingHover ? "bold" : "normal",
+              {(hovered) => (
+                <BrandLink
+                  hovered={hovered}
+                  href="https://uwaterloo.ca"
+                  src="/UWaterloo.png"
+                  alt="UWaterloo Logo"
+                  label="UWaterloo"
+                  imageWidth={20}
+                  imageHeight={20}
+                  imageClassName="object-contain relative top-[1px]"
+                  gap="4px"
+                  anchorClassName="font-medium hover:font-bold hover:text-[#c4a3ec] transition-colors duration-200 inline-flex items-center"
+                  anchorStyle={{
+                    fontWeight: hovered ? "bold" : "normal",
+                    color: hovered ? "#c4a3ec" : "inherit",
+                    textDecoration: "none",
                   }}
-                >
-                  {!programmingHover && (
-                    <span className="font-bold">something...</span>
-                  )}
-                  {programmingHover && (
-                    <Highlighter action="underline" color="#CCD6F5">
-                      <span
-                        className="italic"
-                        style={{ fontWeight: "bold", color: "#c4a3ec" }}
-                      >
-                        something...
-                      </span>
-                    </Highlighter>
-                  )}
-                </span>{" "}
-              </Link>
-            </li>
-            <li
-              className="group  flex flex-row items-start gap-2 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
-              onMouseEnter={() => {
-                setYolandoHover(true);
-              }}
-              onMouseLeave={() => {
-                setYolandoHover(false);
-              }}
-            >
-              <div className="absolute left-2 top-1/2 w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              Engineering @{"  "}
-              <a
-                href="https://yolando.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" hover:font-bold  hover:text-[#c4a3ec] transition-colors duration-200 inline-flex items-center"
-                style={{ minHeight: "1.5rem" }}
-              >
-                {!yolandoHover && (
-                  <span
-                    className="italic"
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      gap: "6px",
-                      fontWeight: "bold",
-                      color: "#CCD6F5",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Image
-                      src={`/yolando_logo.jpeg`}
-                      alt="Yolando Logo"
-                      width={16}
-                      height={16}
-                      className="object-contain rounded-[2px] relative top-[1px]"
-                    />
-                    Yolando
-                  </span>
-                )}
-                {yolandoHover && (
-                  <Highlighter action="underline" color="#CCD6F5">
-                    <span
-                      className="italic"
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        gap: "6px",
-                        fontWeight: "bold",
-                        color: "#c4a3ec",
-                        alignItems: "center",
-                      }}
-                    >
-                      <Image
-                        src={`/yolando_logo.jpeg`}
-                        alt="Yolando Logo"
-                        width={16}
-                        height={16}
-                        className="object-contain rounded-[2px] relative top-[1px]"
-                      />
-                      Yolando
-                    </span>
-                  </Highlighter>
-                )}
-              </a>
-            </li>
+                />
+              )}
+            </IntroItem>
 
-            <li
-              className="group  flex flex-row items-start gap-2 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
-              onMouseEnter={() => {
-                setLivewellHover(true);
-              }}
-              onMouseLeave={() => {
-                setLivewellHover(false);
-              }}
+            <IntroItem
+              prefix="Currently working on "
+              className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
             >
-              <div className="absolute left-2 top-1/2 w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              Prev. @{"  "}
-              <a
-                href="https://joinlivewell.ca"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" hover:font-bold  hover:text-[#c4a3ec] transition-colors duration-200 inline-flex items-center"
-                style={{ minHeight: "1.5rem" }}
-              >
-                {!livewellHover && (
+              {(hovered) => (
+                <Link href={"/projects"}>
                   <span
-                    className="italic"
+                    className="font-medium italic hover:text-[#c4a3ec] transition-colors duration-200 "
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      gap: "6px",
-                      fontWeight: "bold",
-                      color: "#CCD6F5",
-                      alignItems: "center",
+                      textDecoration: hovered ? "underline" : "none",
+                      fontWeight: hovered ? "bold" : "normal",
                     }}
                   >
-                    <Image
-                      src={`/hims__hers_logo.jpeg`}
-                      alt="Livewell Logo"
-                      width={16}
-                      height={16}
-                      className="object-contain rounded-[2px] relative top-[1px]"
-                    />
-                    Hims & Hers
-                  </span>
-                )}
-                {livewellHover && (
-                  <Highlighter action="underline" color="#CCD6F5">
-                    <span
-                      className="italic"
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        gap: "6px",
-                        fontWeight: "bold",
-                        color: "#c4a3ec",
-                        alignItems: "center",
-                      }}
-                    >
-                      <Image
-                        src={`/hims__hers_logo.jpeg`}
-                        alt="Livewell Logo"
-                        width={16}
-                        height={16}
-                        className="object-contain rounded-[2px] relative top-[1px]"
-                      />
-                      Hims & Hers
-                    </span>
-                  </Highlighter>
-                )}
-              </a>
-            </li>
+                    {!hovered && (
+                      <span className="font-bold">something...</span>
+                    )}
+                    {hovered && (
+                      <Highlighter action="underline" color="#CCD6F5">
+                        <span
+                          className="italic"
+                          style={{ fontWeight: "bold", color: "#c4a3ec" }}
+                        >
+                          something...
+                        </span>
+                      </Highlighter>
+                    )}
+                  </span>{" "}
+                </Link>
+              )}
+            </IntroItem>
+
+            <IntroItem
+              prefix={<>Engineering @{"  "}</>}
+              className="group  flex flex-row items-start gap-2 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
+            >
+              {(hovered) => (
+                <BrandLink
+                  hovered={hovered}
+                  href="https://yolando.com"
+                  src="/yolando_logo.jpeg"
+                  alt="Yolando Logo"
+                  label="Yolando"
+                />
+              )}
+            </IntroItem>
+
+            <IntroItem
+              prefix={<>Prev. @{"  "}</>}
+              className="group  flex flex-row items-start gap-2 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
+            >
+              {(hovered) => (
+                <BrandLink
+                  hovered={hovered}
+                  href="https://joinlivewell.ca"
+                  src="/hims__hers_logo.jpeg"
+                  alt="Livewell Logo"
+                  label="Hims & Hers"
+                />
+              )}
+            </IntroItem>
           </ul>
         </div>
       </motion.div>
@@ -402,28 +198,16 @@ export default function Home() {
         className="w-full max-w-xl mt-2 mb-16 mx-auto px-4"
       >
         <Button
-          className="cursor-target w-full bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-10 py-6 text-sm md:text-lg font-medium"
+          className={`${SOFT_BUTTON_CLASS} w-full px-10 py-6 text-sm md:text-lg font-medium`}
           asChild
-          style={{ border: "1px solid #6b7280" }}
+          style={SOFT_BUTTON_BORDER}
           onMouseEnter={() => setProjectsHover(true)}
           onMouseLeave={() => setProjectsHover(false)}
         >
           <Link href="/projects" className="!font-bold">
-            {projectsHover ? (
-              <Highlighter
-                action="underline"
-                iterations={1}
-                padding={0}
-                animationDuration={50}
-                color="#CCD6F5"
-              >
-                <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                  View My Projects
-                </span>
-              </Highlighter>
-            ) : (
-              <span style={{ color: "#CCD6F5" }}>View My Projects</span>
-            )}
+            <HighlightLabel hovered={projectsHover} animationDuration={50}>
+              View My Projects
+            </HighlightLabel>
           </Link>
         </Button>
       </motion.div>
@@ -437,9 +221,9 @@ export default function Home() {
         </div>
         <div className="flex flex-col justify-center items-center">
           <Button
-            className="cursor-target bg-slate-800/30 text-slate-100 hover:bg-slate-700/50 hover:border-slate-300 hover:text-slate-600 transition-all duration-200 backdrop-blur-sm px-6 py-3 text-sm md:text-base"
+            className={`${SOFT_BUTTON_CLASS} px-6 py-3 text-sm md:text-base`}
             asChild
-            style={{ border: "1px solid #6b7280" }}
+            style={SOFT_BUTTON_BORDER}
             onMouseEnter={() => setEmailHover(true)}
             onMouseLeave={() => setEmailHover(false)}
           >
@@ -448,21 +232,9 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {emailHover ? (
-                <Highlighter
-                  action="underline"
-                  iterations={1}
-                  padding={0}
-                  animationDuration={200}
-                  color="#CCD6F5"
-                >
-                  <span style={{ fontWeight: "bold", color: "#c4a3ec" }}>
-                    b86lin@uwaterloo.ca
-                  </span>
-                </Highlighter>
-              ) : (
-                <span style={{ color: "#CCD6F5" }}>b86lin@uwaterloo.ca</span>
-              )}{" "}
+              <HighlightLabel hovered={emailHover} animationDuration={200}>
+                b86lin@uwaterloo.ca
+              </HighlightLabel>{" "}
               <Image
                 src="/UWaterloo.png"
                 alt="UWaterloo Logo"

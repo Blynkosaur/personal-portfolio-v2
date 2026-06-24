@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/ProjectCard";
 import projects from "./projects.json";
 import { Highlighter } from "@/components/ui/highlighter";
@@ -7,40 +6,10 @@ import Link from "next/link";
 import styles from "../Page.module.css";
 import TextType from "@/components/TextType";
 import { useState } from "react";
-import { FaHome } from "react-icons/fa";
-import { ArrowLeft, MapPin } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import FooterBar from "@/components/FooterBar";
 import { motion } from "motion/react";
-
-const pageContainerAnimation = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.08,
-    },
-  },
-};
-
-const pageItemAnimation = {
-  hidden: { opacity: 0, y: 28 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
-  },
-};
-
-export function WaterlooImage() {
-  return (
-    <img
-      style={{ height: "24px", width: "24px" }}
-      src="/watimage.png"
-      alt="icon"
-      class="icon"
-    />
-  );
-}
+import { pageContainerAnimation, pageItemAnimation } from "@/lib/animations";
 
 export default function Projects() {
   const [homeHover, setHomeHover] = useState(false);
@@ -90,7 +59,10 @@ export default function Projects() {
           >
             {backHomeHover ? (
               <Highlighter action="underline" color="#CCD6F5" padding={0}>
-                <span className="inline-flex items-center gap-1.5" style={{ color: "#c4a3ec", fontWeight: "700" }}>
+                <span
+                  className="inline-flex items-center gap-1.5"
+                  style={{ color: "#c4a3ec", fontWeight: "700" }}
+                >
                   <ArrowLeft size={14} />
                   Back Home
                 </span>
