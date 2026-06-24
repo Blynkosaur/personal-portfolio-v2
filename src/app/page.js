@@ -269,7 +269,7 @@ export default function Home() {
               }}
             >
               <div className="absolute left-2 top-1/2 w-[5px] h-[5px] bg-[#CCD6F5] rotate-45 transform -translate-y-1/2 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"></div>
-              Inc. engineering @{"  "}
+              Engineering @{"  "}
               <a
                 href="https://yolando.com"
                 target="_blank"
