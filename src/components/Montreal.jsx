@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import montrealSvg from "@/assets/montreal.svg";
 
 export default function Montreal() {
   return (
@@ -13,8 +14,8 @@ export default function Montreal() {
         aria-label="Montreal illustration"
         className="h-36 w-full bg-[#CCD6F5]"
         style={{
-          WebkitMaskImage: "url('/montreal.svg')",
-          maskImage: "url('/montreal.svg')",
+          WebkitMaskImage: `url('${montrealSvg.src}')`,
+          maskImage: `url('${montrealSvg.src}')`,
           WebkitMaskRepeat: "no-repeat",
           maskRepeat: "no-repeat",
           WebkitMaskSize: "contain",

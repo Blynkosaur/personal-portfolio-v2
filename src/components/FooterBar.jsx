@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Github, Linkedin, Mail, FileText, Code } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 import styles from "./FooterBar.module.css";
+import seWebring from "@/assets/se-webring.svg";
 
 const FooterBar = ({ links = [], className = "" }) => {
   const defaultLinks = [
@@ -81,7 +82,7 @@ const FooterBar = ({ links = [], className = "" }) => {
             className={styles.link}
           >
             <img
-              src="/se-webring.svg"
+              src={seWebring.src}
               alt="Webring"
               className={styles.navIcon}
             />

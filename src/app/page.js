@@ -14,6 +14,9 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { pageContainerAnimation, pageItemAnimation } from "@/lib/animations";
 import { SOFT_BUTTON_CLASS, SOFT_BUTTON_BORDER } from "@/lib/ui";
+import uwaterlooLogo from "@/assets/UWaterloo.png";
+import yolandoLogo from "@/assets/yolando_logo.jpeg";
+import himsHersLogo from "@/assets/hims__hers_logo.jpeg";
 
 export default function Home() {
   const [projectsHover, setProjectsHover] = useState(false);
@@ -111,7 +114,7 @@ export default function Home() {
                 <BrandLink
                   hovered={hovered}
                   href="https://uwaterloo.ca"
-                  src="/UWaterloo.png"
+                  src={uwaterlooLogo}
                   alt="UWaterloo Logo"
                   label="UWaterloo"
                   imageWidth={20}
@@ -167,7 +170,7 @@ export default function Home() {
                 <BrandLink
                   hovered={hovered}
                   href="https://yolando.com"
-                  src="/yolando_logo.jpeg"
+                  src={yolandoLogo}
                   alt="Yolando Logo"
                   label="Yolando"
                 />
@@ -182,7 +185,7 @@ export default function Home() {
                 <BrandLink
                   hovered={hovered}
                   href="https://joinlivewell.ca"
-                  src="/hims__hers_logo.jpeg"
+                  src={himsHersLogo}
                   alt="Livewell Logo"
                   label="Hims & Hers"
                 />
@@ -236,7 +239,7 @@ export default function Home() {
                 b86lin@uwaterloo.ca
               </HighlightLabel>{" "}
               <Image
-                src="/UWaterloo.png"
+                src={uwaterlooLogo}
                 alt="UWaterloo Logo"
                 width={20}
                 height={20}
