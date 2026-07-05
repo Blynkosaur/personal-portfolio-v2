@@ -107,7 +107,7 @@ export default function Projects() {
       {/* Projects Grid */}
       <motion.div
         variants={pageItemAnimation}
-        className="w-full max-w-xl flex flex-col gap-[2px] mx-auto px-4"
+        className="w-full max-w-xl flex flex-col gap-5 mx-auto px-4"
       >
         {/* Project 1 */}
         {projects.map((project, index) => (

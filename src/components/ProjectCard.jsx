@@ -38,7 +38,7 @@ export default function ProjectCard({
         </h3>
         <span className="flex-1" />
         {!open && (
-          <span className="whitespace-nowrap text-xs font-normal text-slate-500">
+          <span className="hidden md:inline whitespace-nowrap text-xs font-normal text-slate-500">
             {tags.slice(0, 2).join(" · ")}
           </span>
         )}
@@ -76,7 +76,7 @@ export default function ProjectCard({
                 href={github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-target inline-flex items-center gap-1.5 rounded-md border border-slate-500 bg-slate-700/50 px-4 py-[9px] text-xs font-bold text-slate-100 transition-all duration-200 hover:translate-x-1 hover:border-slate-400 hover:bg-slate-600/50 hover:text-[#c4a3ec]"
+                className="cursor-target inline-flex items-center gap-1.5 rounded-md bg-slate-700/50 px-4 py-[9px] text-xs font-bold text-slate-100 transition-all duration-200 hover:translate-x-1 hover:bg-slate-600/50 hover:text-[#c4a3ec]"
               >
                 <FaGithub style={{ color: "#c4a3ec" }} />
                 Code
@@ -86,7 +86,7 @@ export default function ProjectCard({
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cursor-target inline-flex items-center rounded-md border border-slate-500 bg-slate-700/50 px-4 py-[9px] text-xs font-bold text-slate-100 transition-all duration-200 hover:translate-x-1 hover:border-slate-400 hover:bg-slate-600/50 hover:text-[#c4a3ec]"
+                  className="cursor-target inline-flex items-center rounded-md bg-slate-700/50 px-4 py-[9px] text-xs font-bold text-slate-100 transition-all duration-200 hover:translate-x-1 hover:bg-slate-600/50 hover:text-[#c4a3ec]"
                 >
                   Demo
                 </a>
