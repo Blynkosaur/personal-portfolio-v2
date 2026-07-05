@@ -27,11 +27,11 @@ const redaction = localFont({
   variable: "--font-redaction",
 });
 
-const redaction35 = localFont({
-  src: "../assets/Redaction/otf/Redaction35-Italic.otf",
+const redaction70 = localFont({
+  src: "../assets/Redaction/otf/Redaction70-Italic.otf",
   weight: "400",
   style: "italic",
-  variable: "--font-redaction-35",
+  variable: "--font-redaction-70",
 });
 
 export const metadata = {
@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${gowunBatang.variable} ${inconsolata.variable} ${redaction35.variable} antialiased overflow-x-hidden overscroll-x-none w-full`}
+        className={`${gowunBatang.variable} ${inconsolata.variable} ${redaction70.variable} antialiased overflow-x-hidden overscroll-x-none w-full`}
       >
         <DotGrid
           dotSize={2}

@@ -14,7 +14,7 @@ export default {
   		fontFamily: {
   			'gowun-batang': ['var(--font-gowun-batang)', 'Georgia', 'serif'],
   			'inconsolata': ['var(--font-inconsolata)', 'Courier New', 'monospace'],
-  			'redaction-35': ['var(--font-redaction-35)', 'Georgia', 'serif'],
+  			'redaction-70': ['var(--font-redaction-70)', 'Georgia', 'serif'],
   		},
   		colors: {
   			background: 'hsl(var(--background))',
