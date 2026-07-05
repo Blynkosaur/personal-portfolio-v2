@@ -1,33 +1,50 @@
 [
   {
-    "title": "Tailored 🪡",
+    "title": "Tailored",
     "description": "Internship application season is approaching. Bypass ATS with a custom resume and cover letter :)",
     "hook": "bzzzz...  AI Agents??! bzz... bzz... LLMS.. Tokens?!?!?",
-    "tags": ["AWS", "Browserbase", "Docker", "LaTeX"],
+    "tags": [
+      "AWS",
+      "Browserbase",
+      "Docker",
+      "LaTeX"
+    ],
     "github": "https://github.com/Blynkosaur/Tailored",
     "link": "https://tailored.bry4n.co"
   },
   {
-    "title": "SaaScript 💻",
+    "title": "SaaScript",
     "description": "Built <i>SaaScript</i>, a <i>\"startup buzzword\"</i> interpreted programming language featuring a custom bytecode virtual machine in C Implementing a full lexer, parser, and bytecode compiler to translate high-level code into executable bytecode.",
     "hook": "Still dealing with segfaults...",
-    "tags": ["C", "Makefile", "GCC/GDB"],
+    "tags": [
+      "C",
+      "Makefile",
+      "GCC/GDB"
+    ],
     "github": "https://github.com/Blynkosaur/BryteLinker",
     "link": null
   },
   {
-    "title": "League of Studies 📖",
+    "title": "League of Studies",
     "description": "My mom told me to stop playing League of Legends 💔, so I made <i>League of Studies</i>, a gamified study platform instead. Fight with your friends or a boss to study for exams and climb the leaderboard!",
     "hook": "JACHacks 2025 Winner!",
-    "tags": ["React", "Supabase", "Gamification"],
+    "tags": [
+      "React",
+      "Supabase",
+      "Gamification"
+    ],
     "github": "https://github.com/Blynkosaur/LeagueOfStudies",
     "link": "https://ihateto.study"
   },
   {
-    "title": "Tumor Classifier 🧠",
+    "title": "Tumor Classifier",
     "description": "Designed and implemented a neural network from scratch using only NumPy to classify breast growths as benign or malignant. Learning the calculus and linear algebra behind supervised learning models was a great experience.",
     "hook": "Achieved 95% precision and 90% recall scores.",
-    "tags": ["Python", "NumPy", "Machine Learning"],
+    "tags": [
+      "Python",
+      "NumPy",
+      "Machine Learning"
+    ],
     "github": "https://github.com/Blynkosaur/Tumor-Classification",
     "link": null
   }

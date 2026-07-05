@@ -1,4 +1,5 @@
 import { Gowun_Batang, Inconsolata } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Presence from "@/components/Presence";
 import DotGrid from "@/components/DotGrid";
@@ -17,6 +18,22 @@ const inconsolata = Inconsolata({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+const redaction = localFont({
+  src: [
+    { path: "../assets/Redaction/otf/Redaction-Regular.otf", weight: "400", style: "normal" },
+    { path: "../assets/Redaction/otf/Redaction-Italic.otf", weight: "400", style: "italic" },
+    { path: "../assets/Redaction/otf/Redaction-Bold.otf", weight: "700", style: "normal" },
+  ],
+  variable: "--font-redaction",
+});
+
+const redaction35 = localFont({
+  src: "../assets/Redaction/otf/Redaction35-Italic.otf",
+  weight: "400",
+  style: "italic",
+  variable: "--font-redaction-35",
+});
+
 export const metadata = {
   title: "Bryan Lin",
   description: "Meet Bryan!",
@@ -26,7 +43,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${gowunBatang.variable} ${inconsolata.variable} antialiased overflow-x-hidden overscroll-x-none w-full`}
+        className={`${gowunBatang.variable} ${inconsolata.variable} ${redaction35.variable} antialiased overflow-x-hidden overscroll-x-none w-full`}
       >
         <DotGrid
           dotSize={2}

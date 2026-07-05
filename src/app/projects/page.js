@@ -107,7 +107,7 @@ export default function Projects() {
       {/* Projects Grid */}
       <motion.div
         variants={pageItemAnimation}
-        className="w-full max-w-xl grid grid-cols-1 gap-6 mx-auto px-4"
+        className="w-full max-w-xl flex flex-col gap-[2px] mx-auto px-4"
       >
         {/* Project 1 */}
         {projects.map((project, index) => (
@@ -125,10 +125,11 @@ export default function Projects() {
 
       <motion.div
         variants={pageItemAnimation}
-        className="w-full max-w-xl mx-auto px-4 mt-8"
+        className="w-full max-w-xl mx-auto px-4 mt-auto pt-8"
       >
         <FooterBar />
       </motion.div>
+      <motion.div variants={pageItemAnimation} className="h-8"></motion.div>
     </motion.main>
   );
 }
