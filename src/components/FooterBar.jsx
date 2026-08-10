@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Github, Linkedin, Mail, FileText, Code } from "lucide-react";
+import { Github, Linkedin, Mail, Code } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 import styles from "./FooterBar.module.css";
 import seWebring from "@/assets/se-webring.svg";
@@ -26,11 +26,6 @@ const FooterBar = ({ links = [], className = "" }) => {
       name: "email",
       href: "mailto:b86lin@uwaterloo.ca",
       icon: Mail,
-    },
-    {
-      name: "resume",
-      href: "./BryanLin_Resume.pdf",
-      icon: FileText,
     },
     {
       name: "repo",
