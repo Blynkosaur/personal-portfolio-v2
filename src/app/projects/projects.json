@@ -1,5 +1,15 @@
 [
   {
+    "title": "Treehouse",
+    "description": "A worktree manager to run infinite agents!",
+    "hook": "Worktrees born ready, not born broken.",
+    "tags": [
+      "Go"
+    ],
+    "github": "https://github.com/blynkosaur/treehouse",
+    "link": null
+  },
+  {
     "title": "Tailored",
     "description": "Internship application season is approaching. Bypass ATS with a custom resume and cover letter :)",
     "hook": "bzzzz...  AI Agents??! bzz... bzz... LLMS.. Tokens?!?!?",

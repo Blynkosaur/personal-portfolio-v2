@@ -28,7 +28,7 @@ export default function ProjectCard({
           ▸
         </span>
         <h3
-          className="!font-redaction-70 whitespace-nowrap text-lg italic transition-colors duration-200"
+          className="!font-gowun-batang whitespace-nowrap text-lg italic transition-colors duration-200"
           style={{
             color: open ? "#c4a3ec" : "#CCD6F5",
             fontWeight: 400,
