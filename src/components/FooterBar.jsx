@@ -1,96 +1,102 @@
-"use client";
-import Link from "next/link";
-import { Github, Linkedin, Mail, Code } from "lucide-react";
+import { Code, Github, Linkedin, Mail } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
-import styles from "./FooterBar.module.css";
 import seWebring from "@/assets/se-webring.svg";
 
-const FooterBar = ({ links = [], className = "" }) => {
-  const defaultLinks = [
-    {
-      name: "github",
-      href: "https://github.com/blynkosaur",
-      icon: Github,
-    },
-    {
-      name: "linkedin",
-      href: "https://www.linkedin.com/in/bry4n-lin",
-      icon: Linkedin,
-    },
-    {
-      name: "x",
-      href: "https://x.com/bry4n_lin",
-      icon: FaXTwitter,
-    },
-    {
-      name: "email",
-      href: "mailto:b86lin@uwaterloo.ca",
-      icon: Mail,
-    },
-    {
-      name: "repo",
-      href: "https://github.com/blynkosaur/personal-portfolio-v2",
-      icon: Code,
-    },
-  ];
+const SOCIALS = [
+  {
+    href: "https://github.com/blynkosaur",
+    label: "GitHub",
+    name: "github",
+    icon: Github,
+  },
+  {
+    href: "https://www.linkedin.com/in/bry4n-lin",
+    label: "LinkedIn",
+    name: "linkedin",
+    icon: Linkedin,
+  },
+  {
+    href: "https://x.com/bry4n_lin",
+    label: "X",
+    name: "x",
+    icon: FaXTwitter,
+  },
+  {
+    href: "mailto:b86lin@uwaterloo.ca",
+    label: "Email",
+    name: "email",
+    icon: Mail,
+  },
+  {
+    href: "https://github.com/blynkosaur/personal-portfolio-v2",
+    label: "Site source code",
+    name: "repo",
+    icon: Code,
+  },
+];
 
-  const linkItems = links.length > 0 ? links : defaultLinks;
-
-  return (
-    <footer className={`${styles.footerBar} ${className}`}>
-      <p className={styles.socialsText}>Here are my socials:</p>
-      <hr className={styles.divider} />
-      <div className={styles.footerContent}>
-        <div className={styles.linksContainer}>
-          {linkItems.map((link, index) => {
-            const LinkComponent =
-              link.href?.startsWith("mailto:") || link.href?.startsWith("http")
-                ? "a"
-                : Link;
-            const linkProps =
-              link.href?.startsWith("mailto:") || link.href?.startsWith("http")
-                ? {
-                    href: link.href,
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                  }
-                : { href: link.href };
-
-            return (
-              <LinkComponent key={index} {...linkProps} className={styles.link}>
-                {link.icon && (
-                  <>
-                    <link.icon className={styles.icon} />
-                    <span className={styles.label}>{link.name}</span>
-                  </>
-                )}
-                {!link.icon && <span>{link.name}</span>}
-              </LinkComponent>
-            );
-          })}
-        </div>
-        <div className={styles.navContainer}>
+const FooterBar = ({ className = "" }) => (
+  <footer className={`flex w-full flex-col gap-4 ${className}`}>
+    {/* The bar sits above the logos, as it did in the original footer. */}
+    <hr className="m-0 border-0 border-t border-[var(--rule)]" />
+    <div className="flex items-center justify-between gap-4">
+      <div className="-ml-3 flex items-center sm:-ml-2.5">
+      {SOCIALS.map(({ href, label, name, icon: Icon }) => {
+        const external = href.startsWith("http");
+        return (
           <a
-            href="https://se-webring.xyz/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.link}
+            key={name}
+            href={href}
+            target={external ? "_blank" : undefined}
+            rel={external ? "noopener noreferrer" : undefined}
+            aria-label={label}
+            className="cursor-target group flex h-11 min-w-11 items-center justify-center text-[var(--text-2)] transition-colors duration-150 hover:text-[var(--accent)] sm:h-10 sm:min-w-10"
           >
-            <img
-              src={seWebring.src}
-              alt="Webring"
-              className={styles.navIcon}
+            <Icon
+              size={18}
+              strokeWidth={1.6}
+              className="shrink-0 transition-transform duration-500 ease-out group-hover:scale-110"
             />
-            <span className={styles.label}>webring</span>
+            {/* Name slides out of the icon on hover, as the old footer did. */}
+            <span className="hidden max-w-0 overflow-hidden whitespace-nowrap font-geist-mono text-[13px] opacity-0 transition-all duration-500 ease-out group-hover:ml-2 group-hover:max-w-[200px] group-hover:opacity-100 md:inline-block">
+              {name}
+            </span>
           </a>
-        </div>
+        );
+      })}
       </div>
-      <p className={styles.copyright}>
-        {new Date().getFullYear()}
-        <span className={styles.copyrightSymbol}>©</span> Bryan Lin
-      </p>
-    </footer>
-  );
-};
+      <a
+        href="https://se-webring.xyz/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="SE Webring"
+        className="cursor-target group flex shrink-0 items-center font-geist-mono text-xs text-[var(--text-2)] transition-colors duration-150 hover:text-[var(--accent)]"
+      >
+        {/* Masked rather than an <img> so the mark takes currentColor and
+            matches the icons beside it, in both rest and hover states. */}
+        <span
+          aria-hidden="true"
+          className="h-7 w-7 shrink-0 bg-current transition-transform duration-500 ease-out group-hover:scale-110"
+          style={{
+            WebkitMaskImage: `url('${seWebring.src}')`,
+            maskImage: `url('${seWebring.src}')`,
+            WebkitMaskRepeat: "no-repeat",
+            maskRepeat: "no-repeat",
+            WebkitMaskSize: "contain",
+            maskSize: "contain",
+            WebkitMaskPosition: "center",
+            maskPosition: "center",
+          }}
+        />
+        <span className="hidden max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-500 ease-out group-hover:ml-2 group-hover:max-w-[200px] group-hover:opacity-100 md:inline-block">
+          webring
+        </span>
+      </a>
+    </div>
+    <div className="font-geist-mono text-xs text-[var(--muted)]">
+      © {new Date().getFullYear()} Bryan Lin
+    </div>
+  </footer>
+);
 
 export default FooterBar;

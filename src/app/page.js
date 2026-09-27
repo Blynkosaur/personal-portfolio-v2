@@ -1,262 +1,156 @@
-"use client";
-import { Highlighter } from "@/components/ui/highlighter";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import styles from "./Page.module.css";
-import TextType from "@/components/TextType";
-import LocationBadge from "@/components/LocationBadge";
-import FooterBar from "@/components/FooterBar";
-import IntroItem from "@/components/IntroItem";
-import BrandLink from "@/components/BrandLink";
-import HighlightLabel from "@/components/HighlightLabel";
-import { useState } from "react";
 import Image from "next/image";
-import { motion } from "motion/react";
-import { pageContainerAnimation, pageItemAnimation } from "@/lib/animations";
-import { SOFT_BUTTON_CLASS, SOFT_BUTTON_BORDER } from "@/lib/ui";
-import uwaterlooLogo from "@/assets/UWaterloo.png";
+import { MapPin } from "lucide-react";
+import FooterBar from "@/components/FooterBar";
+import RollLink from "@/components/RollLink";
 import yolandoLogo from "@/assets/yolando_logo.jpeg";
 import himsHersLogo from "@/assets/hims__hers_logo.jpeg";
 
-export default function Home() {
-  const [projectsHover, setProjectsHover] = useState(false);
-  const [emailHover, setEmailHover] = useState(false);
+const LABEL_CLASS =
+  "font-geist-mono text-[11px] uppercase tracking-[0.1em] text-[var(--muted)]";
+
+// One row of the Experience / Selected projects lists. Only the name is a link,
+// so hovering the row to expand it is not also hovering a link. Rows with a
+// blurb expand it underneath on hover; focus-within does the same for keyboards.
+function Row({ href, logo, alt, name, detail, meta, blurb }) {
+  const external = href.startsWith("http");
+
   return (
-    <motion.main
-      className={`${styles.page} relative overflow-y-hidden flex flex-col justify-center items-center text-[#CCD6F5] px-2 md:px-10 pb-10 pt-0 scrollbar-hide overflow-x-hidden`}
-      initial="hidden"
-      animate="visible"
-      variants={pageContainerAnimation}
-      style={{
-        minHeight: "100vh",
-        backgroundColor: "transparent",
-        color: "#E8F4F8",
-        fontFamily: "var(--font-inconsolata), 'Courier New', monospace",
-        paddingBottom: "40px",
-        zIndex: 2,
-      }}
-    >
-      <motion.div
-        variants={pageItemAnimation}
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100vh",
-          zIndex: 1,
-          pointerEvents: "none",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      />
-      <motion.div
-        variants={pageItemAnimation}
-        className="w-full  z-999 max-w-xl mt-4 mx-auto px-4"
+    <div className="group/row border-t border-[var(--rule)] py-3.5 sm:py-3">
+      <div
+        className={`flex gap-3 ${
+          logo ? "items-center" : "items-start sm:items-center"
+        }`}
       >
-        <div className="mt-16 mb-6 flex items-end justify-between gap-4">
-          <h1
-            className="font-bold text-left text-2xl md:text-4xl"
-            style={{ fontWeight: "700" }}
-          >
-            <span>
-              <TextType
-                text={["👋Hi! I'm"]}
-                typingSpeed={75}
-                pauseDuration={2000}
-                initialDelay={0}
-                showCursor={false}
-                textColors={["#CCD6F5"]}
-                loop={false}
-                style={{
-                  fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
-                  fontWeight: "700",
-                  fontStyle: "normal",
-                  opacity: 1,
-                }}
-              />{" "}
-              <TextType
-                text={["Bryan"]}
-                typingSpeed={75}
-                pauseDuration={1500}
-                initialDelay={750}
-                showCursor={true}
-                cursorCharacter="|"
-                textColors={["#c4a3ec"]}
-                loop={false}
-                style={{
-                  fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
-                  fontWeight: "700",
-                  fontStyle: "normal",
-                }}
-              />
-            </span>
-          </h1>
-          <LocationBadge />
-        </div>
-
-        <div
-          className="text-[#CCD6F5] text-sm md:text-lg mb-12 leading-7 md:leading-9"
-          style={{
-            fontWeight: "300",
-            alignContent: "left",
-            textAlign: "left",
-            width: "100%",
-          }}
-        >
-          <ul className="space-y-4">
-            <IntroItem
-              prefix="SWE"
-              className="group flex items-start gap-2 pl-8 relative hover:font-bold hover:translate-x-3 transition-transform duration-200"
-            >
-              {(hovered) => (
-                <BrandLink
-                  hovered={hovered}
-                  href="https://uwaterloo.ca"
-                  src={uwaterlooLogo}
-                  alt="UWaterloo Logo"
-                  label="UWaterloo"
-                  imageWidth={20}
-                  imageHeight={20}
-                  imageClassName="object-contain relative top-[1px]"
-                  gap="4px"
-                  anchorClassName="font-medium hover:font-bold hover:text-[#c4a3ec] transition-colors duration-200 inline-flex items-center"
-                  anchorStyle={{
-                    fontWeight: hovered ? "bold" : "normal",
-                    color: hovered ? "#c4a3ec" : "inherit",
-                    textDecoration: "none",
-                  }}
-                />
-              )}
-            </IntroItem>
-
-            <IntroItem
-              prefix="Currently working on "
-              className="group  items-start gap-4 pl-8 relative hover:translate-x-3 hover:font-bold transition-transform duration-200"
-            >
-              {(hovered) => (
-                <Link href={"/projects"}>
-                  <span
-                    className="font-medium italic hover:text-[#c4a3ec] transition-colors duration-200 "
-                    style={{
-                      textDecoration: hovered ? "underline" : "none",
-                      fontWeight: hovered ? "bold" : "normal",
-                    }}
-                  >
-                    {!hovered && (
-                      <span className="font-bold">something...</span>
-                    )}
-                    {hovered && (
-                      <Highlighter action="underline" color="#CCD6F5">
-                        <span
-                          className="italic"
-                          style={{ fontWeight: "bold", color: "#c4a3ec" }}
-                        >
-                          something...
-                        </span>
-                      </Highlighter>
-                    )}
-                  </span>{" "}
-                </Link>
-              )}
-            </IntroItem>
-
-            <IntroItem
-              prefix={<>Engineering @{"  "}</>}
-              className="group  flex flex-row items-start gap-2 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
-            >
-              {(hovered) => (
-                <BrandLink
-                  hovered={hovered}
-                  href="https://yolando.com"
-                  src={yolandoLogo}
-                  alt="Yolando Logo"
-                  label="Yolando"
-                />
-              )}
-            </IntroItem>
-
-            <IntroItem
-              prefix={<>Prev. @{"  "}</>}
-              className="group  flex flex-row items-start gap-2 pl-8 relative hover:translate-x-3 transition-transform hover:font-bold duration-200"
-            >
-              {(hovered) => (
-                <BrandLink
-                  hovered={hovered}
-                  href="https://joinlivewell.ca"
-                  src={himsHersLogo}
-                  alt="Livewell Logo"
-                  label="Hims & Hers"
-                />
-              )}
-            </IntroItem>
-          </ul>
-        </div>
-      </motion.div>
-
-      {/* Projects Button */}
-      <motion.div
-        variants={pageItemAnimation}
-        className="w-full max-w-xl mt-2 mb-16 mx-auto px-4"
-      >
-        <Button
-          className={`${SOFT_BUTTON_CLASS} w-full px-10 py-6 text-sm md:text-lg font-medium`}
-          asChild
-          style={SOFT_BUTTON_BORDER}
-          onMouseEnter={() => setProjectsHover(true)}
-          onMouseLeave={() => setProjectsHover(false)}
-        >
-          <Link href="/projects" className="!font-bold">
-            <HighlightLabel hovered={projectsHover} animationDuration={50}>
-              View My Projects
-            </HighlightLabel>
-          </Link>
-        </Button>
-      </motion.div>
-      <motion.div
-        variants={pageItemAnimation}
-        className="text-sm md:text-lg mb-4 w-full max-w-xl text-left flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center mx-auto px-4"
-        style={{ color: "#CCD6F5" }}
-      >
-        <div className="flex flex-col items-center justify-center">
-          ↳ You can contact me at
-        </div>
-        <div className="flex flex-col justify-center items-center">
-          <Button
-            className={`${SOFT_BUTTON_CLASS} px-6 py-3 text-sm md:text-base`}
-            asChild
-            style={SOFT_BUTTON_BORDER}
-            onMouseEnter={() => setEmailHover(true)}
-            onMouseLeave={() => setEmailHover(false)}
-          >
+        {logo && (
+          <Image
+            src={logo}
+            alt={alt}
+            width={22}
+            height={22}
+            className="h-[22px] w-[22px] shrink-0 rounded-[5px] object-cover"
+          />
+        )}
+        <div className="flex min-w-0 flex-grow flex-col gap-0.5 sm:flex-row sm:items-baseline sm:gap-3">
+          <h3 className="text-[15px] font-medium">
             <a
-              href="mailto:b86lin@uwaterloo.ca"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={href}
+              target={external ? "_blank" : undefined}
+              rel={external ? "noopener noreferrer" : undefined}
+              className="cursor-target transition-colors duration-150 hover:text-[var(--accent)]"
             >
-              <HighlightLabel hovered={emailHover} animationDuration={200}>
-                b86lin@uwaterloo.ca
-              </HighlightLabel>{" "}
-              <Image
-                src={uwaterlooLogo}
-                alt="UWaterloo Logo"
-                width={20}
-                height={20}
-                className="object-contain relative top-[1px]"
-              />
+              {name}
+              {external && (
+                <span className="sr-only"> (opens in new tab)</span>
+              )}
             </a>
-          </Button>
+          </h3>
+          <span className="text-sm text-[var(--muted)] sm:flex-grow sm:text-[15px]">
+            {detail}
+          </span>
         </div>
-      </motion.div>
-      {/* Bottom spacing for footer */}
-      <motion.div
-        variants={pageItemAnimation}
-        className="w-full max-w-xl mx-auto px-4"
-      >
-        <FooterBar />
-      </motion.div>
-      <motion.div variants={pageItemAnimation} className="h-8"></motion.div>
-    </motion.main>
+        {/* Rolls with the row, not on its own, so it reads as one affordance. */}
+        <span className="relative block shrink-0 overflow-hidden font-geist-mono text-[11px] leading-[1.5] text-[var(--muted)] sm:text-xs">
+          <span className="block transition-transform duration-300 ease-out group-hover/row:-translate-y-full">
+            {meta}
+          </span>
+          <span
+            aria-hidden="true"
+            className="absolute left-0 top-0 block translate-y-full text-[var(--accent)] transition-transform duration-300 ease-out group-hover/row:translate-y-0"
+          >
+            {meta}
+          </span>
+        </span>
+      </div>
+      {blurb && (
+        <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out group-focus-within/row:grid-rows-[1fr] group-hover/row:grid-rows-[1fr]">
+          <div className="overflow-hidden">
+            <p className="pt-2 text-sm leading-[1.6] text-[var(--text-2)]">
+              {blurb}
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <main className="mx-auto flex w-full max-w-[560px] flex-col gap-10 px-6 pb-10 pt-[72px] sm:gap-11 sm:px-4 sm:pt-[170px]">
+      <header className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-baseline sm:justify-between">
+          <h1 className="order-2 font-instrument-serif text-[44px] font-normal leading-none tracking-[-0.01em] sm:order-1 sm:text-5xl">
+            Bryan <span className="text-[var(--accent)]">Lin</span>
+          </h1>
+          <span className="order-1 flex items-center gap-1.5 font-geist-mono text-xs text-[var(--muted)] sm:order-2 sm:text-[13px]">
+            <MapPin size={14} strokeWidth={1.75} />
+            Montreal, QC
+          </span>
+        </div>
+        <p className="text-base leading-[1.6] text-[var(--text-2)]">
+          Software engineer studying at{" "}
+          <a
+            href="https://uwaterloo.ca"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-target border-b border-[#3A3C4A] text-[var(--text)] transition-colors duration-150 hover:text-[var(--accent)]"
+          >
+            UWaterloo
+          </a>
+          . I build backend systems and AI infrastructure.
+        </p>
+      </header>
+
+      <section className="flex flex-col gap-3 sm:gap-3.5">
+        <h2 className={LABEL_CLASS}>Experience</h2>
+        <div className="flex flex-col border-b border-[var(--rule)]">
+          <Row
+            href="https://yolando.com"
+            logo={yolandoLogo}
+            alt="Yolando logo"
+            name="Yolando"
+            detail="Software Engineer Intern"
+            meta="2026"
+            blurb="Backend services and AI infrastructure for brand search."
+          />
+          <Row
+            href="https://joinlivewell.ca"
+            logo={himsHersLogo}
+            alt="Hims & Hers logo"
+            name="Hims & Hers"
+            detail="Software Engineer Intern"
+            meta="2025"
+            blurb="Product engineering on patient-facing features and data dashboards."
+          />
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-3 sm:gap-3.5">
+        <div className="flex items-baseline justify-between">
+          <h2 className={LABEL_CLASS}>Selected projects</h2>
+          <RollLink
+            href="/projects"
+            label="All projects →"
+            className="text-[13px] text-[var(--text-2)]"
+          />
+        </div>
+        <div className="flex flex-col border-b border-[var(--rule)]">
+          <Row
+            href="https://plume.hackmit.org/project/aajnp-oqnis-ttafi-kbgks"
+            name="Rumi"
+            detail="AI interior shopping agent"
+            meta="HackMIT ’26 winner"
+          />
+          <Row
+            href="https://github.com/blynkosaur/treehouse"
+            name="Treehouse"
+            detail="Git worktrees for parallel AI agents"
+            meta="Go ↗"
+          />
+        </div>
+      </section>
+
+      <FooterBar />
+    </main>
   );
 }
