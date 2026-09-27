@@ -14,7 +14,9 @@ export default {
   		fontFamily: {
   			'gowun-batang': ['var(--font-gowun-batang)', 'Georgia', 'serif'],
   			'inconsolata': ['var(--font-inconsolata)', 'Courier New', 'monospace'],
-  			'redaction-70': ['var(--font-redaction-70)', 'Georgia', 'serif'],
+  			'instrument-serif': ['var(--font-instrument-serif)', 'Georgia', 'serif'],
+  			'geist': ['var(--font-geist)', 'system-ui', 'sans-serif'],
+  			'geist-mono': ['var(--font-geist-mono)', 'monospace'],
   		},
   		colors: {
   			background: 'hsl(var(--background))',
@@ -65,7 +67,5 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate"),
-	require("tailwind-scrollbar-hide")
-  ],
+  plugins: [],
 };

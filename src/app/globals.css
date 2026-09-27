@@ -2,25 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #161822;
+  --text: #e6e4ee;
+  --text-2: #a9a8b6;
+  --muted: #8b8a99;
+  --rule: #2a2c38;
+  --chip-border: #2e3040;
+  --accent: #c4a7f5;
+  /* Swap this one line to try IBM Plex Sans, DM Sans, Hanken Grotesk, etc. */
+  --font-body: var(--font-geist), system-ui, sans-serif;
+}
+
 body {
-  font-family: var(--font-inconsolata), 'Courier New', monospace;
-  background-color: #151520;
-  color: #e8f4f8;
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text);
+  /* Dot grid, replacing the three.js DotGrid that used to render in the layout. */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 22px 22px;
   overflow-x: hidden;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-}
-
-/* Ensure all text elements use Karla */
-* {
-  font-family: var(--font-inconsolata), 'Courier New', monospace !important;
-  font-weight: 400;
-}
-
-/* Headers use Gowun Batang */
-h1, h2, h3, h4, h5, h6,
-h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
-  font-family: var(--font-gowun-batang), 'Georgia', serif !important;
 }
 
 body::-webkit-scrollbar {
@@ -67,9 +70,7 @@ html::-webkit-scrollbar-thumb {
     --primary-foreground: 0 0% 98%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
     --accent-foreground: 240 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -94,9 +95,7 @@ html::-webkit-scrollbar-thumb {
     --primary-foreground: 240 5.9% 10%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
@@ -114,8 +113,5 @@ html::-webkit-scrollbar-thumb {
 @layer base {
   * {
     @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }
