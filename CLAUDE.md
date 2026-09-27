@@ -11,7 +11,7 @@ npm run start   # serve production build
 npm run lint    # eslint (next core-web-vitals)
 ```
 
-No test suite exists. Both `package-lock.json` and `pnpm-lock.yaml` are checked in; scripts run under either.
+No test suite exists. `package-lock.json` is the only lockfile — use npm. A stale `pnpm-lock.yaml` used to sit beside it and broke the Vercel build, which runs `--frozen-lockfile`.
 
 ## Architecture
 
