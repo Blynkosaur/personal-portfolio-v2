@@ -1,18 +1,43 @@
 [
   {
+    "title": "Rumi",
+    "blurb": "AI interior shopping agent. Led the design agent, chat and planning system. Won Ramp 2nd Place and Long Lake Winner at HackMIT 2026.",
+    "description": "Scan your room with an iPhone and <i>Rumi</i> rebuilds it in 3D, then an agent shops for furniture that actually fits, checking the measurements and your budget before it places anything.",
+    "hook": "HackMIT 2026 Winner!",
+    "tag": "HackMIT '26 winner",
+    "year": "2026",
+    "tags": [
+      "TypeScript",
+      "React Three Fiber",
+      "Convex",
+      "Swift"
+    ],
+    "github": "https://github.com/IBS27/rumi",
+    "plume": "https://plume.hackmit.org/project/aajnp-oqnis-ttafi-kbgks",
+    "link": null
+  },
+  {
     "title": "Treehouse",
+    "blurb": "Go CLI that gives each AI coding agent its own git worktree, so parallel agents don't collide.",
     "description": "A worktree manager to run infinite agents!",
     "hook": "Worktrees born ready, not born broken.",
+    "tag": "2026",
+    "year": "2026",
     "tags": [
-      "Go"
+      "Go",
+      "git"
     ],
     "github": "https://github.com/blynkosaur/treehouse",
+    "plume": null,
     "link": null
   },
   {
     "title": "Tailored",
+    "blurb": "Cursor for cover letters.",
     "description": "Internship application season is approaching. Bypass ATS with a custom resume and cover letter :)",
     "hook": "bzzzz...  AI Agents??! bzz... bzz... LLMS.. Tokens?!?!?",
+    "tag": "2026",
+    "year": "2026",
     "tags": [
       "AWS",
       "Browserbase",
@@ -20,42 +45,55 @@
       "LaTeX"
     ],
     "github": "https://github.com/Blynkosaur/Tailored",
+    "plume": null,
     "link": "https://tailored.bry4n.co"
   },
   {
     "title": "SaaScript",
+    "blurb": "A startup-buzzword programming language.",
     "description": "Built <i>SaaScript</i>, a <i>\"startup buzzword\"</i> interpreted programming language featuring a custom bytecode virtual machine in C Implementing a full lexer, parser, and bytecode compiler to translate high-level code into executable bytecode.",
     "hook": "Still dealing with segfaults...",
+    "tag": "2025",
+    "year": "2025",
     "tags": [
       "C",
       "Makefile",
       "GCC/GDB"
     ],
     "github": "https://github.com/Blynkosaur/BryteLinker",
+    "plume": null,
     "link": null
   },
   {
     "title": "League of Studies",
+    "blurb": "Competitive gamified studying for you and your friends.",
     "description": "My mom told me to stop playing League of Legends 💔, so I made <i>League of Studies</i>, a gamified study platform instead. Fight with your friends or a boss to study for exams and climb the leaderboard!",
     "hook": "JACHacks 2025 Winner!",
+    "tag": "2025",
+    "year": "2025",
     "tags": [
       "React",
       "Supabase",
       "Gamification"
     ],
     "github": "https://github.com/Blynkosaur/LeagueOfStudies",
+    "plume": null,
     "link": "https://ihateto.study"
   },
   {
     "title": "Tumor Classifier",
+    "blurb": "A neural net written from scratch.",
     "description": "Designed and implemented a neural network from scratch using only NumPy to classify breast growths as benign or malignant. Learning the calculus and linear algebra behind supervised learning models was a great experience.",
     "hook": "Achieved 95% precision and 90% recall scores.",
+    "tag": "2025",
+    "year": "2025",
     "tags": [
       "Python",
       "NumPy",
       "Machine Learning"
     ],
     "github": "https://github.com/Blynkosaur/Tumor-Classification",
+    "plume": null,
     "link": null
   }
 ]

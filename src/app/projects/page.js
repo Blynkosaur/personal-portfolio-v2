@@ -1,135 +1,166 @@
-"use client";
-import ProjectCard from "@/components/ProjectCard";
 import projects from "./projects.json";
-import { Highlighter } from "@/components/ui/highlighter";
-import Link from "next/link";
-import styles from "../Page.module.css";
-import TextType from "@/components/TextType";
-import { useState } from "react";
-import { ArrowLeft } from "lucide-react";
 import FooterBar from "@/components/FooterBar";
-import { motion } from "motion/react";
-import { pageContainerAnimation, pageItemAnimation } from "@/lib/animations";
+import RollLink from "@/components/RollLink";
 
-export default function Projects() {
-  const [homeHover, setHomeHover] = useState(false);
-  const [backHomeHover, setBackHomeHover] = useState(false);
+const LABEL_CLASS =
+  "font-geist-mono text-[11px] uppercase tracking-[0.1em] text-[var(--muted)]";
+
+const EXTERNAL = { target: "_blank", rel: "noopener noreferrer" };
+
+function NewTab() {
+  return <span className="sr-only"> (opens in new tab)</span>;
+}
+
+// Code / Demo / Plume, skipping the ones a project doesn't have.
+function ProjectLinks({ github, link, plume }) {
+  const items = [
+    { href: github, label: "Code ↗" },
+    { href: link, label: "Demo ↗" },
+    { href: plume, label: "Plume ↗" },
+  ].filter((item) => item.href);
 
   return (
-    <motion.main
-      className={`${styles.page} relative flex flex-col justify-start items-center text-[#CCD6F5] px-2 md:px-10 pb-10 pt-0 scrollbar-hide overflow-x-hidden`}
-      initial="hidden"
-      animate="visible"
-      variants={pageContainerAnimation}
-      style={{
-        minHeight: "100vh",
-        backgroundColor: "transparent",
-        color: "#E8F4F8",
-        fontFamily: "var(--font-inconsolata), 'Courier New', monospace",
-        fontWeight: "700",
-        paddingBottom: "40px",
-        zIndex: 2,
-      }}
-    >
-      {/* Home Button */}
-      {/* Header */}
-      <motion.div
-        variants={pageItemAnimation}
-        className="w-full max-w-xl mt-16 mx-auto px-4 text-left"
-      >
-        <div className="mt-4 mb-4 flex items-center justify-between gap-3">
-          <h1
-            className="text-2xl md:text-4xl font-bold text-left"
-            style={{
-              fontWeight: "700",
-              color: "#c4a3ec",
-              fontFamily: "var(--font-gowun-batang), 'Georgia', serif",
-            }}
+    <div className="flex shrink-0 gap-4 text-[13px] text-[var(--text-2)]">
+      {items.map(({ href, label }) => (
+        <RollLink key={label} href={href} label={label} external />
+      ))}
+    </div>
+  );
+}
+
+// Featured block: several links, so the name is its own link rather than
+// wrapping the whole block (no nested anchors).
+function FeaturedProject({ project }) {
+  const primary = project.link || project.plume || project.github;
+
+  return (
+    <div className="group border-t border-[var(--rule)] py-5">
+      <div className="flex items-baseline justify-between gap-3">
+        <h3 className="text-lg font-medium">
+          <a
+            href={primary}
+            {...EXTERNAL}
+            className="cursor-target transition-colors duration-150 hover:text-[var(--accent)]"
           >
-            My Projects
-          </h1>
-          <Link
-            href="/"
-            className={`text-sm md:text-base text-[#CCD6F5] whitespace-nowrap inline-flex items-center gap-1.5 transition-transform duration-200 ${
-              backHomeHover ? "-translate-x-1" : "translate-x-0"
-            }`}
-            style={{ fontWeight: "600" }}
-            onMouseEnter={() => setBackHomeHover(true)}
-            onMouseLeave={() => setBackHomeHover(false)}
-          >
-            {backHomeHover ? (
-              <Highlighter action="underline" color="#CCD6F5" padding={0}>
-                <span
-                  className="inline-flex items-center gap-1.5"
-                  style={{ color: "#c4a3ec", fontWeight: "700" }}
-                >
-                  <ArrowLeft size={14} />
-                  Back Home
-                </span>
-              </Highlighter>
-            ) : (
-              <>
-                <ArrowLeft size={14} />
-                <span>Back Home</span>
-              </>
-            )}
-          </Link>
+            {project.title}
+            <NewTab />
+          </a>
+        </h3>
+        <span className="shrink-0 font-geist-mono text-xs text-[var(--muted)]">
+          {project.tag}
+        </span>
+      </div>
+      <p className="mt-2 text-[15px] leading-[1.55] text-[var(--text-2)]">
+        {project.blurb}
+      </p>
+      <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-baseline sm:justify-between">
+        <div className="font-geist-mono text-xs text-[var(--muted)]">
+          {project.tags.join(" · ")}
         </div>
-
-        <p className="group   gap-4  relative  hover:font-bold transition-transform duration-200 text-[#CCD6F5] text-sm md:text-lg mb-2 leading-7 md:leading-7 text-left">
-          <span
-            className="group-hover:font-bold  font-bold italic"
-            style={{
-              fontFamily: "var(--font-inconsolata), 'Courier New', monospace",
-              marginBottom: "4px",
-            }}
-          >
-            {" "}
-            <TextType
-              text={["Here is what I've been working on."]}
-              typingSpeed={50}
-              pauseDuration={2000}
-              initialDelay={500}
-              showCursor={true}
-              cursorCharacter="|"
-              textColors={["#CCD6F5"]}
-              loop={false}
-              style={{
-                fontFamily: "var(--font-inconsolata), 'Courier New', monospace",
-                fontWeight: "400",
-                fontStyle: "italic",
-                marginBottom: "4px",
-              }}
-            />
-          </span>
-        </p>
-      </motion.div>
-      {/* Projects Grid */}
-      <motion.div
-        variants={pageItemAnimation}
-        className="w-full max-w-xl flex flex-col gap-5 mx-auto px-4"
-      >
-        {/* Project 1 */}
-        {projects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            tags={project.tags}
-            description={project.description}
-            hook={project.hook}
-            github={project.github}
-            link={project.link}
+        <ProjectLinks {...project} />
+      </div>
+      {/* Same hover expander as the compact rows, under everything else. */}
+      <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out group-hover:grid-rows-[1fr]">
+        <div className="overflow-hidden">
+          <p
+            className="pt-3 text-sm leading-[1.6] text-[var(--text-2)]"
+            dangerouslySetInnerHTML={{ __html: project.description }}
           />
-        ))}
-      </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
-      <motion.div
-        variants={pageItemAnimation}
-        className="w-full max-w-xl mx-auto px-4 mt-auto pt-8"
-      >
+// Compact row: the title is plain text. Hovering expands the description and
+// the links underneath, using the 0fr -> 1fr grid trick so the height animates
+// without measuring anything in JS. focus-within does the same for keyboards,
+// so the links are reachable by tabbing rather than hidden behind a hover.
+function CompactProject({ project }) {
+  return (
+    <div className="group border-t border-[var(--rule)] py-3">
+      <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-3">
+        <div className="flex items-baseline justify-between gap-3 sm:contents">
+          <h3 className="text-[15px] font-medium sm:order-1">
+            <a
+              href={project.link || project.github || project.plume}
+              {...EXTERNAL}
+              className="cursor-target transition-colors duration-150 hover:text-[var(--accent)]"
+            >
+              {project.title}
+              <NewTab />
+            </a>
+          </h3>
+          <span className="shrink-0 font-geist-mono text-xs text-[var(--muted)] sm:order-3">
+            {project.year}
+          </span>
+        </div>
+        <span className="min-w-0 text-[15px] text-[var(--muted)] sm:order-2 sm:flex-grow">
+          {project.blurb}
+        </span>
+      </div>
+      <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out group-focus-within:grid-rows-[1fr] group-hover:grid-rows-[1fr]">
+        <div className="overflow-hidden">
+          <p
+            className="pt-2 text-sm leading-[1.6] text-[var(--text-2)]"
+            dangerouslySetInnerHTML={{ __html: project.description }}
+          />
+          <div className="flex justify-end pt-2.5">
+            <ProjectLinks {...project} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function Projects() {
+  const featured = projects.slice(0, 2);
+  const rest = projects.slice(2);
+
+  return (
+    <main className="mx-auto flex w-full max-w-[640px] flex-col px-6 pb-10 pt-14 sm:px-4 sm:pt-[120px]">
+      <RollLink
+        href="/"
+        label={
+          <>
+            {/* Sans arrow: the mono face draws a much longer glyph than the
+                "All projects →" arrow on the homepage. */}
+            <span className="font-geist">←</span> Bryan Lin
+          </>
+        }
+        className="h-11 self-start font-geist-mono text-[13px] text-[var(--muted)]"
+      />
+
+      <h1 className="mt-4 font-instrument-serif text-[40px] font-normal leading-none tracking-[-0.01em] sm:text-5xl">
+        Projects
+      </h1>
+      <p className="mt-3 text-base leading-[1.6] text-[var(--text-2)]">
+        Things I&apos;ve built — hackathon wins, tools I use daily, and
+        experiments.
+      </p>
+
+      <section className="mt-14 flex flex-col gap-3.5">
+        <h2 className={LABEL_CLASS}>Featured</h2>
+        <div className="flex flex-col border-b border-[var(--rule)]">
+          {featured.map((project) => (
+            <FeaturedProject key={project.title} project={project} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-12 flex flex-col gap-3.5">
+        <h2 className={LABEL_CLASS}>All projects</h2>
+        <div className="flex flex-col border-b border-[var(--rule)]">
+          {rest.map((project) => (
+            <CompactProject key={project.title} project={project} />
+          ))}
+        </div>
+      </section>
+
+      <div className="mt-20">
         <FooterBar />
-      </motion.div>
-      <motion.div variants={pageItemAnimation} className="h-8"></motion.div>
-    </motion.main>
+      </div>
+    </main>
   );
 }
