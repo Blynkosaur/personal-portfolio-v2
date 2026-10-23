@@ -11,8 +11,25 @@ const LABEL_CLASS =
 // One row of the Experience / Selected projects lists. Only the name is a link,
 // so hovering the row to expand it is not also hovering a link. Rows with a
 // blurb expand it underneath on hover; focus-within does the same for keyboards.
-function Row({ href, logo, alt, name, detail, meta, blurb }) {
+function Row({ href, logo, alt, name, detail, meta, metaHref, blurb }) {
   const external = href.startsWith("http");
+
+  // The tag is a link only where one makes sense; the Experience years are not.
+  const metaInner = (
+    <>
+      <span className="block transition-transform duration-300 ease-out group-hover/row:-translate-y-full">
+        {meta}
+      </span>
+      <span
+        aria-hidden="true"
+        className="absolute left-0 top-0 block translate-y-full text-[var(--accent)] transition-transform duration-300 ease-out group-hover/row:translate-y-0"
+      >
+        {meta}
+      </span>
+    </>
+  );
+  const metaClass =
+    "relative block shrink-0 overflow-hidden font-geist-mono text-[11px] leading-[1.5] text-[var(--muted)] sm:text-xs";
 
   return (
     <div className="group/row border-t border-[var(--rule)] py-3.5 sm:py-3">
@@ -49,17 +66,19 @@ function Row({ href, logo, alt, name, detail, meta, blurb }) {
           </span>
         </div>
         {/* Rolls with the row, not on its own, so it reads as one affordance. */}
-        <span className="relative block shrink-0 overflow-hidden font-geist-mono text-[11px] leading-[1.5] text-[var(--muted)] sm:text-xs">
-          <span className="block transition-transform duration-300 ease-out group-hover/row:-translate-y-full">
-            {meta}
-          </span>
-          <span
-            aria-hidden="true"
-            className="absolute left-0 top-0 block translate-y-full text-[var(--accent)] transition-transform duration-300 ease-out group-hover/row:translate-y-0"
+        {metaHref ? (
+          <a
+            href={metaHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`cursor-target ${metaClass}`}
           >
-            {meta}
-          </span>
-        </span>
+            {metaInner}
+            <span className="sr-only"> (opens in new tab)</span>
+          </a>
+        ) : (
+          <span className={metaClass}>{metaInner}</span>
+        )}
       </div>
       {blurb && (
         <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out group-focus-within/row:grid-rows-[1fr] group-hover/row:grid-rows-[1fr]">
@@ -136,16 +155,18 @@ export default function Home() {
         </div>
         <div className="flex flex-col border-b border-[var(--rule)]">
           <Row
-            href="https://plume.hackmit.org/project/aajnp-oqnis-ttafi-kbgks"
+            href="https://github.com/IBS27/rumi"
             name="Rumi"
             detail="AI interior shopping agent"
             meta="HackMIT ’26 winner"
+            metaHref="https://plume.hackmit.org/project/aajnp-oqnis-ttafi-kbgks"
           />
           <Row
             href="https://github.com/blynkosaur/treehouse"
             name="Treehouse"
             detail="Git worktrees for parallel AI agents"
             meta="Go ↗"
+            metaHref="https://github.com/blynkosaur/treehouse"
           />
         </div>
       </section>
