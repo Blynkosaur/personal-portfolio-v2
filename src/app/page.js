@@ -2,6 +2,7 @@ import Image from "next/image";
 import { MapPin } from "lucide-react";
 import FooterBar from "@/components/FooterBar";
 import RollLink from "@/components/RollLink";
+import borealisLogo from "@/assets/borealis_ai_logo.jpeg";
 import yolandoLogo from "@/assets/yolando_logo.jpeg";
 import himsHersLogo from "@/assets/hims__hers_logo.jpeg";
 
@@ -123,6 +124,15 @@ export default function Home() {
       <section className="flex flex-col gap-3 sm:gap-3.5">
         <h2 className={LABEL_CLASS}>Experience</h2>
         <div className="flex flex-col border-b border-[var(--rule)]">
+          <Row
+            href="https://rbcborealis.com"
+            logo={borealisLogo}
+            alt="RBC Borealis logo"
+            name="RBC Borealis"
+            detail="Machine Learning Fellow"
+            meta="Present"
+            blurb="Representation learning for privacy-preserving medical imaging."
+          />
           <Row
             href="https://yolando.com"
             logo={yolandoLogo}
