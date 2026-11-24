@@ -119,7 +119,7 @@ export default function Projects() {
   const rest = projects.slice(2);
 
   return (
-    <main className="mx-auto flex w-full max-w-[640px] flex-col px-6 pb-10 pt-14 sm:px-4 sm:pt-[120px]">
+    <main className="mx-auto flex w-full max-w-[560px] flex-col px-6 pb-10 pt-14 sm:px-4 sm:pt-[120px]">
       <RollLink
         href="/"
         label={

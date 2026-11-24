@@ -1,15 +1,15 @@
 import Image from "next/image";
-import { MapPin } from "lucide-react";
 import FooterBar from "@/components/FooterBar";
 import RollLink from "@/components/RollLink";
 import borealisLogo from "@/assets/borealis_ai_logo.jpeg";
 import yolandoLogo from "@/assets/yolando_logo.jpeg";
 import himsHersLogo from "@/assets/hims__hers_logo.jpeg";
+import hyphenateLogo from "@/assets/hyphenateai_logo.jpeg";
 
 const LABEL_CLASS =
   "font-geist-mono text-[11px] uppercase tracking-[0.1em] text-[var(--muted)]";
 
-// One row of the Experience / Selected projects lists. Only the name is a link,
+// One row of the Experience / Projects lists. Only the name is a link,
 // so hovering the row to expand it is not also hovering a link. Rows with a
 // blurb expand it underneath on hover; focus-within does the same for keyboards.
 function Row({ href, logo, alt, name, detail, meta, metaHref, blurb }) {
@@ -100,24 +100,31 @@ export default function Home() {
       <header className="flex flex-col gap-3">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-baseline sm:justify-between">
           <h1 className="order-2 font-instrument-serif text-[44px] font-normal leading-none tracking-[-0.01em] sm:order-1 sm:text-5xl">
-            Bryan <span className="text-[var(--accent)]">Lin</span>
+            Bryan Lin
           </h1>
-          <span className="order-1 flex items-center gap-1.5 font-geist-mono text-xs text-[var(--muted)] sm:order-2 sm:text-[13px]">
-            <MapPin size={14} strokeWidth={1.75} />
-            Montreal, QC
-          </span>
         </div>
         <p className="text-base leading-[1.6] text-[var(--text-2)]">
-          Software engineer studying at{" "}
+          Software engineering at{" "}
           <a
             href="https://uwaterloo.ca"
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-target border-b border-[#3A3C4A] text-[var(--text)] transition-colors duration-150 hover:text-[var(--accent)]"
+            className="cursor-target border-b border-[#cccccc] transition-colors duration-150 hover:border-[var(--accent)] hover:text-[var(--accent)]"
           >
             UWaterloo
           </a>
-          . I build backend systems and AI infrastructure.
+        </p>
+        <p className="-mt-1 text-base leading-[1.6] text-[var(--text-2)]">
+          I&apos;ll be in New York City this winter on{" "}
+          <a
+            href="https://hyphenate.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-target border-b border-[#cccccc] transition-colors duration-150 hover:border-[var(--accent)] hover:text-[var(--accent)]"
+          >
+            Hyphenate
+          </a>
+          &apos;s engineering team.
         </p>
       </header>
 
@@ -125,12 +132,20 @@ export default function Home() {
         <h2 className={LABEL_CLASS}>Experience</h2>
         <div className="flex flex-col border-b border-[var(--rule)]">
           <Row
+            href="https://hyphenate.ai"
+            logo={hyphenateLogo}
+            alt="Hyphenate logo"
+            name="Hyphenate"
+            detail="Software Engineer Intern"
+            meta="2027"
+          />
+          <Row
             href="https://rbcborealis.com"
             logo={borealisLogo}
             alt="RBC Borealis logo"
             name="RBC Borealis"
             detail="Machine Learning Fellow"
-            meta="Present"
+            meta="2026"
             blurb="Representation learning for privacy-preserving medical imaging."
           />
           <Row
@@ -156,7 +171,7 @@ export default function Home() {
 
       <section className="flex flex-col gap-3 sm:gap-3.5">
         <div className="flex items-baseline justify-between">
-          <h2 className={LABEL_CLASS}>Selected projects</h2>
+          <h2 className={LABEL_CLASS}>Projects</h2>
           <RollLink
             href="/projects"
             label="All projects →"

@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --bg: #161822;
-  --text: #e6e4ee;
-  --text-2: #a9a8b6;
-  --muted: #8b8a99;
-  --rule: #2a2c38;
-  --chip-border: #2e3040;
-  --accent: #c4a7f5;
+  --bg: #ffffff;
+  --text: #111111;
+  --text-2: #555555;
+  --muted: #777777;
+  --rule: #e5e5e5;
+  --chip-border: #dddddd;
+  --accent: #000000;
   /* Swap this one line to try IBM Plex Sans, DM Sans, Hanken Grotesk, etc. */
   --font-body: var(--font-geist), system-ui, sans-serif;
 }
@@ -19,7 +19,7 @@ body {
   background-color: var(--bg);
   color: var(--text);
   /* Dot grid, replacing the three.js DotGrid that used to render in the layout. */
-  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.09) 1px, transparent 1px);
   background-size: 22px 22px;
   overflow-x: hidden;
   -ms-overflow-style: none; /* IE and Edge */
