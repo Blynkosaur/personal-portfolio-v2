@@ -40,6 +40,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 html {
+  zoom: 0.9; /* same look as 90% browser zoom */
   overflow-x: hidden;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
